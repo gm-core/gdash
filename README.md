@@ -14,7 +14,7 @@ Download [the latest release](https://github.com/twisterghost/gdash/releases) an
 
 Returns true if the given array contains the given value
 
-```GML
+```
 @param {String|Array|DS_Map} The collection to search
 @param {*} The value to look for
 @param {Real} [0] The index to begin looking from
@@ -35,7 +35,7 @@ _contains("hello", "ello");
 
 Returns the length of the given array or ds_list
 
-```GML
+```
 @param {Array|DS_List} The collection to determine the length of
 @returns {Real} The length of the collection
 
@@ -51,7 +51,7 @@ _length(some_list_id_of_size_5);
 
 Returns the variable type of the given argument
 
-```GML
+```
 @param {*} A variable to check the type of
 @returns {String} The type of the variable as a human readable string
 
@@ -81,7 +81,7 @@ Checks if two values are equal, being safe about type and checking first-level
 children of ds_lists and ds_maps. Returns false on type inequality rather than
 throwing an error.
 
-```GML
+```
 @param {*} First value to compare
 @param {*} Second value to compare
 @param {ds_type} [Optional] If specified, assumes this type instead of inferring
@@ -111,7 +111,7 @@ _isEqual(map, map2, ds_type_map);
 
 Iterates over a given collection, running the provided function for each value in the collection. Returns an array of all function results at each index.
 
-```GML
+```
 @param {Array|DS_Map|DS_List} The collection to map
 @param {Script} The script to map over the collection
 @param {ds_type|String} ["array"] The type of collection. Only provide when using a DS
@@ -136,7 +136,7 @@ _map(map, divideByTwo, ds_type_map);
 
 Reduces a collection by iterating over it with a function. Provided script should take 2 arguments: `total`, `value`. On the first call, `total` is `undefined`.
 
-```GML
+```
 @param {Array} The array to reduce
 @param {Script} The script to reduce with
 @returns {*} The reduced value from the given script
@@ -157,7 +157,7 @@ Returns a blank object
 
 To use this function, make an object resource called `_gdash_object`
 
-```GML
+```
 @param {String} A category to set on this object as the `type` variable
 @returns {Instance} A blank object instance
 
@@ -172,7 +172,7 @@ show_debug_message(data.type);
 
 Returns an array of the result of a function run the given number of times
 
-```GML
+```
 @param {Real} The number of times to execute the function
 @param {Script} The script to execute
 @returns {Array} An array of the script results
@@ -186,7 +186,7 @@ _times(3, returnTheValue5);
 
 Returns an array of all objects of the provided type in the current room
 
-```GML
+```
 @param {ObjectType} The object type to collect
 @returns {Array} An array of all object IDs of the provided type in the room
 
@@ -200,7 +200,7 @@ _collect(obj_character);
 
 Returns an array where values of the input array are truthy when run through the provided function.
 
-```GML
+```
 @param {Array} The array to filter
 @param {Script} The script to filter with
 @returns {Array} The filtered array
@@ -214,7 +214,7 @@ _filter(_arrayOf(0, 1, 2, 3), lessThanTwo)
 
 Appends the values of one array to another.
 
-```GML
+```
 @param {Array} The array to append to
 @param {Array} The array to append
 @returns {Array} The concatenated array
@@ -228,7 +228,7 @@ _concat(_arrayOf(0, 1, 2), _arrayOf(3, 4, 5));
 
 Destroys the passed in instance
 
-```GML
+```
 @param {Instance} The instance to destroy
 
 @example
@@ -244,7 +244,7 @@ Creates a partial function identifier for use in place of raw scripts in gdash f
 
 Partials are to be treated as a data structure, and must be cleaned up with `_free()` when they are no longer of use.
 
-```GML
+```
 @param {Script} The script to create a partial of
 @param 1-14 {*} Arguments to bind to the partial
 @returns {Real} The partial ID (a ds_map, internally)
@@ -266,7 +266,7 @@ __lessThanTwo(10);
 
 Frees a partial function or ds type from memory. If freeing a ds, you must provide the type (`ds_type_map` or `ds_type_list` supported)
 
-```GML
+```
 @param {Real} The partial ID to free
 @param {DS_Type} [Optional] The type of DS to free (ignore for partials)
 
@@ -280,7 +280,7 @@ _free(__something);
 
 Executes a script or partial with the provided arguments. Can be used in place of `script_execute`
 
-```GML
+```
 @param {Script|Real} The script to run or the ID of the partial to run
 @param 1-14 {*} Arguments to pass the script
 @returns {*} The return value of the script
@@ -298,7 +298,7 @@ _run(addTwo, 1);
 
 Returns an array of the given arguments.
 
-```GML
+```
 @param 0-14 {*) Values to put into an array
 @returns {Array} An array of the given parameters
 
@@ -314,7 +314,7 @@ _arrayOf('hello', 'world', 'i', 'am', 'an', 'array');
 
 Adds a value to the end of an array
 
-```GML
+```
 @param {Array} The array to add the value to
 @param {*} The value to add
 @returns {Array} The array with the value added
@@ -328,7 +328,7 @@ _push(_arrayOf(1, 2), 3);
 
 Returns an array with all duplicate values removed
 
-```GML
+```
 @param {Array} An array with duplicate values
 @returns {Array} An array with the duplicate values removed
 
@@ -341,7 +341,7 @@ _uniq(_arrayOf(1, 1, 2, 3));
 
 Iterates over an array, returning the first element that the given script returns true for.
 
-```GML
+```
 @param {Array} The array to iterate over
 @param {Script} The script to run on the given element
 @returns {*} The first element that returns truthy from the script
@@ -355,7 +355,7 @@ _find(_arrayOf(0, 1, 2, 3), __equalsThree);
 
 Returns an array contains all keys in a ds_map. Order is not guaranteed due to how ds_maps are stored
 
-```GML
+```
 @param {DS_Map} The map to get the keys from
 @returns {Array} An array of all keys in the map
 
@@ -372,7 +372,7 @@ _keys(map);
 
 Returns the value of the provided arguments after a boolean `and`
 
-```GML
+```
 @param {*} Some first input
 @param {*} A value to && the first input with
 @returns {Boolean} The value of the provided arguments after an &&
@@ -389,7 +389,7 @@ _and(false, true);
 
 Runs a script with the provided array as arguments.
 
-```GML
+```
 @param {Script} The script to run
 @param {Array} An array to provide as individual arguments
 @return {*} The return value of the script

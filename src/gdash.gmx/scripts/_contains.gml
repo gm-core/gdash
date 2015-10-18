@@ -1,6 +1,3 @@
-// 
-// _contains(collection, target, fromIndex = 0)
-
 /*
 Returns true if the given array contains the given value
 

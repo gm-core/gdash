@@ -1,7 +1,4 @@
 #define _contains
-// 
-// _contains(collection, target, fromIndex = 0)
-
 /*
 Returns true if the given array contains the given value
 
@@ -99,10 +96,6 @@ if (is_string(argument0)) {
 
 
 #define _isEqual
-// Does a deep equality check to see if two values are equal.
-// Usage: _isEqual(compareA, compareB, [type]);
-// If type is not specified as a ds_ type, it is inferred as a raw type
-
 /*
 Checks if two values are equal, being safe about type and checking first-level
 children of ds_lists and ds_maps. Returns false on type inequality rather than
@@ -224,11 +217,10 @@ return result;
 
 
 #define _object
-// Creates a generic object and returns it.
-// If given a boolean of true, makes the object persistant
-
 /*
 Returns a blank object
+
+To use this function, make an object resource called _gdash_object
 
 @param {String} A category to set on this object as the `type` variable
 @returns {Instance} A blank object instance
@@ -327,6 +319,19 @@ return result;
 
 
 #define _concat
+/*
+Appends the values of one array to another.
+
+@param {Array} The array to append to
+@param {Array} The array to append
+@returns {Array} The concatenated array
+
+@example
+_concat(_arrayOf(0, 1, 2), _arrayOf(3, 4, 5));
+// => [0, 1, 2, 3, 4, 5]
+
+*/
+
 var inputArray = argument[0];
 var appendArray = argument[1];
 var i = _length(inputArray),

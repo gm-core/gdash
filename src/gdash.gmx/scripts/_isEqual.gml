@@ -1,7 +1,3 @@
-// Does a deep equality check to see if two values are equal.
-// Usage: _isEqual(compareA, compareB, [type]);
-// If type is not specified as a ds_ type, it is inferred as a raw type
-
 /*
 Checks if two values are equal, being safe about type and checking first-level
 children of ds_lists and ds_maps. Returns false on type inequality rather than

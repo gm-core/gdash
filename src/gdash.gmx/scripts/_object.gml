@@ -1,8 +1,7 @@
-// Creates a generic object and returns it.
-// If given a boolean of true, makes the object persistant
-
 /*
 Returns a blank object
+
+To use this function, make an object resource called _gdash_object
 
 @param {String} A category to set on this object as the `type` variable
 @returns {Instance} A blank object instance

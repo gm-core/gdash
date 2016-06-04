@@ -15,12 +15,12 @@ _run(addTwo, 1);
 */
 
 var func = argument[0];
-var args;
+var args = undefined;
 for (var i = 1; i < argument_count; i++) {
     args[i - 1] = argument[i];
 }
 
-// Check if func is a partial (map with 'partial' set to 'partial';
+// Check if func is a partial (map with 'partial' set to 'partial');
 if (ds_exists(func, ds_type_map) && _isEqual(ds_map_find_value(func, 'partial'), 'partial')) {
     var partialId = func;
     func = ds_map_find_value(partialId, 'function');
@@ -28,4 +28,6 @@ if (ds_exists(func, ds_type_map) && _isEqual(ds_map_find_value(func, 'partial'),
 }
 
 return _spread(func, args);
+
+
 

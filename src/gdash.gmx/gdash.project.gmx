@@ -9,6 +9,28 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="gamatas">
+      <script>scripts\assert.gml</script>
+      <script>scripts\assert_does_not_exist.gml</script>
+      <script>scripts\assert_exists.gml</script>
+      <script>scripts\assert_not.gml</script>
+      <script>scripts\create_assert_error.gml</script>
+      <script>scripts\describe.gml</script>
+      <script>scripts\info.gml</script>
+      <script>scripts\int_to_event.gml</script>
+      <script>scripts\test_end.gml</script>
+      <script>scripts\test_fail.gml</script>
+      <script>scripts\test_init.gml</script>
+      <script>scripts\test_next.gml</script>
+      <script>scripts\test_suite_pass.gml</script>
+    </scripts>
+    <scripts name="test_functions">
+      <script>scripts\__double.gml</script>
+      <script>scripts\__add.gml</script>
+      <script>scripts\__sum.gml</script>
+      <script>scripts\__greaterThanThree.gml</script>
+      <script>scripts\__isEven.gml</script>
+    </scripts>
     <scripts name="gdash">
       <script>scripts\_contains.gml</script>
       <script>scripts\_typeOf.gml</script>
@@ -32,28 +54,12 @@
       <script>scripts\_free.gml</script>
       <script>scripts\_spread.gml</script>
       <script>scripts\_length.gml</script>
-    </scripts>
-    <scripts name="gamatas">
-      <script>scripts\assert.gml</script>
-      <script>scripts\assert_does_not_exist.gml</script>
-      <script>scripts\assert_exists.gml</script>
-      <script>scripts\assert_not.gml</script>
-      <script>scripts\create_assert_error.gml</script>
-      <script>scripts\describe.gml</script>
-      <script>scripts\info.gml</script>
-      <script>scripts\int_to_event.gml</script>
-      <script>scripts\test_end.gml</script>
-      <script>scripts\test_fail.gml</script>
-      <script>scripts\test_init.gml</script>
-      <script>scripts\test_next.gml</script>
-      <script>scripts\test_suite_pass.gml</script>
-    </scripts>
-    <scripts name="test_functions">
-      <script>scripts\__double.gml</script>
-      <script>scripts\__add.gml</script>
-      <script>scripts\__sum.gml</script>
-      <script>scripts\__greaterThanThree.gml</script>
-      <script>scripts\__isEven.gml</script>
+      <script>scripts\_get.gml</script>
+      <script>scripts\_set.gml</script>
+      <script>scripts\_log.gml</script>
+      <script>scripts\_indexOf.gml</script>
+      <script>scripts\_split.gml</script>
+      <script>scripts\_join.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

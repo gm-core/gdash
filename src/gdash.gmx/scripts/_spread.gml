@@ -12,10 +12,13 @@ _spread(ds_list_add, _arrayOf(listId, 1, 2, 3, 4));
 */
 
 var func = argument[0];
+
+if (is_undefined(argument1)) {
+    return script_execute(func);
+} 
+
 var args = argument[1];
 switch (_length(args)) {
-  case 0:
-    return script_execute(func);
   case 1:
     return script_execute(func, args[0]);
   case 2:
@@ -47,4 +50,6 @@ switch (_length(args)) {
   case 15:
     return script_execute(func, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7], args[8], args[9], args[10], args[11], args[12], args[13], args[14]);
 }
+
+
 

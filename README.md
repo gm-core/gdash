@@ -1,5 +1,7 @@
 # gdash - GML utility library
 
+Version 1.1.0
+
 ## Introduction
 
 gdash is a functional utility library for GML, inspired by [lodash](https://lodash.com/). It aims to add useful, broad-purposed functions to help aid in game development. If you are doing any kind of data manipulation in your game, you probably want to check out gdash.
@@ -33,7 +35,7 @@ _contains("hello", "ello");
 
 ### `_length(collection)`
 
-Returns the length of the given array or ds_list
+Returns the length of the given array or ds_list. If the collection is `undefined`, returns 0.
 
 ```
 @param {Array|DS_List} The collection to determine the length of
@@ -262,7 +264,7 @@ __lessThanTwo(10);
 // => false
 ```
 
-### `_free(resourceId [, dsType]`
+### `_free(resourceId [, dsType])`
 
 Frees a partial function or ds type from memory. If freeing a ds, you must provide the type (`ds_type_map` or `ds_type_list` supported)
 
@@ -397,5 +399,107 @@ Runs a script with the provided array as arguments.
 @example
 _spread(ds_list_add, _arrayOf(listId, 1, 2, 3, 4));
 // => List now contains 1, 2, 3, 4
+```
+
+### `_set(mapId, locationString, value)`
+
+Sets a nested value following a dot notation. Creates any necessary maps along the way.
+
+```
+@param {DS_Map} The map to set data in
+@param {String} The location of the data to set
+@param {Mixed} The data to set
+
+@example
+// someMap looks like:
+// { nested: {three: {deep: 1}}}
+_set(someMap, 'nested.three.deep', 2);
+// => someMap now looks like:
+// => {nested: {three: {deep: 2}}}
+```
+
+### `_get(mapId, locationString [, default)`
+
+Gets a nested value following a dot notation
+
+```
+@param {DS_Map} The map to get data from
+@param {String} The location of the data to get
+@returns {Mixed} The data found at the given location
+
+@example
+// someMap looks like:
+// { nested: {three: {deep: 1}}}
+_get(someMap, 'nested.three.deep');
+// => 1
+```
+
+### `_log(anything)`
+
+Convenience method for `show_debug_message()`
+
+Converts its argument to a string.
+
+### `_indexOf(collection, value)`
+
+Returns the index of the `value` in the `collection`, where `collection` is a ds_list id or array.
+
+Returns `-1` if the value does not exist in the collection.
+
+```
+@param {Array|DS_LIST} The collection to search
+@param {*} The value to look for
+
+@returns {Real} The index of the value, or -1
+
+@example
+var arr = _arrayOf(1, 2, 3, 4);
+_indexOf(arr, 3);
+// => 2
+
+var list = ds_list_create();
+ds_list_add(list, 'hello', 'world', 3, true);
+_indexOf(list, 'world');
+// => 1
+
+var arr = _arrayOf(1, 2, 3, 4);
+_indexOf(arr, 5);
+// => -1
+```
+
+### `_join(array, joiner)`
+
+Returns a string of the given `array` values combined by the `joiner`
+
+```
+@param {Array} The array to join
+@param {String} The character to join by
+@returns {String} The joined array
+
+@example
+var arr = _arrayOf('hello', 'world');
+_join(arr, ' ');
+// => 'hello world'
+
+var arr = _arrayOf('Peter', 'Paul', 'Mary');
+_join(arr, ', ');
+// => 'Peter, Paul, Mary';
+```
+
+### `_split(string, splitter)`
+
+Returns an array of the given `string` split by the `splitter`
+
+```
+@param {String} The string to split
+@param {String} The character to split by
+@returns {Array} The split string
+
+@example
+_split('Hello, world', ',');
+// => ['Hello', ' world']
+
+_split('Dogs and cats and mice', ' and ');
+// => ['Dogs', 'cats', 'mice']
 ```
 

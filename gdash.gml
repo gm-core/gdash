@@ -55,6 +55,7 @@ if (is_string(collection)) {
 }
 
 
+
 #define _typeOf
 /*
 Returns the variable type of the given argument
@@ -91,8 +92,9 @@ if (is_string(argument0)) {
 } else if (is_undefined(argument0)) {
     return "undefined";
 } else if (is_real(argument0)) {
-        return "real";
+    return "real";
 } 
+
 
 
 #define _isEqual
@@ -183,6 +185,7 @@ if (type == ds_type_map) {
 }
 
 
+
 #define _reduce
 /*
 Reduces a collection by iterating over it with a function
@@ -216,6 +219,7 @@ for (var i = 1; i < _length(array); i++) {
 return result;
 
 
+
 #define _object
 /*
 Returns a blank object
@@ -238,6 +242,7 @@ if (argument_count == 1) {
 }
 
 return obj;
+
 
 
 #define _times
@@ -265,6 +270,7 @@ for (var i = 0; i < count; i++) {
 return arr;
 
 
+
 #define _collect
 /*
 Returns an array of all objects of the provided type
@@ -286,6 +292,7 @@ with (argument0) {
 }
 
 return result;
+
 
 
 #define _filter
@@ -318,6 +325,7 @@ for (var i = 0; i < _length(array); i++) {
 return result;
 
 
+
 #define _concat
 /*
 Appends the values of one array to another.
@@ -346,6 +354,7 @@ repeat (_length(appendArray)) {
 return inputArray;
 
 
+
 #define _destroy
 /*
 Destroys the passed in instance
@@ -362,6 +371,7 @@ _map(_filter(_collect(obj_enemy)), hasNoHealth), _destroy);
 with (argument0) {
     instance_destroy();
 }
+
 
 
 #define _partial
@@ -403,6 +413,7 @@ ds_map_add(partial, 'partial', 'partial');
 return partial;
 
 
+
 #define _arrayOf
 /*
 Returns an array of the given arguments.
@@ -426,6 +437,7 @@ for (i = 0; i < argument_count; i++) {
 return arr;
 
 
+
 #define _run
 /*
 Executes a script or partial with the provided arguments
@@ -444,12 +456,12 @@ _run(addTwo, 1);
 */
 
 var func = argument[0];
-var args;
+var args = undefined;
 for (var i = 1; i < argument_count; i++) {
     args[i - 1] = argument[i];
 }
 
-// Check if func is a partial (map with 'partial' set to 'partial';
+// Check if func is a partial (map with 'partial' set to 'partial');
 if (ds_exists(func, ds_type_map) && _isEqual(ds_map_find_value(func, 'partial'), 'partial')) {
     var partialId = func;
     func = ds_map_find_value(partialId, 'function');
@@ -457,6 +469,7 @@ if (ds_exists(func, ds_type_map) && _isEqual(ds_map_find_value(func, 'partial'),
 }
 
 return _spread(func, args);
+
 
 
 #define _push
@@ -477,6 +490,7 @@ var addMe = argument1;
 
 arr[_length(arr)] = addMe;
 return arr;
+
 
 
 #define _map
@@ -535,6 +549,7 @@ if (_isEqual(type, "array")) {
 
 
 
+
 #define _uniq
 /*
 Returns an array with all duplicate values removed
@@ -560,6 +575,7 @@ return result;
 
 
 
+
 #define _and
 /**
 Returns the value of the provided arguments after a boolean and
@@ -577,6 +593,7 @@ _and(false, true);
 
 */
 return argument0 && argument1;
+
 
 
 #define _find
@@ -598,6 +615,7 @@ for (var i = 0; i < _length(argument0); i++) {
         return argument0[i];
     }
 }
+
 
 
 #define _keys
@@ -629,6 +647,7 @@ while (!is_undefined(nextKey)) {
 }
 
 return keys;
+
 
 
 #define _free
@@ -666,6 +685,7 @@ switch (type) {
 }
 
 
+
 #define _spread
 /*
 Runs a script with the provided array as arguments
@@ -681,10 +701,13 @@ _spread(ds_list_add, _arrayOf(listId, 1, 2, 3, 4));
 */
 
 var func = argument[0];
+
+if (is_undefined(argument1)) {
+    return script_execute(func);
+} 
+
 var args = argument[1];
 switch (_length(args)) {
-  case 0:
-    return script_execute(func);
   case 1:
     return script_execute(func, args[0]);
   case 2:
@@ -718,6 +741,7 @@ switch (_length(args)) {
 }
 
 
+
 #define _length
 /*
 Returns the length of the given array or ds_list
@@ -733,11 +757,184 @@ _length(some_list_id_of_size_5);
 // => 5
 */
 
+if (is_undefined(argument0)) {
+    return 0;
+}
+
 if (_typeOf(argument0) == "array") {
     return array_length_1d(argument0);
 } else if (_typeOf(argument0) == "real" && ds_exists(argument0, ds_type_list)) {
     return ds_list_size(argument0);
+} else if (_typeOf(argument0) == "string") {
+    return string_length(argument0);
 }
 
 
+
+#define _get
+/*
+Gets a nested value following a dot notation
+
+@param {DS_Map} The map to get data from
+@param {String} The location of the data to get
+@returns {Mixed} The data found at the given location
+
+@example
+// someMap looks like:
+// { nested: {three: {deep: 1}}}
+_.get(someMap, 'nested.three.deep');
+// => 1
+
+*/
+
+var map = argument0;
+var location = argument1;
+var locationArray = _split(location, '.');
+
+var temp = map;
+for (var i = 0; i < _length(locationArray); i++) {
+    var thisLoc = locationArray[i];
+    if (ds_map_exists(temp, thisLoc)) {
+        temp = temp[? thisLoc];
+    } else {
+        return undefined;
+    }
+}
+
+return temp;
+
+#define _set
+/*
+Sets a nested value following a dot notation
+Creates along the way if its not set
+
+@param {DS_Map} The map to set data in
+@param {String} The location of the data to set
+@param {Mixed} The data to set
+
+@example
+// someMap looks like:
+// { nested: {three: {deep: 1}}}
+_.set(someMap, 'nested.three.deep', 2);
+// => someMap now looks like:
+// => {nested: {three: {deep: 2}}}
+
+*/
+
+var map = argument0;
+var location = argument1;
+var value = argument2;
+var locationArray = _split(location, '.');
+var finalLocation = locationArray[_length(locationArray) - 1];
+
+var temp = map;
+for (var i = 0; i < _length(locationArray) - 1; i++) {
+    var thisLoc = locationArray[i];
+    var prev = temp;
+    temp = temp[? thisLoc];
+    if (is_undefined(temp)) {
+        prev[? thisLoc] = ds_map_create();
+        temp = prev[? thisLoc];
+    }
+}
+
+temp[? finalLocation] = value;
+
+#define _log
+/*
+Convenience method for show_debug_message()
+Automatically convers arguments to strings
+*/
+show_debug_message(string(argument0));
+
+#define _indexOf
+/*
+Returns the index of the given item in the given array, or -1
+
+@param {Array} The collection to search
+@param {*} The value to look for
+
+@returns {Real} The index of the value, or -1
+*/
+var collection = argument0;
+var search = argument1;
+
+for (var i = 0; i < _length(collection); i++) {
+    if (_isEqual(collection[i], search)) {
+        return i;
+    }
+}
+
+return -1;
+
+#define _split
+/*
+Returns an array of strings represnting the given string
+separated by a given substring
+
+@param {String} The string to split
+@param {String} The character to split by
+@returns {Array} The split string
+
+@example
+_split('Hello, world', ',');
+// => ['Hello', ' world']
+
+_split('Dogs and cats and mice', ' and ');
+// => ['Dogs', 'cats', 'mice']
+*/
+
+var inputString = argument0;
+var splitter = argument1;
+var splitterLength = _length(splitter);
+var output;
+var count = 0;
+
+while (string_pos(splitter, inputString) > 0) {
+    var splitterLocation = string_pos(splitter, inputString);
+    var part = string_copy(inputString, 1, splitterLocation - 1);
+    output[count] = part;
+    count++;
+    inputString = string_delete(inputString, 1, splitterLocation + _length(splitter) - 1);
+}
+
+output[count] = inputString;
+return output;
+
+
+#define _join
+/*
+Returns a string of the given array combined with the given joiner
+
+@param {Array} The array to join
+@param {String} The character to join by
+@returns {String} The joined array
+
+@example
+var arr = _arrayOf('hello', 'world');
+_join(arr, ' ');
+// => 'hello world'
+
+var arr = _arrayOf('Peter', 'Paul', 'Mary');
+_join(arr, ', ');
+// => 'Peter, Paul, Mary';
+*/
+
+var outString = "";
+var inArray = argument0;
+var joiner = argument1;
+
+var arrLength = _length(inArray);
+var maxIndex = arrLength - 1;
+var stringJoiner = string(joiner);
+
+for (var i = 0; i < arrLength; i++) {
+    outString += string(inArray[i]);
+    
+    if (i == maxIndex) {
+        outString += stringJoiner;
+    }
+}
+
+return outString;
 

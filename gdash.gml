@@ -931,7 +931,7 @@ var stringJoiner = string(joiner);
 for (var i = 0; i < arrLength; i++) {
     outString += string(inArray[i]);
     
-    if (i == maxIndex) {
+    if (i != maxIndex) {
         outString += stringJoiner;
     }
 }

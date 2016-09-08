@@ -27,7 +27,7 @@ for (var i = 0; i < _length(locationArray) - 1; i++) {
     var prev = temp;
     temp = temp[? thisLoc];
     if (is_undefined(temp)) {
-        prev[? thisLoc] = ds_map_create();
+        ds_map_add_map(prev, thisLoc, ds_map_create());
         temp = prev[? thisLoc];
     }
 }

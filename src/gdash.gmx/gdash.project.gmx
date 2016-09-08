@@ -60,6 +60,7 @@
       <script>scripts\_indexOf.gml</script>
       <script>scripts\_split.gml</script>
       <script>scripts\_join.gml</script>
+      <script>scripts\_cloneArray.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

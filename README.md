@@ -503,3 +503,18 @@ _split('Dogs and cats and mice', ' and ');
 // => ['Dogs', 'cats', 'mice']
 ```
 
+
+### `_cloneArray(array)`
+
+Clones a given input array, returning a deep copy.
+
+```
+@param {Array} The array to clone
+@returns {Array} A copy of the input array
+
+@example
+var myArray = _arrayOf(1, 2, 3);
+var copyArray = _cloneArray(myArray);
+_isEqual(myArray, copyArray)
+// => true
+```

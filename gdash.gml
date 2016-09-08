@@ -55,7 +55,6 @@ if (is_string(collection)) {
 }
 
 
-
 #define _typeOf
 /*
 Returns the variable type of the given argument
@@ -94,6 +93,7 @@ if (is_string(argument0)) {
 } else if (is_real(argument0)) {
     return "real";
 } 
+
 
 
 
@@ -185,7 +185,6 @@ if (type == ds_type_map) {
 }
 
 
-
 #define _reduce
 /*
 Reduces a collection by iterating over it with a function
@@ -219,7 +218,6 @@ for (var i = 1; i < _length(array); i++) {
 return result;
 
 
-
 #define _object
 /*
 Returns a blank object
@@ -242,7 +240,6 @@ if (argument_count == 1) {
 }
 
 return obj;
-
 
 
 #define _times
@@ -270,7 +267,6 @@ for (var i = 0; i < count; i++) {
 return arr;
 
 
-
 #define _collect
 /*
 Returns an array of all objects of the provided type
@@ -292,7 +288,6 @@ with (argument0) {
 }
 
 return result;
-
 
 
 #define _filter
@@ -325,7 +320,6 @@ for (var i = 0; i < _length(array); i++) {
 return result;
 
 
-
 #define _concat
 /*
 Appends the values of one array to another.
@@ -354,7 +348,6 @@ repeat (_length(appendArray)) {
 return inputArray;
 
 
-
 #define _destroy
 /*
 Destroys the passed in instance
@@ -371,7 +364,6 @@ _map(_filter(_collect(obj_enemy)), hasNoHealth), _destroy);
 with (argument0) {
     instance_destroy();
 }
-
 
 
 #define _partial
@@ -413,7 +405,6 @@ ds_map_add(partial, 'partial', 'partial');
 return partial;
 
 
-
 #define _arrayOf
 /*
 Returns an array of the given arguments.
@@ -435,7 +426,6 @@ for (i = 0; i < argument_count; i++) {
 }
 
 return arr;
-
 
 
 #define _run
@@ -472,6 +462,7 @@ return _spread(func, args);
 
 
 
+
 #define _push
 /*
 Adds a value to the end of an array
@@ -490,7 +481,6 @@ var addMe = argument1;
 
 arr[_length(arr)] = addMe;
 return arr;
-
 
 
 #define _map
@@ -549,7 +539,6 @@ if (_isEqual(type, "array")) {
 
 
 
-
 #define _uniq
 /*
 Returns an array with all duplicate values removed
@@ -575,7 +564,6 @@ return result;
 
 
 
-
 #define _and
 /**
 Returns the value of the provided arguments after a boolean and
@@ -593,7 +581,6 @@ _and(false, true);
 
 */
 return argument0 && argument1;
-
 
 
 #define _find
@@ -615,7 +602,6 @@ for (var i = 0; i < _length(argument0); i++) {
         return argument0[i];
     }
 }
-
 
 
 #define _keys
@@ -647,7 +633,6 @@ while (!is_undefined(nextKey)) {
 }
 
 return keys;
-
 
 
 #define _free
@@ -683,7 +668,6 @@ switch (type) {
         ds_list_destroy(dsId);
         break;
 }
-
 
 
 #define _spread
@@ -742,6 +726,7 @@ switch (_length(args)) {
 
 
 
+
 #define _length
 /*
 Returns the length of the given array or ds_list
@@ -768,6 +753,7 @@ if (_typeOf(argument0) == "array") {
 } else if (_typeOf(argument0) == "string") {
     return string_length(argument0);
 }
+
 
 
 
@@ -803,6 +789,7 @@ for (var i = 0; i < _length(locationArray); i++) {
 
 return temp;
 
+
 #define _set
 /*
 Sets a nested value following a dot notation
@@ -833,12 +820,13 @@ for (var i = 0; i < _length(locationArray) - 1; i++) {
     var prev = temp;
     temp = temp[? thisLoc];
     if (is_undefined(temp)) {
-        prev[? thisLoc] = ds_map_create();
+        ds_map_add_map(prev, thisLoc, ds_map_create());
         temp = prev[? thisLoc];
     }
 }
 
 temp[? finalLocation] = value;
+
 
 #define _log
 /*
@@ -847,17 +835,37 @@ Automatically convers arguments to strings
 */
 show_debug_message(string(argument0));
 
+
 #define _indexOf
 /*
 Returns the index of the given item in the given array, or -1
 
-@param {Array} The collection to search
+@param {Array|DS_LIST} The collection to search
 @param {*} The value to look for
 
 @returns {Real} The index of the value, or -1
+
+@example
+var arr = _arrayOf(1, 2, 3, 4);
+_indexOf(arr, 3);
+// => 2
+
+var list = ds_list_create();
+ds_list_add(list, 'hello', 'world', 3, true);
+_indexOf(list, 'world');
+// => 1
+
+var arr = _arrayOf(1, 2, 3, 4);
+_indexOf(arr, 5);
+// => -1
+
 */
 var collection = argument0;
 var search = argument1;
+
+if (_typeOf(collection) == "real" && ds_exists(collection, ds_type_list)) {
+    return ds_list_find_index(collection, search);
+}
 
 for (var i = 0; i < _length(collection); i++) {
     if (_isEqual(collection[i], search)) {
@@ -866,6 +874,7 @@ for (var i = 0; i < _length(collection); i++) {
 }
 
 return -1;
+
 
 #define _split
 /*
@@ -900,6 +909,7 @@ while (string_pos(splitter, inputString) > 0) {
 
 output[count] = inputString;
 return output;
+
 
 
 #define _join
@@ -937,4 +947,30 @@ for (var i = 0; i < arrLength; i++) {
 }
 
 return outString;
+
+
+#define _cloneArray
+/*
+Clones a given input array, returning a deep copy.
+
+@param {Array} The array to clone
+@returns {Array} A copy of the input array
+
+@example
+var myArray = _arrayOf(1, 2, 3);
+var copyArray = _cloneArray(myArray);
+_isEqual(myArray, copyArray)
+// => true
+*/
+
+var inputArray = argument0;
+
+var outputArray;
+outputArray[0] = -1;
+
+for (var i = 0; i < _length(inputArray); i++) {
+    outputArray[i] = inputArray[i];
+}
+
+return outputArray;
 

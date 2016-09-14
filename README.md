@@ -12,6 +12,36 @@ Download [the latest release](https://github.com/twisterghost/gdash/releases) an
 
 ## API
 
+* [_and](#_andvaluea-valueb)
+* [_arrayOf](#_arrayofvalue1-value2--value14)
+* [_cloneArray](#_clonearrayarray)
+* [_collect](#_collectobjecttype)
+* [_concat](#_concatarraya-arrayb)
+* [_contains](#_containscollection-target-fromindex--0)
+* [_destroy](#_destroyinstance)
+* [_filter](#_filterarray-filterscript)
+* [_find](#_findarray-findscript)
+* [_free](#_freeresourceid--dstype)
+* [_get](#_getmapid-locationstring--default)
+* [_indexOf](#_indexofcollection-value)
+* [_isEqual](#_isequalvaluea-valueb)
+* [_join](#_joinarray-joiner)
+* [_keys](#_keysdsmapid)
+* [_length](#_lengthcollection)
+* [_log](#_loganything)
+* [_map](#_mapcolletion-mapscript)
+* [_object](#_object)
+* [_partial](#_partialscript-arg0-arg1--arg13)
+* [_push](#_pusharray-value)
+* [_reduce](#_reducecollection-reducerscript)
+* [_run](#_runscript-arg0-arg1--arg13)
+* [_set](#_setmapid-locationstring-value)
+* [_split](#_splitstring-splitter)
+* [_spread](#_spreadscript-argarray)
+* [_times](#_timesscript)
+* [_typeOf](#_typeofvalue)
+* [_uniq](#_uniqarray)
+
 ### `_and(valueA, valueB)`
 
 Returns the value of the provided arguments after a boolean `and`

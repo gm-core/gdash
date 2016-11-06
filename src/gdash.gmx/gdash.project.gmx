@@ -64,7 +64,6 @@
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\_gdash_object</object>
     <objects name="test_automation">
       <object>objects\obj_gdash_test_1</object>
     </objects>

@@ -37,6 +37,105 @@ test_next();
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="24">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// _cloneArray
+describe("_cloneArray", "Returns a clone of the given array");
+
+var arr = _arrayOf(2, 1, 5, 4, 6);
+var cloned = _cloneArray(arr);
+
+for (var i = 0; i &lt; array_length_1d(arr); i++) {
+    assert(cloned[i], arr[i]);
+}
+
+test_end();
+game_end();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="23">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// _get
+describe("_get", "Retrieves a deeply nested map value");
+
+var map = ds_map_create();
+map[? "hello"] = ds_map_create();
+var hello = map[? "hello"];
+hello[? "world"] = 2;
+
+assert(_get(map, "hello.world"), 2);
+
+test_end();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="22">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// _set
+describe("_set", "Sets a value safely in a deeply nested map");
+
+var map = ds_map_create();
+_set(map, "hello.world", 2);
+
+var hello = map[? "hello"];
+assert(hello[? "world"], 2);
+
+test_end();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="21">
       <action>
         <libid>1</libid>
@@ -54,7 +153,8 @@ test_next();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>describe('_indexOf', 'Returns the index of a value in a collection');
+            <string>/// _indexOf
+describe('_indexOf', 'Returns the index of a value in a collection');
 
 var arr = _arrayOf(1, 2, 3, 4);
 var list = ds_list_create();
@@ -70,7 +170,6 @@ assert(_indexOf(list, 2), 1);
 assert(_indexOf(list, 100), -1);
 
 test_end();
-game_end();
 </string>
           </argument>
         </arguments>

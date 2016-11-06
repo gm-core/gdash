@@ -31,4 +31,3 @@ while (string_pos(splitter, inputString) > 0) {
 output[count] = inputString;
 return output;
 
-

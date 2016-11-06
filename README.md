@@ -1,10 +1,10 @@
 # gdash - GML utility library
 
-Version 1.2.0
+Version 1.3.0
 
 ## Introduction
 
-gdash is a functional utility library for GML, inspired by [lodash](https://lodash.com/). It aims to add useful, broad-purposed functions to help aid in game development. If you are doing any kind of data manipulation in your game, you probably want to check out gdash.
+gdash is a functional utility library for GML, inspired by [lodash](https://lodash.com/). It aims to add useful, broad-purposed functions to help aid in game development. If you are doing any kind of data manipulation in your game, gdash can help out.
 
 ## Install
 

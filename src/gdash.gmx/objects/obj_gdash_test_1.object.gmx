@@ -37,6 +37,45 @@ test_next();
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="21">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>describe('_indexOf', 'Returns the index of a value in a collection');
+
+var arr = _arrayOf(1, 2, 3, 4);
+var list = ds_list_create();
+list[| 0] = 1;
+list[| 1] = 2;
+list[| 2] = 3;
+list[| 3] = 4;
+
+assert(_indexOf(arr, 2), 1);
+assert(_indexOf(arr, 3), 2);
+assert(_indexOf(arr, 6), -1);
+assert(_indexOf(list, 2), 1);
+assert(_indexOf(list, 100), -1);
+
+test_end();
+game_end();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="20">
       <action>
         <libid>1</libid>
@@ -70,9 +109,7 @@ assert(res[2], 2);
 assert(res[3], 30);
 assert(res[4], 40);
 assert(res[5], 50);
-
 test_end();
-game_end();
 </string>
           </argument>
         </arguments>

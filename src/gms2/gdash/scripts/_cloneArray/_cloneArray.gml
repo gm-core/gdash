@@ -1,5 +1,5 @@
 /// @desc Clones a given input array, returning a deep copy.
-/// @param {Array} The array to clone
+/// @param {Array} array The array to clone
 /// @returns {Array} A copy of the input array
 /*
 @example

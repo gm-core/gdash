@@ -1,6 +1,6 @@
 /// @desc Executes a script or partial with the provided arguments
-/// @param {Script|Real} The script to run or the ID of the partial to run
-/// @param 1-14 {*} Arguments to pass the script
+/// @param {Script|Real} scriptOrPartial The script to run or the ID of the partial to run
+/// @param {*} arguments... Arguments to pass the script
 /// @returns {*} The return value of the script
 /*
 @example

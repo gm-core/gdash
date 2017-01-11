@@ -1,5 +1,6 @@
 /// @desc Frees a partial function from memory
-/// @param {Real} The partial ID to free
+/// @param {Real} resource The partial ID to free
+/// @param {DS_TYPE} optionalType The type of resource to free
 /*
 @example
 var __sometihng = _partial(someScript, 1);

@@ -1,7 +1,7 @@
 /// @descSets a nested value following a dot notation. Creates along the way if its not set.
-/// @param {DS_Map} The map to set data in
-/// @param {String} The location of the data to set
-/// @param {Mixed} The data to set
+/// @param {DS_Map} map The map to set data in
+/// @param {String} locationString The location of the data to set
+/// @param {Mixed} value The data to set
 /*
 @example
 // someMap looks like:

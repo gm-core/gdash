@@ -1,6 +1,6 @@
 /// @desc Returns an array of the result of a function run the given number of times
-/// @param {Real} The number of times to execute the function
-/// @param {Script} The script to execute
+/// @param {Real} executeCount The number of times to execute the function
+/// @param {Script} script The script to execute
 /// @returns {Array} An array of the script results
 /*
 @example

@@ -1,5 +1,5 @@
 /// @desc Returns the variable type of the given argument
-/// @param {*} A variable to check the type of
+/// @param {*} value A variable to check the type of
 /// @returns {String} The type of the variable as a human readable string
 /*
 @example

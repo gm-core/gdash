@@ -1,6 +1,6 @@
 /// @desc Iterates over an array, returning the first element that the given script returns true for.
-/// @param {Array} The array to iterate over
-/// @param {Script} The script to run on the given element
+/// @param {Array} array The array to iterate over
+/// @param {Script} findScript The script to run on the given element
 /// @returns {*} The first element that returns truthy from the script
 /*
 @example

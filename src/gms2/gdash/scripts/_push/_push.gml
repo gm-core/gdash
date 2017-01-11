@@ -1,6 +1,6 @@
 /// @desc Adds a value to the end of an array
-/// @param {Array} The array to add the value to
-/// @param {*} The value to add
+/// @param {Array} array The array to add the value to
+/// @param {*} value The value to add
 /// @returns {Array} The array with the value added
 /*
 @example

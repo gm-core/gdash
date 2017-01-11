@@ -1,5 +1,5 @@
 /// @desc Returns an array contains all keys in a ds_map. Order is not guaranteed due to how ds_maps are stored.
-/// @param {DS_Map} The map to get the keys from
+/// @param {DS_Map} map The map to get the keys from
 /// @returns {Array} An array of all keys in the map
 /*
 @example

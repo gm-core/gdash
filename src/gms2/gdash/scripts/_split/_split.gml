@@ -1,6 +1,6 @@
 /// @desc Returns an array of strings represnting the given string separated by a given substring
-/// @param {String} The string to split
-/// @param {String} The character to split by
+/// @param {String} string The string to split
+/// @param {String} splitChar The character to split by
 /// @returns {Array} The split string
 /*
 @example

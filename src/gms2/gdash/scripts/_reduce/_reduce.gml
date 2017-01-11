@@ -1,6 +1,6 @@
 /// @desc Reduces a collection by iterating over it with a function. Provided script should take 2 arguments: total, value. On the first call, total is undefined.
-/// @param {Array} The array to reduce
-/// @param {Script} The script to reduce with
+/// @param {Array} inputArray The array to reduce
+/// @param {Script} recuderScript The script to reduce with
 /// @returns {*} The reduced value from the given script
 /*
 @example

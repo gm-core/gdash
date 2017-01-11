@@ -26,4 +26,3 @@ assert(_contains(map, "world"), true);
 assert(_contains(map, 2), true);
 ds_map_destroy(map);
 test_end();
-

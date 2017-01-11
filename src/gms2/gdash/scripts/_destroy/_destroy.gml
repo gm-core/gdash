@@ -1,5 +1,5 @@
 /// @desc Destroys the passed in instance
-/// @param {Instance} The instance to destroy
+/// @param {Instance} instance The instance to destroy
 /*
 @example
 _destroy(obj_enemy);

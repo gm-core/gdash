@@ -1,7 +1,7 @@
 /// @desc Runs a script with the provided array as arguments
 /// Note: This script is disgusting, but useful.
-/// @param {Script} The script to run
-/// @param {Array} An array to provide as individual arguments
+/// @param {Script} script The script to run
+/// @param {Array} arrayOfArguments An array to provide as individual arguments
 /// @return {*} The return value of the script
 /*
 @example

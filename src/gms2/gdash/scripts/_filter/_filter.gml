@@ -1,6 +1,6 @@
 /// @desc Returns an array where values of the input array are truthy when run through the provided function.
-/// @param {Array} The array to filter
-/// @param {Script} The script to filter with
+/// @param {Array} inputArray The array to filter
+/// @param {Script} filterScript The script to filter with
 /// @returns {Array} The filtered array
 /*
 @example

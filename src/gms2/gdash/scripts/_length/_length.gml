@@ -1,5 +1,5 @@
 /// @desc Returns the length of the given array or ds_list
-/// @param {Array|DS_List} The collection to determine the length of
+/// @param {Array|DS_List} collection The collection to determine the length of
 /// @returns {Real} The length of the collection
 /*
 @example

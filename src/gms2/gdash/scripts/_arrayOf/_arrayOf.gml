@@ -1,5 +1,5 @@
 /// @desc Returns an array of the given arguments.
-/// @param 0-14 {*) Values to put into an array
+/// @param {*) values... Values to put into an array
 /// @returns {Array} An array of the given parameters
 /*
 @example

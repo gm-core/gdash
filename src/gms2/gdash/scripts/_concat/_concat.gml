@@ -1,6 +1,6 @@
 /// @desc Appends the values of one array to another.
-/// @param {Array} The array to append to
-/// @param {Array} The array to append
+/// @param {Array} baseArray The array to append to
+/// @param {Array} arrayToAppend The array to append
 /// @returns {Array} The concatenated array
 /*
 @example

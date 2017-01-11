@@ -1,6 +1,6 @@
 /// @desc Checks if two values are equal, being safe about type and checking first-level children of ds_lists and ds_maps. Returns false on type inequality rather than throwing an error.
-/// @param {*} First value to compare
-/// @param {*} Second value to compare
+/// @param {*} firstValue First value to compare
+/// @param {*} secondValue Second value to compare
 /// @param {ds_type} [Optional] If specified, assumes this type instead of inferring the type. Only specify this if using _isEqual for a ds
 /// @returns {Boolean} true if the values are equal, false otherwise
 /*

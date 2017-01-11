@@ -1,6 +1,6 @@
 /// @desc Returns a string of the given array combined with the given joiner
-/// @param {Array} The array to join
-/// @param {String} The character to join by
+/// @param {Array} array The array to join
+/// @param {String} joinChar The character to join by
 /// @returns {String} The joined array
 /*
 @example

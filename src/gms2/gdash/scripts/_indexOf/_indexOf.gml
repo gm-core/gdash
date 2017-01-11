@@ -1,6 +1,6 @@
 /// @desc Returns the index of the given item in the given array, or -1
-/// @param {Array|DS_List} The collection to search
-/// @param {*} The value to look for
+/// @param {Array|DS_List} collection The collection to search
+/// @param {*} value The value to look for
 /// @returns {Real} The index of the value, or -1
 
 var collection = argument0;

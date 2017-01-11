@@ -1,7 +1,7 @@
 /// @desc Returns true if the given array contains the given value
-/// @param {String|Array|DS_Map} The collection to search
-/// @param {*} The value to look for
-/// @param {Real} [0] The index to begin looking from
+/// @param {String|Array|DS_Map} collection The collection to search
+/// @param {*} value The value to look for
+/// @param {Real} optionalFromIndex [0] The index to begin looking from
 /// @returns {Boolean} True if the collection contains the target, otherwise false
 /*
 @example

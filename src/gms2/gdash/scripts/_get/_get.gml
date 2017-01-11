@@ -1,6 +1,6 @@
 /// @desc Gets a nested value following a dot notation
-/// @param {DS_Map} The map to get data from
-/// @param {String} The location of the data to get
+/// @param {DS_Map} map The map to get data from
+/// @param {String} locationString The location of the data to get
 /// @returns {Mixed} The data found at the given location
 /*
 @example

@@ -1,8 +1,7 @@
 /// @desc Iterates over a given collection, running the provided function for each value in the collection. Returns an array of all function results at each index.
-
-/// @param {Array|DS_Map|DS_List} The collection to map
-/// @param {Script} The script to map over the collection
-/// @param {ds_type|String} ["array"] The type of collection. Only provide when using a DS
+/// @param {Array|DS_Map|DS_List} collection The collection to map
+/// @param {Script} script The script to map over the collection
+/// @param {ds_type|String} optionalType ["array"] The type of collection. Only provide when using a DS
 /// @returns {Array} An array of all mapped results
 /*
 @example

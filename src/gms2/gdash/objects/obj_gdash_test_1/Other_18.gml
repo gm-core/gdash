@@ -1,0 +1,10 @@
+/// _find
+describe("_find", "returns the first element in an array that is truthy in the function");
+
+var arr = _arrayOf(0, 1, 2, 3, 40, 5);
+var res = _find(arr, __greaterThanThree);
+
+assert(res, 40);
+
+test_end();
+

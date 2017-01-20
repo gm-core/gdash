@@ -1,6 +1,6 @@
 # gdash - GML utility library
 
-Version 1.3.0
+Version 2.0.0
 
 ## Introduction
 
@@ -30,7 +30,6 @@ Download [the latest release](https://github.com/twisterghost/gdash/releases) an
 * [_length](#_lengthcollection)
 * [_log](#_loganything)
 * [_map](#_mapcolletion-mapscript)
-* [_object](#_object)
 * [_partial](#_partialscript-arg0-arg1--arg13)
 * [_push](#_pusharray-value)
 * [_reduce](#_reducecollection-reducerscript)
@@ -348,23 +347,6 @@ ds_map_add(map, 'hello', 6);
 ds_map_add(map, 'world', 10);
 _map(map, divideByTwo, ds_type_map);
 // => [3, 5]
-```
-
-### `_object()`
-
-Returns a blank object
-
-To use this function, make an object resource called `_gdash_object`
-
-```
-@param {String} A category to set on this object as the `type` variable
-@returns {Instance} A blank object instance
-
-@example
-var data = _object('test');
-data.hello = 'world';
-show_debug_message(data.type);
-// => prints "test"
 ```
 
 ### `_partial(script, arg0, arg1 ... arg13)`

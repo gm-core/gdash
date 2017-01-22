@@ -11,7 +11,7 @@
         "6674cf91-7ea3-4e59-9ebf-1f0caf512692"
     ],
     "filterType": "GMScript",
-    "folderName": "test_functions",
+    "folderName": "unit test",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

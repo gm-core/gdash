@@ -12,20 +12,22 @@ _.set(someMap, 'nested.three.deep', 2);
 
 */
 
-var map = argument0;
-var location = argument1;
-var value = argument2;
-var locationArray = _split(location, ".");
-var finalLocation = locationArray[_length(locationArray) - 1];
+var 
+map = argument0,
+location = argument1,
+value = argument2,
+locationArray = _split(location, "."),
+n = _length(locationArray),
+finalLocation = locationArray[n - 1],
+thisLoc, prev;
 
-var temp = map;
-for (var i = 0; i < _length(locationArray) - 1; i++) {
-    var thisLoc = locationArray[i];
-    var prev = temp;
-    temp = temp[? thisLoc];
+for (var i = 0; i < n - 1; i++) {
+    thisLoc = locationArray[i];
+    prev = temp;
+    map = map[? thisLoc];
     if (is_undefined(temp)) {
         ds_map_add_map(prev, thisLoc, ds_map_create());
-        temp = prev[? thisLoc];
+        map = prev[? thisLoc];
     }
 }
 

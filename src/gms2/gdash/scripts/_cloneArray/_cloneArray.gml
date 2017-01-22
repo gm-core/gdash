@@ -9,13 +9,9 @@ _isEqual(myArray, copyArray)
 // => true
 */
 
-var inputArray = argument0;
+// Abuse GML array copy into script mechanics.
 
-var outputArray;
-outputArray[0] = -1;
-
-for (var i = 0; i < _length(inputArray); i++) {
-    outputArray[i] = inputArray[i];
-}
-
-return outputArray;
+var
+result = argument0;
+result[0] = result[0]; // this forces a copy    
+return result;

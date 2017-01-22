@@ -23,9 +23,10 @@ _isEqual(map, map2, ds_type_map);
 
 */
 
-var compareA = argument[0];
-var compareB = argument[1];
-var type;
+var 
+compareA = argument[0]m
+compareB = argument[1],
+type;
 
 if (argument_count == 3) {
     type = argument[2];
@@ -38,8 +39,8 @@ if (argument_count == 3) {
                 return false;
             }
             
-            for (var i = 0; i < _length(compareA); i++) {
-                if (!_isEqual(compareA[i], compareB[i])) {
+            for (var i = _length(compareA)-1; i >= 0; i--) {
+                if (!_isEqual(compareA[@ i], compareB[@ i])) {
                     return false;
                 }
             }
@@ -57,7 +58,7 @@ if (type == ds_type_map) {
         return false;
     }
     
-    for (var i = 0; i < _length(aKeys); i++) {
+    for (var i = _length(aKeys)-1; i >= 0; i--) {
         if (!_isEqual(ds_map_find_value(compareA, aKeys[i]), ds_map_find_value(compareB, aKeys[i]))) {
             return false;
         }
@@ -65,11 +66,11 @@ if (type == ds_type_map) {
     
     return true;
 } else if (type == ds_type_list) {
-    if (!_isEqual(ds_list_size(compareA), ds_list_size(compareB))) {
+    if (ds_list_size(compareA) != ds_list_size(compareB)) {
         return false;
     }
     
-    for (var i = 0; i < ds_list_size(compareA); i++) {
+    for (var i = ds_list_size(compareA); i >= 0 ; i--) {
         if (!_isEqual(ds_list_find_value(compareA, i), ds_list_find_value(compareB, i))) {
             return false;
         }

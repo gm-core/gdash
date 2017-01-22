@@ -8,9 +8,7 @@ _push(_arrayOf(1, 2), 3);
 // => [1, 2, 3]
 */
 
-var arr = argument0;
-var addMe = argument1;
-
-arr[_length(arr)] = addMe;
-return arr;
+gml_pragma("forceinline");
+argument0[@ _length(argument0)] = argument1;
+return argument0;
 

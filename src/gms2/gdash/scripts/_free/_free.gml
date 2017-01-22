@@ -3,13 +3,15 @@
 /// @param {DS_TYPE} optionalType The type of resource to free
 /*
 @example
-var __sometihng = _partial(someScript, 1);
+var __something = _partial(someScript, 1);
 __something(2);
 _free(__something);
 
 */
-var dsId = argument[0];
-var type;
+
+var 
+dsId = argument[0],
+type;
 
 if (argument_count == 1) {
     type = ds_type_map;
@@ -29,4 +31,5 @@ switch (type) {
         ds_list_destroy(dsId);
         break;
 }
+
 

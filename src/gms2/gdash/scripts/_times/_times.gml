@@ -8,10 +8,11 @@ _times(3, returnTheValue5);
 // => [5, 5, 5];
 
 */
-var count = argument[0];
-var func = argument[1];
 
-var arr;
+var 
+count = argument0,
+func = argument1,
+arr[count-1] = 0;
 
 for (var i = 0; i < count; i++) {
     arr[i] = _run(func, i);

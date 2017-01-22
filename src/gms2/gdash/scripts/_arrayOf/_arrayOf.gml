@@ -10,10 +10,10 @@ _arrayOf('hello', 'world', 'i', 'am', 'an', 'array');
 // => ['hello', 'world', 'i', 'am', 'an', 'array'];
 */
 
-var arr;
-for (i = 0; i < argument_count; i++) {
-    arr[i] = argument[i];
+var result;
+
+for (i = argument_count-1; i >= 0; i--) {
+    result[i] = argument[i];
 }
 
-return arr;
-
+return result;

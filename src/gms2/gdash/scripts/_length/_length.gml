@@ -22,5 +22,5 @@ if (_typeOf(argument0) == "array") {
     return string_length(argument0);
 }
 
-
+return 0;
 

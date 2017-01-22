@@ -11,5 +11,6 @@ _and(false, true);
 // => false
 
 */
+gml_pragma("forceinline");
 return argument0 && argument1;
 

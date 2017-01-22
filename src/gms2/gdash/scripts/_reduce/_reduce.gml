@@ -13,13 +13,14 @@ _reduce(arr, concat);
 // => 'helloworld';
 */
 
-var array = argument[0];
-var func = argument[1];
+var 
+array = argument[0],
+func = argument[1],
+result = undefined,
+n = _length(array);
 
-var result = _run(func, undefined, array[0]);
-
-for (var i = 1; i < _length(array); i++) {
-    result = _run(func, result, array[i]);
+for (var i = 0; i < n; i++) {
+    result = _run(func, result, array[@ i]);
 }
 
 return result;

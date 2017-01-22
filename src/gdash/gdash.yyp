@@ -400,25 +400,6 @@
             }
         },
         {
-            "Key": "6e0279a3-8932-432e-b399-b4c2f985b0c5",
-            "Value": {
-                "id": "fed56c61-7e22-4140-95ab-c2640ac98b03",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "notes\\notes.yy",
-                "resourceType": "GMNotes"
-            }
-        },
-        {
             "Key": "4b2720a1-e8f2-435e-b526-fecdfa79b961",
             "Value": {
                 "id": "948601bf-6a23-4483-8736-d84865751576",
@@ -1442,25 +1423,6 @@
                 ],
                 "resourcePath": "views\\487f543a-4cda-49b2-8606-d69071691939.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "35170da1-3c2d-439d-ae70-2fcf78b4ca36",
-            "Value": {
-                "id": "d7723e5f-705f-4a3e-b069-f0926b947b65",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "notes\\compatibility_report_110117_90219219.yy",
-                "resourceType": "GMNotes"
             }
         }
     ],

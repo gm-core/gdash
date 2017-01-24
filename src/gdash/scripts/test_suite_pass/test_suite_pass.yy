@@ -1,5 +1,5 @@
 {
-    "id": "dbf428c1-1e51-44a8-81d8-8099f5757ec1",
+    "id": "a2a1d716-72c2-48f6-a6d7-233361694051",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "test_suite_pass",

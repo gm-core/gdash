@@ -4,4 +4,4 @@
  * caution, as this is not supported for direct developer use
  * within the test automation suite.
  */
-event_perform(ev_other, int_to_event(global.testNumber++));
+event_user(global.gamatas_testNumber++);

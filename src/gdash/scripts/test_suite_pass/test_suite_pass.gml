@@ -3,10 +3,10 @@
  * otherwise, quits. This should be called by itself in the last user
  * defined action on your test controller object.
  */
-info("TEST SUITE PASSED: " + global.testSuiteName);
+gamatas_info("TEST SUITE PASSED: " + global.gamatas_testSuiteName);
 if (room != room_last) {
     room_goto_next();
 } else {
-    info("ALL TESTS PASSING");
+    gamatas_info("ALL TESTS PASSING");
     game_end();
 }

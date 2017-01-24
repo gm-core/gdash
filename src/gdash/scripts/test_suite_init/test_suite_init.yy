@@ -1,8 +1,8 @@
 {
-    "id": "b5ad72d1-0993-40f4-9fee-e88d67c9f7c7",
+    "id": "a0f14370-d8cd-40df-8d1e-c4e5bda1652c",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "assert_exists",
+    "name": "test_suite_init",
     "IsCompatibility": false,
     "IsDnD": false
 }

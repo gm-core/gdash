@@ -1,9 +1,9 @@
 /// _typeOf
-describe("_typeOf", "Should return the type of any known data type");
+test_start("_typeOf", "Should return the type of any known data type");
 
-assert(_typeOf(100), "real");
-assert(_typeOf("hello"), "string");
-assert(_typeOf(undefined), "undefined");
+assert_equal(_typeOf(100), "real");
+assert_equal(_typeOf("hello"), "string");
+assert_equal(_typeOf(undefined), "undefined");
 
 test_end();
 

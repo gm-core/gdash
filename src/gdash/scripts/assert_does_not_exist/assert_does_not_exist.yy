@@ -1,5 +1,5 @@
 {
-    "id": "0901360a-a162-4c78-b640-eb7ae5bd87e1",
+    "id": "b32257d4-ac63-4961-93cd-d23f41da4deb",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "assert_does_not_exist",

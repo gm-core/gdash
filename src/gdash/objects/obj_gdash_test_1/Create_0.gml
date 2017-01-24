@@ -1,10 +1,2 @@
-/// Test descrption
-/*
- * This test ensures that gdash is working properly
- */
-
-test_init("gdash");
+test_suite_init("gdash suite 1");
 test_next();
-
-/* */
-/*  */

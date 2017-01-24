@@ -419,9 +419,9 @@
             }
         },
         {
-            "Key": "e0fc46fa-4a3f-4dff-9f7c-bbbacf49757e",
+            "Key": "996403d5-3dc3-4db4-b513-6322da671b2c",
             "Value": {
-                "id": "fbaf4b10-186c-418c-915c-64ce52c9ba69",
+                "id": "2c48fed6-adc7-45fc-8c3b-c1f49dd5c89c",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -433,14 +433,14 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\\describe\\describe.yy",
+                "resourcePath": "scripts\\test_next\\test_next.yy",
                 "resourceType": "GMScript"
             }
         },
         {
-            "Key": "dbf428c1-1e51-44a8-81d8-8099f5757ec1",
+            "Key": "b5ad72d1-0993-40f4-9fee-e88d67c9f7c7",
             "Value": {
-                "id": "6420b858-ebf0-4b70-a02d-de6a5be2492c",
+                "id": "1f2b636d-359d-4983-830e-e66e92c43048",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -452,14 +452,14 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\\test_suite_pass\\test_suite_pass.yy",
+                "resourcePath": "scripts\\assert_exists\\assert_exists.yy",
                 "resourceType": "GMScript"
             }
         },
         {
-            "Key": "e811c9f1-b116-489f-940c-6e2575a6fc0b",
+            "Key": "b32257d4-ac63-4961-93cd-d23f41da4deb",
             "Value": {
-                "id": "8c469354-7255-4663-9198-9aed75d29797",
+                "id": "565469b2-3c1c-4871-acc9-cd290347d9b1",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -471,71 +471,14 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\\test_init\\test_init.yy",
+                "resourcePath": "scripts\\assert_does_not_exist\\assert_does_not_exist.yy",
                 "resourceType": "GMScript"
             }
         },
         {
-            "Key": "37a9a856-63f6-44d9-91f7-ae3bda6f0d00",
+            "Key": "aa10c8c9-61fd-4c64-8f0c-020a594c89ae",
             "Value": {
-                "id": "3ceb5141-bdce-4d81-9680-c394d353cba9",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "scripts\\create_assert_error\\create_assert_error.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "d6c7075b-43fa-455a-8242-42de8f43b800",
-            "Value": {
-                "id": "4b4ae749-aec9-4ff9-a89f-670510a37fc9",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "scripts\\assert\\assert.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "42399293-59c8-4d21-9b4c-ebca4668426b",
-            "Value": {
-                "id": "569add6d-12b1-40af-ac35-5b0c4f287142",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "scripts\\assert_not\\assert_not.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "0a73cea8-e08e-4ed5-b60e-dbf42d1ac111",
-            "Value": {
-                "id": "7e7b68e1-27ab-4927-8ac6-9d4225fa179a",
+                "id": "98463901-8686-4cbf-ac65-28386969fb1b",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -548,6 +491,63 @@
                     "default"
                 ],
                 "resourcePath": "scripts\\test_fail\\test_fail.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "66f29b20-fcc2-4666-a728-ab9cc5f5754e",
+            "Value": {
+                "id": "d9e366c1-b83d-4b98-9bd6-8802157e7365",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\assert_not_equal\\assert_not_equal.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4661396e-c309-4810-a304-19ae7e55020d",
+            "Value": {
+                "id": "4e4e2cf7-fb7e-45b2-966a-d0b4fa7b91cb",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\test_end\\test_end.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e92bff8e-c7f9-4b62-99dd-7c2c8e34a8c5",
+            "Value": {
+                "id": "8c8d8eb7-3d69-488c-a5e4-577851daeb0e",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\assert\\assert.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -628,9 +628,9 @@
             }
         },
         {
-            "Key": "ba3e7b6b-21ed-494e-971b-cb1b202bd637",
+            "Key": "a2a1d716-72c2-48f6-a6d7-233361694051",
             "Value": {
-                "id": "b7d4c284-2ef9-4d36-aea3-7d214cd99165",
+                "id": "04f042df-5d23-4082-a92f-5ca191e9db86",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -642,14 +642,14 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\\test_end\\test_end.yy",
+                "resourcePath": "scripts\\test_suite_pass\\test_suite_pass.yy",
                 "resourceType": "GMScript"
             }
         },
         {
-            "Key": "a406ae11-12ec-49cd-b1cc-45a333ccd935",
+            "Key": "a0f14370-d8cd-40df-8d1e-c4e5bda1652c",
             "Value": {
-                "id": "a1b17962-16d5-42e2-b0aa-3db3dd0e73a9",
+                "id": "1624222f-7f5e-45af-911a-b389747ee743",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -661,7 +661,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\\int_to_event\\int_to_event.yy",
+                "resourcePath": "scripts\\test_suite_init\\test_suite_init.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -685,9 +685,9 @@
             }
         },
         {
-            "Key": "0901360a-a162-4c78-b640-eb7ae5bd87e1",
+            "Key": "9f9cb746-17e1-42a8-9b2b-b82d330890a3",
             "Value": {
-                "id": "8c12ccd8-da7b-44ae-a3e6-f1431191f1a2",
+                "id": "7b93c434-19bf-48e9-8f16-b59d3079d834",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -699,7 +699,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\\assert_does_not_exist\\assert_does_not_exist.yy",
+                "resourcePath": "scripts\\gamatas_create_assert_error\\gamatas_create_assert_error.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -723,9 +723,9 @@
             }
         },
         {
-            "Key": "c9e911b4-e0a5-44b2-94f6-6a6dc9106a01",
+            "Key": "203fea1b-cc99-4761-80c1-c5638ed06219",
             "Value": {
-                "id": "176f0052-a768-4e9f-8b9d-78ce1ff2d83d",
+                "id": "473543ff-e8b6-4db4-acc2-5c0a5fb76bf9",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -737,7 +737,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\\info\\info.yy",
+                "resourcePath": "scripts\\test_start\\test_start.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -780,9 +780,9 @@
             }
         },
         {
-            "Key": "a257ac2f-1258-4606-a6c6-a51a5aaf32b2",
+            "Key": "c62a30c7-6d70-4a19-840a-e14fc2b00f30",
             "Value": {
-                "id": "c9270636-3f84-4274-b42d-eeca7aaccd27",
+                "id": "11f9c53f-9062-46a1-bfdc-55455a33df1d",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -794,7 +794,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\\test_next\\test_next.yy",
+                "resourcePath": "scripts\\assert_equal\\assert_equal.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -932,9 +932,9 @@
             }
         },
         {
-            "Key": "0b6ab207-c224-4f47-915c-8286414f04b1",
+            "Key": "b7a6c2ff-4962-4c6a-a173-b1d9a4b4db17",
             "Value": {
-                "id": "96077ce3-cab4-45db-82e8-a990fce9ca75",
+                "id": "dcf748ab-88fc-4f56-9267-311b6a1e40b7",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -946,7 +946,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\\assert_exists\\assert_exists.yy",
+                "resourcePath": "scripts\\gamatas_info\\gamatas_info.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1424,30 +1424,69 @@
                 "resourcePath": "views\\487f543a-4cda-49b2-8606-d69071691939.yy",
                 "resourceType": "GMFolder"
             }
+        },
+        {
+            "Key": "eb59c611-ad90-4091-9ff8-890fa38a3b2c",
+            "Value": {
+                "id": "300845d5-0467-4101-bec0-1e763c24c9c6",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\assert_is_false\\assert_is_false.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3b7a5125-87e3-472c-bcea-6eb7ac80de75",
+            "Value": {
+                "id": "67f8d489-30b8-4e36-93f0-076a8835129e",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\assert_is_true\\assert_is_true.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "0867ed85-c521-436c-b709-460351015c08",
+            "Value": {
+                "id": "6d441312-1664-45d8-b176-464e2f2fabfb",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\assert_is_undefined\\assert_is_undefined.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "room_order": [
         "e80bc793-727b-4912-80cd-2a9381ae60e5"
     ],
     "script_order": [
-        "d6c7075b-43fa-455a-8242-42de8f43b800",
-        "0901360a-a162-4c78-b640-eb7ae5bd87e1",
-        "0b6ab207-c224-4f47-915c-8286414f04b1",
-        "42399293-59c8-4d21-9b4c-ebca4668426b",
-        "37a9a856-63f6-44d9-91f7-ae3bda6f0d00",
-        "e0fc46fa-4a3f-4dff-9f7c-bbbacf49757e",
-        "c9e911b4-e0a5-44b2-94f6-6a6dc9106a01",
-        "a406ae11-12ec-49cd-b1cc-45a333ccd935",
-        "ba3e7b6b-21ed-494e-971b-cb1b202bd637",
-        "0a73cea8-e08e-4ed5-b60e-dbf42d1ac111",
-        "e811c9f1-b116-489f-940c-6e2575a6fc0b",
-        "a257ac2f-1258-4606-a6c6-a51a5aaf32b2",
-        "dbf428c1-1e51-44a8-81d8-8099f5757ec1",
-        "a44c3458-a344-402c-8fd1-6eff64583bc8",
-        "71fc0e7e-ac29-4c46-920e-a07621c9158d",
-        "2e2daba8-4764-4076-8526-b2528785accc",
-        "73ab2ea6-b1dd-40ce-9fb0-1356bcff5f3e",
-        "6674cf91-7ea3-4e59-9ebf-1f0caf512692",
         "cf6d1c85-7152-4e6c-9814-5b6fd0a19260",
         "1ba92935-c21d-4159-91a1-0a778afcbcf6",
         "78a96032-6d47-40a1-94e8-dcb78178a134",
@@ -1475,7 +1514,12 @@
         "cfac0abc-4609-4eae-a2d7-af54980b51fd",
         "a1387e7d-9ef7-458e-8194-e706a534715b",
         "69828e54-01dd-4a2a-b789-7e999d214dca",
-        "024cd91c-bb54-4636-a223-6ba0a8f98e80"
+        "024cd91c-bb54-4636-a223-6ba0a8f98e80",
+        "a44c3458-a344-402c-8fd1-6eff64583bc8",
+        "71fc0e7e-ac29-4c46-920e-a07621c9158d",
+        "2e2daba8-4764-4076-8526-b2528785accc",
+        "73ab2ea6-b1dd-40ce-9fb0-1356bcff5f3e",
+        "6674cf91-7ea3-4e59-9ebf-1f0caf512692"
     ],
     "tutorial": ""
 }

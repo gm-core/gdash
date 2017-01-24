@@ -1,8 +1,8 @@
 {
-    "id": "a406ae11-12ec-49cd-b1cc-45a333ccd935",
+    "id": "b7a6c2ff-4962-4c6a-a173-b1d9a4b4db17",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "int_to_event",
+    "name": "gamatas_info",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -1,5 +1,5 @@
 {
-    "id": "d6c7075b-43fa-455a-8242-42de8f43b800",
+    "id": "e92bff8e-c7f9-4b62-99dd-7c2c8e34a8c5",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "assert",

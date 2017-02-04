@@ -31,7 +31,8 @@
         "cfac0abc-4609-4eae-a2d7-af54980b51fd",
         "a1387e7d-9ef7-458e-8194-e706a534715b",
         "69828e54-01dd-4a2a-b789-7e999d214dca",
-        "024cd91c-bb54-4636-a223-6ba0a8f98e80"
+        "024cd91c-bb54-4636-a223-6ba0a8f98e80",
+        "57f78abd-c504-4760-9308-eae1d4712394"
     ],
     "filterType": "GMScript",
     "folderName": "gdash",

@@ -22,7 +22,7 @@ var maxIndex = arrLength - 1;
 var stringJoiner = string(joiner);
 
 for (var i = 0; i < arrLength; i++) {
-    outString += string(inArray[i]);
+    outString += string(inArray[@ i]);
     
     if (i != maxIndex) {
         outString += stringJoiner;
@@ -30,4 +30,5 @@ for (var i = 0; i < arrLength; i++) {
 }
 
 return outString;
+
 

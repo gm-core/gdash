@@ -9,16 +9,11 @@ _concat(_arrayOf(0, 1, 2), _arrayOf(3, 4, 5));
 
 */
 
-var inputArray = argument[0];
-var appendArray = argument[1];
-var i = _length(inputArray),
-var n = 0;
+var n = _length(argument0);
+var arr = _cloneArray(argument0);
 
-repeat (_length(appendArray)) {
-    inputArray[i] = appendArray[n];
-    n++;
-    i++;
+for (var i = _length(argument1) - 1; i >= 0; i--) {
+    arr[@ n+i] = argument1[@ i]; 
 }
 
-return inputArray;
-
+return arr;

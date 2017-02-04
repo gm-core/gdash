@@ -7,12 +7,11 @@
 _collect(obj_character);
 // => [10001, 10002, 10005]
 */
-var result;
-var i = 0;
 
-with (argument0) {
-    result[i] = id;
-    i++;
+var result;
+
+for (var i = instance_number(argument0); i >= 0; i--) {
+    result[i] = instance_find(argument0, i);
 }
 
 return result;

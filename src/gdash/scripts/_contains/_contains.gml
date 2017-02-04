@@ -16,7 +16,7 @@ _contains("hello", "ello");
 */
 
 var collection = argument[0];
-var target = argument[1]
+var target = argument[1];
 var fromIndex = 0;
 
 if (argument_count == 3) {
@@ -30,8 +30,9 @@ if (is_string(collection)) {
 } else if (is_array(collection)) {
 
     // If it is an array, check if target exists in the array.
-    for (var i = fromIndex; i < _length(collection); i++) {
-        if (_typeOf(collection[i]) == _typeOf(target) && collection[i] == target) {
+    var n = _length(collection);
+    for (var i = fromIndex; i < n; i++) {
+        if (_typeOf(collection[@ i]) == _typeOf(target) && collection[@ i] == target) {
             return true;
         }
     }
@@ -50,4 +51,5 @@ if (is_string(collection)) {
         return false;
     }
 }
-
+// Catch case for unknown collection
+return false;

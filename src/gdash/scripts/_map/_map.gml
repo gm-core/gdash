@@ -21,30 +21,29 @@ _map(map, divideByTwo, ds_type_map);
 var collection = argument[0];
 var func = argument[1];
 var type = "array";
+var result;
 
 if (argument_count == 3) {
     type = argument[2];
 }
 
-var resultArray;
-
 if (_isEqual(type, "array")) {
-    for (var i = 0; i < _length(collection); i++) {
-        resultArray[i] = _run(func, collection[i], i);
+    for (var i = _length(collection)-1; i >= 0; i--) {
+        result[i] = _run(func, collection[@ i], i);
     }
     
-    return resultArray;
+    return result;
 } else if (_isEqual(type, ds_type_map)) {
     var keys = _keys(collection);
-    for (var i = 0; i < _length(keys); i++) {
-        resultArray[i] = _run(func, ds_map_find_value(collection, keys[i]), keys[i]);
+    for (var i = _length(keys)-1; i >= 0; i--) {
+        result[i] = _run(func, ds_map_find_value(collection, keys[i]), keys[i]);
     }
-    return resultArray;
+    return result;
 } else if (_isEqual(type, ds_type_list)) {
-    for (var i = 0; i < _length(collection); i++) {
-        resultArray[i] = _run(func, ds_list_find_value(collection, i), i);
+    for (var i = _length(collection)-1; i >= 0; i--) {
+        result[i] = _run(func, ds_list_find_value(collection, i), i);
     }
-    return resultArray;
+    return result;
 }
 
 

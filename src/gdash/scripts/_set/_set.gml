@@ -16,18 +16,20 @@ var map = argument0;
 var location = argument1;
 var value = argument2;
 var locationArray = _split(location, ".");
-var finalLocation = locationArray[_length(locationArray) - 1];
+var n = _length(locationArray);
+var finalLocation = locationArray[n - 1];
+var thisLoc;
+var prev;
 
-var temp = map;
-for (var i = 0; i < _length(locationArray) - 1; i++) {
-    var thisLoc = locationArray[i];
-    var prev = temp;
-    temp = temp[? thisLoc];
-    if (is_undefined(temp)) {
+for (var i = 0; i < n - 1; i++) {
+    thisLoc = locationArray[i];
+    prev = map;
+    map = map[? thisLoc];
+    if (is_undefined(map)) {
         ds_map_add_map(prev, thisLoc, ds_map_create());
-        temp = prev[? thisLoc];
+        map = prev[? thisLoc];
     }
 }
 
-temp[? finalLocation] = value;
+map[? finalLocation] = value;
 

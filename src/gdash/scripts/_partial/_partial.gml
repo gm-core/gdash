@@ -17,13 +17,15 @@ lessThanTwo(10);
 // => false
 
 */
+
 var func = argument[0];
+var partial = ds_map_create();
 var args;
-for (var i = 1; i < argument_count; i++) {
+
+for (var i = argument_count-1; i >= 1; i--) {
     args[i - 1] = argument[i];
 }
 
-var partial = ds_map_create();
 ds_map_add(partial, "function", func);
 ds_map_add(partial, "args", args);
 ds_map_add(partial, "partial", "partial");

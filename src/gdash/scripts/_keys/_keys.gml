@@ -13,12 +13,12 @@ _keys(map);
 */
 
 var map = argument0;
+var nextKey = ds_map_find_first(map);
+var nextInd = 0;
 var keys;
-keys[0] = ds_map_find_first(map);
-var nextKey = ds_map_find_next(map, keys[0]);
 
 while (!is_undefined(nextKey)) {
-    keys[_length(keys)] = nextKey;
+    keys[nextInd++] = nextKey;
     nextKey = ds_map_find_next(map, nextKey);
 }
 

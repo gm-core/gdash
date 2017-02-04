@@ -11,19 +11,20 @@ _.get(someMap, 'nested.three.deep');
 
 */
 
-var map = argument0;
 var location = argument1;
 var locationArray = _split(location, ".");
+var map = argument0;
+var n = _length(locationArray);
+var thisLoc;
 
-var temp = map;
-for (var i = 0; i < _length(locationArray); i++) {
-    var thisLoc = locationArray[i];
-    if (ds_map_exists(temp, thisLoc)) {
-        temp = temp[? thisLoc];
+for (var i = 0; i < n; i++) {
+    thisLoc = locationArray[i];
+    if (ds_map_exists(map, thisLoc)) {
+        map = map[? thisLoc];
     } else {
         return undefined;
     }
 }
 
-return temp;
+return map;
 

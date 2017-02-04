@@ -14,17 +14,19 @@ _split('Dogs and cats and mice', ' and ');
 var inputString = argument0;
 var splitter = argument1;
 var splitterLength = _length(splitter);
-var output;
+var result;
+var splitterLocation;
+var part;
 var count = 0;
 
 while (string_pos(splitter, inputString) > 0) {
-    var splitterLocation = string_pos(splitter, inputString);
-    var part = string_copy(inputString, 1, splitterLocation - 1);
-    output[count] = part;
+    splitterLocation = string_pos(splitter, inputString);
+    part = string_copy(inputString, 1, splitterLocation - 1);
+    result[count] = part;
     count++;
     inputString = string_delete(inputString, 1, splitterLocation + _length(splitter) - 1);
 }
 
-output[count] = inputString;
-return output;
+result[count] = inputString;
+return result;
 

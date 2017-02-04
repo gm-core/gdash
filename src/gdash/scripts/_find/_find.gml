@@ -8,9 +8,14 @@ _find(_arrayOf(0, 1, 2, 3), __equalsThree);
 // => 3
 */
 
-for (var i = 0; i < _length(argument0); i++) {
-    if (_run(argument1, argument0[i])) {
-        return argument0[i];
+
+var n = _length(argument0);
+
+for (var i = 0; i < n; i++) {
+    if (_run(argument1, argument0[@ i])) {
+        return argument0[@ i];
     }
 }
 
+// Catch empty result
+return undefined;

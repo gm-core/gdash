@@ -9,15 +9,14 @@ _filter(_arrayOf(0, 1, 2, 3), lessThanTwo)
 
 */
 
-var array = argument[0];
-var func = argument[1];
-var result = undefined;
-var resultCount = 0;
+var result;
+var j = 0;
+var n = _length(argument0);
 
-for (var i = 0; i < _length(array); i++) {
-    if (_run(func, array[i])) {
-        result[resultCount] = array[i];
-        resultCount++;
+for (var i = 0; i < n; i++) {
+    if (_run(argument1, argument0[@ i])) {
+        result[j] = argument0[@ i];
+        j++;
     }    
 }
 

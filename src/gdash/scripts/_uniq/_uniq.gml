@@ -8,11 +8,16 @@ _uniq(_arrayOf(1, 1, 2, 3));
 */
 
 var arr = argument0;
+var n = _length(arr);
+var j = 0;
 var result = undefined;
 
-for (var i = 0; i < _length(arr); i++) {
-    if (!_contains(result, arr[i])) {
-        result = _push(result, arr[i]);
+if (_length(arr) < 2)
+    return arr;
+
+for (var i = 0; i < n; i++) {
+    if (!_contains(result, arr[@ i])) {
+        result[j++] = arr[@ i];
     }
 }
 

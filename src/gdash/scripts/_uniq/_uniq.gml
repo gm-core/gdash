@@ -7,11 +7,10 @@ _uniq(_arrayOf(1, 1, 2, 3));
 // => [1, 2, 3]
 */
 
-var 
-arr = argument0,
-n = _length(arr),
-j = 0,
-result = undefined;
+var arr = argument0;
+var n = _length(arr);
+var j = 0;
+var result = undefined;
 
 if (_length(arr) < 2)
     return arr;

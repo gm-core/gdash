@@ -12,11 +12,10 @@ _run(addTwo, 1);
 // => 3
 */
 
-var 
-func = argument[0],
-args = undefined;
+var func = argument[0];
+var args = undefined;
 
-for (var i = argument_count; i >= 1; i--) {
+for (var i = argument_count-1; i >= 1; i--) {
     args[i - 1] = argument[i];
 }
 

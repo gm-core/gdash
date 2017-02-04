@@ -23,10 +23,9 @@ _isEqual(map, map2, ds_type_map);
 
 */
 
-var 
-compareA = argument[0]m
-compareB = argument[1],
-type;
+var compareA = argument[0];
+var compareB = argument[1];
+var type;
 
 if (argument_count == 3) {
     type = argument[2];

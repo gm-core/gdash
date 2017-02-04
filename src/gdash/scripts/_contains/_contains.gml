@@ -15,10 +15,9 @@ _contains("hello", "ello");
 // => true
 */
 
-var 
-collection = argument[0];
-target = argument[1],
-fromIndex = 0;
+var collection = argument[0];
+var target = argument[1];
+var fromIndex = 0;
 
 if (argument_count == 3) {
     fromIndex = argument[2];

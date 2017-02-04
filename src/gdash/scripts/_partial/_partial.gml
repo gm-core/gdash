@@ -18,12 +18,11 @@ lessThanTwo(10);
 
 */
 
-var 
-func = argument[0],
-partial = ds_map_create(),
-args;
+var func = argument[0];
+var partial = ds_map_create();
+var args;
 
-for (var i = argument_count; i >= 1; i--) {
+for (var i = argument_count-1; i >= 1; i--) {
     args[i - 1] = argument[i];
 }
 

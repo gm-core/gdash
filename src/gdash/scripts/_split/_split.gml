@@ -11,13 +11,13 @@ _split('Dogs and cats and mice', ' and ');
 // => ['Dogs', 'cats', 'mice']
 */
 
-var 
-inputString = argument0,
-splitter = argument1,
-splitterLength = _length(splitter),
-result, 
-splitterLocation, part,
-count = 0;
+var inputString = argument0;
+var splitter = argument1;
+var splitterLength = _length(splitter);
+var result;
+var splitterLocation;
+var part;
+var count = 0;
 
 while (string_pos(splitter, inputString) > 0) {
     splitterLocation = string_pos(splitter, inputString);

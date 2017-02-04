@@ -9,9 +9,8 @@ _free(__something);
 
 */
 
-var 
-dsId = argument[0],
-type;
+var dsId = argument[0];
+var type;
 
 if (argument_count == 1) {
     type = ds_type_map;

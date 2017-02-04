@@ -10,8 +10,9 @@ _isEqual(myArray, copyArray)
 */
 
 // Abuse GML array copy into script mechanics.
+/// Note, maybe switch to GMS2 new method: array_copy?
 
-var
-result = argument0;
+var result = argument0;
+
 result[0] = result[0]; // this forces a copy    
 return result;

@@ -18,11 +18,10 @@ _map(map, divideByTwo, ds_type_map);
 // => [3, 5]
 */
 
-var 
-collection = argument[0],
-func = argument[1],
-type = "array",
-result;
+var collection = argument[0];
+var func = argument[1];
+var type = "array";
+var result;
 
 if (argument_count == 3) {
     type = argument[2];

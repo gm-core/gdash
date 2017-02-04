@@ -13,14 +13,13 @@ _join(arr, ', ');
 // => 'Peter, Paul, Mary';
 */
 
-var 
-outString = "",
-inArray = argument0,
-joiner = argument1,
+var outString = "";
+var inArray = argument0;
+var joiner = argument1;
 
-arrLength = _length(inArray),
-maxIndex = arrLength - 1,
-stringJoiner = string(joiner);
+var arrLength = _length(inArray);
+var maxIndex = arrLength - 1;
+var stringJoiner = string(joiner);
 
 for (var i = 0; i < arrLength; i++) {
     outString += string(inArray[@ i]);

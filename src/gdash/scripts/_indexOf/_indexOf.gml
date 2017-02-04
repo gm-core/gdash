@@ -3,9 +3,8 @@
 /// @param {*} value The value to look for
 /// @returns {Real} The index of the value, or -1
 
-var 
-collection = argument0,
-search = argument1;
+var collection = argument0;
+var search = argument1;
 
 // Search lists
 if (is_real(collection)) {

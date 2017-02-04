@@ -129,13 +129,20 @@ _concat(_arrayOf(0, 1, 2), _arrayOf(3, 4, 5));
 
 ### `_contains(collection, target, fromIndex = 0)`
 
-Returns true if the given array contains the given value
+Returns true if the given collection contains the given value
 
 ```
-@param {String|Array|DS_Map} The collection to search
+@param {String|Array|DS_Map|DS_List} The collection to search
 @param {*} The value to look for
 @param {Real} [0] The index to begin looking from
+@param {ds_type} [ds_type_list] The type of the ds, if this is a ds.
 @returns {Boolean} True if the collection contains the target, otherwise false
+
+Note: You only need to specify a ds_type when looking at a ds_list or ds_map.
+By default, the ds_type is set to ds_type_map. Options are:
+
+* ds_type_list
+* ds_type_map
 
 @example
 _contains([1, 2, 3], 1);
@@ -164,12 +171,12 @@ _map(_filter(_collect(obj_enemy)), hasNoHealth), _destroy);
 
 ### `_filter(array, filterScript)`
 
-Returns an array where values of the input array are truthy when run through the provided function.
+Returns a a collection where values of the input collection are truthy when run through the provided function.
 
 ```
-@param {Array} The array to filter
+@param {Array|DS_List} The collection to filter
 @param {Script} The script to filter with
-@returns {Array} The filtered array
+@returns {Array|DS_List} The filtered collection
 
 @example
 _filter(_arrayOf(0, 1, 2, 3), lessThanTwo)
@@ -400,7 +407,7 @@ _or(false, false);
 
 ### `_partial(script, arg0, arg1 ... arg13)`
 
-Creates a partial function identifier for use in place of raw scripts in gdash functions, or with the use of _run.
+Creates a partial function identifier for use in place of raw scripts in gdash functions, or with the use of `_run`.
 
 Partials are to be treated as a data structure, and must be cleaned up with `_free()` when they are no longer of use.
 
@@ -441,7 +448,7 @@ _push(_arrayOf(1, 2), 3);
 Reduces a collection by iterating over it with a function. Provided script should take 2 arguments: `total`, `value`. On the first call, `total` is `undefined`.
 
 ```
-@param {Array} The array to reduce
+@param {Array|DS_List} The collection to reduce
 @param {Script} The script to reduce with
 @returns {*} The reduced value from the given script
 

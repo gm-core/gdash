@@ -1,7 +1,8 @@
 /// @desc Returns true if the given array contains the given value
-/// @param {String|Array|DS_Map} collection The collection to search
+/// @param {String|Array|DS_Map|DS_List} collection The collection to search
 /// @param {*} value The value to look for
 /// @param {Real} optionalFromIndex [0] The index to begin looking from
+/// @param {ds_type} optionalDSType [ds_type_list] The type of the ds, if this is a ds.
 /// @returns {Boolean} True if the collection contains the target, otherwise false
 /*
 @example
@@ -19,8 +20,15 @@ var collection = argument[0];
 var target = argument[1];
 var fromIndex = 0;
 
-if (argument_count == 3) {
+// TODO: This should default to ds_type_list in the next major version
+var dsType = ds_type_map;
+
+if (argument_count > 2) {
     fromIndex = argument[2];
+}
+
+if (argument_count > 3) {
+    dsType = argument[3];
 }
 
 if (is_string(collection)) {
@@ -38,18 +46,32 @@ if (is_string(collection)) {
     }
     return false;
 } else if (is_real(collection)) {
-    
-    // If it is a real, assume it is a ds ID.
-    if (ds_exists(collection, ds_type_map)) {
+    if (dsType == ds_type_map) {
         var keys = _keys(collection);
-        for (var i = fromIndex; i < _length(keys); i++) {
-            var thisValue = ds_map_find_value(collection, keys[i])
+        var n = _length(keys);
+        for (var i = fromIndex; i < n; i++) {
+            var thisValue = collection[? keys[i]];
             if (_typeOf(thisValue) == _typeOf(target) && thisValue == target) {
                 return true;
             }
         }
         return false;
+    } else if (dsType == ds_type_list) {
+        var n = _length(collection);
+        for (var i = fromIndex; i < n; i++) {
+            var thisValue = collection[| i];
+            if (_typeOf(thisValue) == _typeOf(target) && thisValue == target) {
+                return true;
+            }
+        }
+    } else {
+        show_error("Cannot look for value in ds type: " + string(dsType) + "\nIf using _contains with a data structure, it must be a list or map.", false);
     }
+} else if (is_undefined(collection)) {
+    return false;
+} else {
+    // Catch case for unknown collection
+    show_error("Cannot look for value in type: " + _typeOf(collection) + "\nCollection must be a string, array, map or list.", false);
 }
-// Catch case for unknown collection
+
 return false;

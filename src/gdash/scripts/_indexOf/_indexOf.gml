@@ -12,8 +12,7 @@ if (is_real(collection)) {
 }
 
 // Search arrays
-var
-n = _length(collection);
+var n = _length(collection);
 
 for (var i = 0; i < n; i++) {
     if (_isEqual(collection[@ i], search)) {

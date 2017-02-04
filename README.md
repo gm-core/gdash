@@ -6,40 +6,50 @@ Version 2.0.1
 
 gdash is a functional utility library for GML, inspired by [lodash](https://lodash.com/). It aims to add useful, broad-purposed functions to help aid in game development. If you are doing any kind of data manipulation in your game, gdash can help out.
 
+## Table of Contents
+
+<!-- toc -->
+
+- [Install](#install)
+- [API](#api)
+  * [`_and(valueA, valueB)`](#_andvaluea-valueb)
+  * [`_arrayOf(value1, value2 ... value14)`](#_arrayofvalue1-value2--value14)
+  * [`_cloneArray(array)`](#_clonearrayarray)
+  * [`_collect(objectType)`](#_collectobjecttype)
+  * [`_concat(arrayA, arrayB)`](#_concatarraya-arrayb)
+  * [`_contains(collection, target, fromIndex = 0)`](#_containscollection-target-fromindex--0)
+  * [`_destroy(instance)`](#_destroyinstance)
+  * [`_filter(array, filterScript)`](#_filterarray-filterscript)
+  * [`_find(array, findScript)`](#_findarray-findscript)
+  * [`_free(resourceId [, dsType])`](#_freeresourceid--dstype)
+  * [`_get(mapId, locationString [, default])`](#_getmapid-locationstring--default)
+  * [`_indexOf(collection, value)`](#_indexofcollection-value)
+  * [`_isEqual(valueA, valueB)`](#_isequalvaluea-valueb)
+  * [`_join(array, joiner)`](#_joinarray-joiner)
+  * [`_keys(dsMapId)`](#_keysdsmapid)
+  * [`_length(collection)`](#_lengthcollection)
+  * [`_log(anything)`](#_loganything)
+  * [`_map(colletion, mapScript)`](#_mapcolletion-mapscript)
+  * [`_nth(collection, n)`](#_nthcollection-n)
+  * [`_or(valueA, valueB)`](#_orvaluea-valueb)
+  * [`_partial(script, arg0, arg1 ... arg13)`](#_partialscript-arg0-arg1--arg13)
+  * [`_push(array, value)`](#_pusharray-value)
+  * [`_reduce(collection, reducerScript)`](#_reducecollection-reducerscript)
+  * [`_run(script, arg0, arg1 ... arg13)`](#_runscript-arg0-arg1--arg13)
+  * [`_set(mapId, locationString, value)`](#_setmapid-locationstring-value)
+  * [`_split(string, splitter)`](#_splitstring-splitter)
+  * [`_spread(script, argArray)`](#_spreadscript-argarray)
+  * [`_times(script)`](#_timesscript)
+  * [`_typeOf(value)`](#_typeofvalue)
+  * [`_uniq(array)`](#_uniqarray)
+
+<!-- tocstop -->
+
 ## Install
 
 Download [the latest release](https://github.com/twisterghost/gdash/releases) and import the gml files into your project's scripts. For GameMaker: Studio 2, you can just drag and drop the files into the editor.
 
 ## API
-
-* [_and](#_andvaluea-valueb)
-* [_arrayOf](#_arrayofvalue1-value2--value14)
-* [_cloneArray](#_clonearrayarray)
-* [_collect](#_collectobjecttype)
-* [_concat](#_concatarraya-arrayb)
-* [_contains](#_containscollection-target-fromindex--0)
-* [_destroy](#_destroyinstance)
-* [_filter](#_filterarray-filterscript)
-* [_find](#_findarray-findscript)
-* [_free](#_freeresourceid--dstype)
-* [_get](#_getmapid-locationstring--default)
-* [_indexOf](#_indexofcollection-value)
-* [_isEqual](#_isequalvaluea-valueb)
-* [_join](#_joinarray-joiner)
-* [_keys](#_keysdsmapid)
-* [_length](#_lengthcollection)
-* [_log](#_loganything)
-* [_map](#_mapcolletion-mapscript)
-* [_partial](#_partialscript-arg0-arg1--arg13)
-* [_push](#_pusharray-value)
-* [_reduce](#_reducecollection-reducerscript)
-* [_run](#_runscript-arg0-arg1--arg13)
-* [_set](#_setmapid-locationstring-value)
-* [_split](#_splitstring-splitter)
-* [_spread](#_spreadscript-argarray)
-* [_times](#_timesscript)
-* [_typeOf](#_typeofvalue)
-* [_uniq](#_uniqarray)
 
 ### `_and(valueA, valueB)`
 
@@ -193,7 +203,7 @@ __something(2);
 _free(__something);
 ```
 
-### `_get(mapId, locationString [, default)`
+### `_get(mapId, locationString [, default])`
 
 Gets a nested value following a dot notation
 
@@ -347,6 +357,45 @@ ds_map_add(map, 'hello', 6);
 ds_map_add(map, 'world', 10);
 _map(map, divideByTwo, ds_type_map);
 // => [3, 5]
+```
+
+### `_nth(collection, n)`
+
+Returns the nth index of the given array or ds_list. If n is negative, the nth element from the end is returned.
+
+```
+@param collection
+@param n
+
+@example
+var list = ds_list_create();
+list[| 0] = "hello"
+list[| 1] = "world";
+_nth(list, 0);
+// => "hello";
+
+_nth(list, -1);
+// => "world";
+```
+
+### `_or(valueA, valueB)`
+
+Returns the value of the provided arguments after a boolean `or`
+
+```
+@param {*} Some first input
+@param {*} A value to || the first input with
+@returns {Boolean} The value of the provided arguments after an ||
+
+@example
+_or(true, true);
+// => true
+
+_or(false, true);
+// => true
+
+_or(false, false);
+// => false
 ```
 
 ### `_partial(script, arg0, arg1 ... arg13)`

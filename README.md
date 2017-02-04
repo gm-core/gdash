@@ -40,6 +40,7 @@ gdash is a functional utility library for GML, inspired by [lodash](https://loda
   * [`_split(string, splitter)`](#_splitstring-splitter)
   * [`_spread(script, argArray)`](#_spreadscript-argarray)
   * [`_times(script)`](#_timesscript)
+  * [`_toArray(list)`](#_toarraylist)
   * [`_typeOf(value)`](#_typeofvalue)
   * [`_uniq(array)`](#_uniqarray)
 
@@ -540,6 +541,16 @@ Returns an array of the result of a function run the given number of times
 @example
 _times(3, returnTheValue5);
 // => [5, 5, 5];
+```
+
+### `_toArray(list)`
+
+Returns the given ds_list as an array
+
+```
+@param {DS_List} the list to convert
+@returns {Array} An array representation of the given list
+Note: If the given list is of size 0, this will return undefined
 ```
 
 ### `_typeOf(value)`

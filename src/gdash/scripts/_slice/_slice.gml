@@ -18,12 +18,11 @@ var endi=0;
 
 if (argument_count == 3) {
 	endi = argument[2];
-}
-else {
+} else {
 	endi = _length(array);
 }
 
-for(var i = endi-1; i >= starti; i--) {
+for (var i = endi - 1; i >= starti; i--) {
 	result[i-starti] = array[@ i];
 }
 

@@ -2,13 +2,15 @@
 /// @param {Mixed} Message The message or value to log
 
 var toshow = "";
-for(var i = 0; i < argument_count; i++) {
-	if (i != 0)
+for (var i = 0; i < argument_count; i++) {
+
+	if (i != 0) {
 		toshow += ", ";
+    }
+    
 	if (is_array(argument[i])) {
 		toshow += "[" + _join(argument[i],", ") + "]";
-	}
-	else {
+	} else {
 		toshow += string(argument[i]);
 	}
 }

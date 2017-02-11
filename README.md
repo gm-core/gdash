@@ -1,6 +1,6 @@
 # gdash - GML utility library
 
-Version 2.1.0
+Version 2.2.0
 
 ## Introduction
 
@@ -28,15 +28,17 @@ gdash is a functional utility library for GML, inspired by [lodash](https://loda
   * [`_join(array, joiner)`](#_joinarray-joiner)
   * [`_keys(dsMapId)`](#_keysdsmapid)
   * [`_length(collection)`](#_lengthcollection)
-  * [`_log(anything)`](#_loganything)
+  * [`_log(messages...)`](#_logmessages)
   * [`_map(colletion, mapScript)`](#_mapcolletion-mapscript)
   * [`_nth(collection, n)`](#_nthcollection-n)
   * [`_or(valueA, valueB)`](#_orvaluea-valueb)
   * [`_partial(script, arg0, arg1 ... arg13)`](#_partialscript-arg0-arg1--arg13)
   * [`_push(array, value)`](#_pusharray-value)
   * [`_reduce(collection, reducerScript)`](#_reducecollection-reducerscript)
+  * [`_reverse(array)`](#_reversearray)
   * [`_run(script, arg0, arg1 ... arg13)`](#_runscript-arg0-arg1--arg13)
   * [`_set(mapId, locationString, value)`](#_setmapid-locationstring-value)
+  * [`_slice(array, start[, end])`](#_slicearray-start-end)
   * [`_split(string, splitter)`](#_splitstring-splitter)
   * [`_spread(script, argArray)`](#_spreadscript-argarray)
   * [`_times(script)`](#_timesscript)
@@ -337,11 +339,11 @@ _length(some_list_id_of_size_5);
 // => 5
 ```
 
-### `_log(anything)`
+### `_log(messages...)`
 
 Convenience method for `show_debug_message()`
 
-Converts its argument to a string.
+Converts its arguments to a string.
 
 ### `_map(colletion, mapScript)`
 
@@ -463,6 +465,21 @@ _reduce(arr, concat);
 // => 'helloworld';
 ```
 
+### `_reverse(array)`
+
+Reverses a given input array.
+
+```
+@param {Array} array The array to reverse
+@returns {Array} The reversed array
+
+@example
+var myArray = _arrayOf(1, 2, 3);
+var reverseArray = _reverse(myArray);
+_isEqual(_arrayOf(3,2,1), reverseArray)
+// => true
+```
+
 ### `_run(script, arg0, arg1 ... arg13)`
 
 Executes a script or partial with the provided arguments. Can be used in place of `script_execute`
@@ -496,6 +513,23 @@ Sets a nested value following a dot notation. Creates any necessary maps along t
 _set(someMap, 'nested.three.deep', 2);
 // => someMap now looks like:
 // => {nested: {three: {deep: 2}}}
+```
+
+### `_slice(array, start[, end])`
+
+Creates a slice of array from start up to, but not including, end.
+
+```
+@param {Array} array The array to slice
+@param {Integer} start Index to start the slice
+@param {Integer} end(optional) Index up to which to make the slice, defaults to end of array.
+@returns {Array} The sliced array
+
+@example
+var myArray = _arrayOf(1, 2, 3, 4);
+var slicedArray = _slice(myArray, 1, 3);
+_isEqual(_arrayOf(2,3), slicedArray)
+// => true
 ```
 
 ### `_split(string, splitter)`

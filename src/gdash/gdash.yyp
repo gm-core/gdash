@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "306bd252-5957-48f2-b8af-8353d163a88d",
+            "Value": {
+                "id": "45850a8f-be4e-4bc8-b959-041c0c32e8bc",
+                "resourcePath": "objects\\obj_gdash_test_3\\obj_gdash_test_3.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3b7a5125-87e3-472c-bcea-6eb7ac80de75",
             "Value": {
                 "id": "67f8d489-30b8-4e36-93f0-076a8835129e",
@@ -375,6 +383,14 @@
             }
         },
         {
+            "Key": "a099a4f0-a29c-4209-ba86-dd62ac3ff07c",
+            "Value": {
+                "id": "35f3a369-88f0-4e4d-82ef-3706e84be174",
+                "resourcePath": "scripts\\_reverse\\_reverse.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a0f14370-d8cd-40df-8d1e-c4e5bda1652c",
             "Value": {
                 "id": "1624222f-7f5e-45af-911a-b389747ee743",
@@ -459,6 +475,14 @@
             "Value": {
                 "id": "f699079d-0199-4e22-95e5-f7a831cd6d66",
                 "resourcePath": "scripts\\_get\\_get.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "afacb44e-b26f-4211-bd5f-175ffd3f6677",
+            "Value": {
+                "id": "9937a319-63f4-4208-81be-15febeb81759",
+                "resourcePath": "scripts\\_slice\\_slice.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -693,6 +717,14 @@
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
             }
+        },
+        {
+            "Key": "ffc8f9ff-847a-4442-8dca-835f728e67dc",
+            "Value": {
+                "id": "a4a056e5-c15e-46bb-ab0c-23145ab012b9",
+                "resourcePath": "rooms\\rm_test_3\\rm_test_3.yy",
+                "resourceType": "GMRoom"
+            }
         }
     ],
     "script_order": [
@@ -727,6 +759,8 @@
         "57f78abd-c504-4760-9308-eae1d4712394",
         "e8b3e4ac-cefc-43b3-85d8-b8668d14ef8f",
         "da7da0f1-1a2d-47c9-955b-587d639ca46a",
+        "a099a4f0-a29c-4209-ba86-dd62ac3ff07c",
+        "afacb44e-b26f-4211-bd5f-175ffd3f6677",
         "66f29b20-fcc2-4666-a728-ab9cc5f5754e",
         "9f9cb746-17e1-42a8-9b2b-b82d330890a3",
         "b7a6c2ff-4962-4c6a-a173-b1d9a4b4db17",

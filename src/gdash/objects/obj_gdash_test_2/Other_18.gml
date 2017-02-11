@@ -1,4 +1,4 @@
-/// _length
+/// @desc _length
 test_start("_length", "returns the length of an array, list, or string, or 0 for undefined");
 
 var array = _arrayOf(1, 2, 3);

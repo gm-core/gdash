@@ -1,4 +1,4 @@
-/// _cloneArray
+/// @desc _cloneArray
 test_start("_cloneArray", "Returns a clone of the given array");
 
 var arr = _arrayOf(2, 1, 5, 4, 6);

@@ -1,4 +1,4 @@
-/// _nth
+/// @desc _nth
 test_start("_nth", "Returns the nth element of the collection");
 
 var list = ds_list_create();

@@ -1,4 +1,4 @@
-/// _split
+/// @desc _split
 test_start("_split", "returns an array of a string split up by a substring");
 
 var str = "hello,world,foo,bar";

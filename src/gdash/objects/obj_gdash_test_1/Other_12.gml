@@ -1,4 +1,4 @@
-/// _keys
+/// @desc _keys
 test_start("_keys", "Returns an array of all keys in a map");
 
 var map = ds_map_create();

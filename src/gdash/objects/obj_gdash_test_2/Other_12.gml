@@ -1,4 +1,4 @@
-/// _destroy
+/// @desc _destroy
 test_start("_destroy", "destroys the given object")
 
 instance_create_depth(0, 0, 0, obj_example_object);

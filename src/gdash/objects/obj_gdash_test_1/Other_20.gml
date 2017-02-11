@@ -1,4 +1,4 @@
-/// _concat
+/// @desc _concat
 test_start("_concat", "Appends one array to another");
 
 var arr1 = _arrayOf(0, 1, 2);

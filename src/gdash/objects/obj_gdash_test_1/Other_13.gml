@@ -1,4 +1,4 @@
-/// _map
+/// @desc _map
 test_start("_map", "Iterates over a collection, calling a function");
 
 var map = ds_map_create();

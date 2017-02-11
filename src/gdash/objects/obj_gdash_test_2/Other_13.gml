@@ -1,4 +1,4 @@
-/// _arrayOf
+/// @desc _arrayOf
 test_start("_arrayOf", "returns an array of the arguments");
 
 var arr = _arrayOf(2, 4, 6, 1, 2, 3);

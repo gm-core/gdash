@@ -1,4 +1,4 @@
-/// _get
+/// @desc _get
 test_start("_get", "Retrieves a deeply nested map value");
 
 var map = ds_map_create();

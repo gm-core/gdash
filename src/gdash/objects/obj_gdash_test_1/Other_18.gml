@@ -1,4 +1,4 @@
-/// _find
+/// @desc _find
 test_start("_find", "returns the first element in an array that is truthy in the function");
 
 var arr = _arrayOf(0, 1, 2, 3, 40, 5);

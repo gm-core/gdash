@@ -1,4 +1,4 @@
-/// _spread
+/// @desc _spread
 test_start("_spread", "turns an array into script arguments")
 
 var args = _arrayOf(2, 5);

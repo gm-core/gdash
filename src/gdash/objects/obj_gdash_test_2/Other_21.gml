@@ -1,4 +1,4 @@
-/// _or
+/// @desc _or
 test_start("_or", "returns the result of an OR of two values");
 
 assert_is_true(_or(true, true));

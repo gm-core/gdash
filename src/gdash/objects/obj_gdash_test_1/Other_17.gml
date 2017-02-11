@@ -1,4 +1,4 @@
-/// _push
+/// @desc _push
 test_start("_push", "Adds an element to an array");
 
 var arr = _arrayOf(0, 1, 2);

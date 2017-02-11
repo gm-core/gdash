@@ -1,4 +1,4 @@
-/// _free
+/// @desc _free
 test_start("_free", "frees a ds_map or ds_list or partial from memory");
 
 var map = ds_map_create();

@@ -1,4 +1,4 @@
-/// _partial and _run
+/// @desc _partial and _run
 test_start("_partial and _run", "returns a partial which can be executed with _run");
 
 var add_one = _partial(__add, 1);

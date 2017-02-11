@@ -1,4 +1,4 @@
-/// _reduce
+/// @desc _reduce
 test_start("_reduce", "Iterates over an array, calling a function, returning the overall result");
 
 var arr;

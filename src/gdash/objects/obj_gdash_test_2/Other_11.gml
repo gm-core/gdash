@@ -1,4 +1,4 @@
-/// _collect
+/// @desc _collect
 test_start("_collect", "returns an array of instances of the given type");
 
 var firstObj = instance_create_depth(0, 0, 0, obj_example_object);

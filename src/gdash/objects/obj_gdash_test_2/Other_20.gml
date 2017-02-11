@@ -1,4 +1,4 @@
-/// _join
+/// @desc _join
 test_start("_join", "turns an array into a string");
 
 var array = _arrayOf("hello", "world", "!");

@@ -1,4 +1,4 @@
-/// _toArray
+/// @desc _toArray
 test_start("_toArray", "Converts a list to an array");
 
 var list = ds_list_create();

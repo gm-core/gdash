@@ -1,4 +1,4 @@
-/// _isEqual
+/// @desc _isEqual
 test_start("_isEqual", "Determines if two values are equal");
 
 assert_is_true(_isEqual(1, 1));

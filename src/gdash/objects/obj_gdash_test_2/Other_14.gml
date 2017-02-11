@@ -1,4 +1,4 @@
-/// _and
+/// @desc _and
 test_start("_and", "returns the result of a logical 'and' of the params");
 
 assert_is_true(_and(true, true));

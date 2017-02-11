@@ -1,4 +1,4 @@
-/// _typeOf
+/// @desc _typeOf
 test_start("_typeOf", "Should return the type of any known data type");
 
 assert_equal(_typeOf(100), "real");

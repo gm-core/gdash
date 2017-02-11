@@ -1,4 +1,4 @@
-/// _indexOf
+/// @desc _indexOf
 test_start("_indexOf", "Returns the index of a value in a collection");
 
 var arr = _arrayOf(1, 2, 3, 4);

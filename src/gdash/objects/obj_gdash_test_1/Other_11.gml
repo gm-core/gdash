@@ -1,4 +1,4 @@
-/// _contains
+/// @desc _contains
 test_start("_contains", "Should determine if arbitrary things contain targets");
 
 // String contains string

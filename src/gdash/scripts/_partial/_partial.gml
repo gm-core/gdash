@@ -10,10 +10,10 @@ return argument1 < argument0
 
 // Meanwhile...
 var lessThanTwo = _partial(lessThan, 2);
-lessThanTwo(1);
+_run(lessThanTwo, 1);
 // => true
 
-lessThanTwo(10);
+_run(lessThanTwo, 10);
 // => false
 
 */

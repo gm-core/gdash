@@ -424,11 +424,11 @@ Partials are to be treated as a data structure, and must be cleaned up with `_fr
 return argument1 < argument0
 
 // Meanwhile...
-var __lessThanTwo = _partial(lessThan, 2);
-__lessThanTwo(1);
+var lessThanTwo = _partial(lessThan, 2);
+_run(lessThanTwo, 1);
 // => true
 
-__lessThanTwo(10);
+_run(lessThanTwo, 10);
 // => false
 ```
 

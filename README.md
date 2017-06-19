@@ -503,16 +503,25 @@ _run(addTwo, 1);
 Sets a nested value following a dot notation. Creates any necessary maps along the way.
 
 ```
-@param {DS_Map} The map to set data in
-@param {String} The location of the data to set
-@param {Mixed} The data to set
+@descSets a nested value following a dot notation. Creates along the way if its not set.
+@param {DS_Map} map The map to set data in
+@param {String} locationString The location of the data to set
+@param {Mixed} value The data to set
+@param {ds_type_map|ds_type_list} optionalType Optional argument, pass in ds_type_map or ds_type_list to denote this value as a map or list
 
 @example
 // someMap looks like:
-// { nested: {three: {deep: 1}}}
-_set(someMap, 'nested.three.deep', 2);
+//  { nested: {three: {deep: 1}}}
+_.set(someMap, 'nested.three.deep', 2);
 // => someMap now looks like:
 // => {nested: {three: {deep: 2}}}
+
+@example
+// some map looks like:
+// { someKey: "someValue" }
+_.set(someMap, "newKey", ds_list_create(), ds_list);
+// => someMap now looks like:
+// => { someKey: "someValue"], newKey: [] }
 ```
 
 ### `_slice(array, start[, end])`

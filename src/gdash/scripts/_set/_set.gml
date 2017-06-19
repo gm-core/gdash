@@ -2,19 +2,33 @@
 /// @param {DS_Map} map The map to set data in
 /// @param {String} locationString The location of the data to set
 /// @param {Mixed} value The data to set
+/// @param {ds_type_map|ds_type_list} optionalType Optional argument, pass in ds_type_map or ds_type_list to denote this value as a map or list
 /*
 @example
 // someMap looks like:
-// { nested: {three: {deep: 1}}}
+//  { nested: {three: {deep: 1}}}
 _.set(someMap, 'nested.three.deep', 2);
 // => someMap now looks like:
 // => {nested: {three: {deep: 2}}}
 
+@example
+// some map looks like:
+// { someKey: "someValue" }
+_.set(someMap, "newKey", ds_list_create(), ds_list);
+// => someMap now looks like:
+// => { someKey: "someValue"], newKey: [] }
+
 */
 
-var map = argument0;
-var location = argument1;
-var value = argument2;
+var map = argument[0];
+var location = argument[1];
+var value = argument[2];
+var type = -10;
+
+if (argument_count > 3) {
+    type = argument[3];
+}
+
 var locationArray = _split(location, ".");
 var n = _length(locationArray);
 var finalLocation = locationArray[n - 1];
@@ -31,5 +45,13 @@ for (var i = 0; i < n - 1; i++) {
     }
 }
 
-map[? finalLocation] = value;
+if (type == -10) {
+    map[? finalLocation] = value;
+} else if (type == ds_type_map) {
+    ds_map_add_map(map, finalLocation, value);
+} else if (type == ds_type_list) {
+    ds_map_add_list(map, finalLocation, value);
+} else {
+    show_error("Unknown type for _set: " + string(type), false);
+}
 

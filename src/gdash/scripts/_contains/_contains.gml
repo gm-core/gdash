@@ -20,8 +20,7 @@ var collection = argument[0];
 var target = argument[1];
 var fromIndex = 0;
 
-// TODO: This should default to ds_type_list in the next major version
-var dsType = ds_type_map;
+var dsType = ds_type_list;
 
 if (argument_count > 2) {
     fromIndex = argument[2];
@@ -57,13 +56,7 @@ if (is_string(collection)) {
         }
         return false;
     } else if (dsType == ds_type_list) {
-        var n = _length(collection);
-        for (var i = fromIndex; i < n; i++) {
-            var thisValue = collection[| i];
-            if (_typeOf(thisValue) == _typeOf(target) && thisValue == target) {
-                return true;
-            }
-        }
+        return ds_list_find_index(collection, target) != -1;
     } else {
         show_error("Cannot look for value in ds type: " + string(dsType) + "\nIf using _contains with a data structure, it must be a list or map.", false);
     }

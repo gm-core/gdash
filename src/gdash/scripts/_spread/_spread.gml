@@ -11,7 +11,7 @@ _spread(ds_list_add, _arrayOf(listId, 1, 2, 3, 4));
 
 var func = argument[0];
 
-if (is_undefined(argument1)) {
+if (is_undefined(argument[1])) {
     return script_execute(func);
 } 
 

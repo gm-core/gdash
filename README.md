@@ -50,7 +50,7 @@ gdash is a functional utility library for GML, inspired by [lodash](https://loda
 
 ## Install
 
-Download [the latest release](https://github.com/twisterghost/gdash/releases) and import the gml files into your project's scripts. For GameMaker: Studio 2, you can just drag and drop the files into the editor.
+Download [the latest release](https://github.com/gm-core/gdash/releases) and import the gml files into your project's scripts. For GameMaker: Studio 2, you can just drag and drop the files into the editor.
 
 ## API
 

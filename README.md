@@ -568,7 +568,8 @@ Runs a script with the provided array as arguments.
 @return {*} The return value of the script
 
 @example
-_spread(ds_list_add, _arrayOf(listId, 1, 2, 3, 4));
+// Assume we have a script add_to_list which is similar to ds_list_add
+_spread(add_to_list, _arrayOf(listId, 1, 2, 3, 4));
 // => List now contains 1, 2, 3, 4
 ```
 

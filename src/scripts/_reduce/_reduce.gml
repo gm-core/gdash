@@ -16,15 +16,16 @@ _reduce(arr, concat);
 var collection = argument[0];
 var func = argument[1];
 var result = undefined;
-var n = _length(collection);
 var type = _type_of(collection);
 
 if (type == "real") {
-    for (var i = 0; i < n; i++) {
+    var length = ds_list_size(collection);
+    for (var i = 0; i < length; i++) {
         result = _run(func, result, collection[| i]);
     }
 } else if (type == "array") {
-    for (var i = 0; i < n; i++) {
+    var length = array_length_1d(collection);
+    for (var i = 0; i < length; i++) {
         result = _run(func, result, collection[@ i]);
     }
 } else {

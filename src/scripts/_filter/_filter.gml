@@ -14,19 +14,20 @@ _filter([0, 1, 2, 3], lessThanTwo)
 var result;
 var collection = argument0;
 var j = 0;
-var n = _length(collection);
 var type = _type_of(collection);
 
 if (type == "real") {
+    var length = ds_list_size(collection);
     result = ds_list_create();
-    for (var i = 0; i < n; i++) {
+    for (var i = 0; i < length; i++) {
         if (_run(argument1, collection[| i])) {
             result[| j] = collection[| i];
             j++;
         }    
     }
 } else if (type == "array") {
-    for (var i = 0; i < n; i++) {
+    var length = array_length_1d(collection);
+    for (var i = 0; i < length; i++) {
         if (_run(argument1, collection[@ i])) {
             result[j] = collection[@ i];
             j++;

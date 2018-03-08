@@ -37,7 +37,7 @@ if (is_string(collection)) {
 } else if (is_array(collection)) {
 
     // If it is an array, check if target exists in the array.
-    var n = _length(collection);
+    var n = array_length_1d(collection);
     for (var i = fromIndex; i < n; i++) {
         if (_type_of(collection[@ i]) == _type_of(target) && collection[@ i] == target) {
             return true;
@@ -47,7 +47,7 @@ if (is_string(collection)) {
 } else if (is_real(collection)) {
     if (dsType == ds_type_map) {
         var keys = _keys(collection);
-        var n = _length(keys);
+        var n = array_length_1d(keys);
         for (var i = fromIndex; i < n; i++) {
             var thisValue = collection[? keys[i]];
             if (_type_of(thisValue) == _type_of(target) && thisValue == target) {

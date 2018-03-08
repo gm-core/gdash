@@ -1,6 +1,6 @@
 # gdash - GML utility library
 
-Version 3.0.0
+Version 4.0.0
 
 ## Introduction
 

@@ -1,0 +1,21 @@
+{
+  "name": "gdash-utilities",
+  "version": "0.0.1",
+  "description": "This package.json is to install development utilities for gdash. You can ignore this if you are using gdash in your game.",
+  "scripts": {
+    "readme-toc": "markdown-toc -i README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gm-core/gdash.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gm-core/gdash/issues"
+  },
+  "homepage": "https://github.com/gm-core/gdash#readme",
+  "devDependencies": {
+    "markdown-toc": "^1.2.0"
+  }
+}

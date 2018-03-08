@@ -13,8 +13,8 @@ gdash is a functional utility library for GML, inspired by [lodash](https://loda
 - [Install](#install)
 - [API](#api)
   * [`_and(valueA, valueB)`](#_andvaluea-valueb)
-  * [`_arrayOf(value1, value2 ... value14)`](#_arrayofvalue1-value2--value14)
-  * [`_cloneArray(array)`](#_clonearrayarray)
+  * [`_array_of(value1, value2 ... value14)`](#_array_ofvalue1-value2--value14)
+  * [`_clone_array(array)`](#_clone_arrayarray)
   * [`_collect(objectType)`](#_collectobjecttype)
   * [`_concat(arrayA, arrayB)`](#_concatarraya-arrayb)
   * [`_contains(collection, target, fromIndex = 0)`](#_containscollection-target-fromindex--0)
@@ -23,8 +23,8 @@ gdash is a functional utility library for GML, inspired by [lodash](https://loda
   * [`_find(array, findScript)`](#_findarray-findscript)
   * [`_free(resourceId [, dsType])`](#_freeresourceid--dstype)
   * [`_get(mapId, locationString [, default])`](#_getmapid-locationstring--default)
-  * [`_indexOf(collection, value)`](#_indexofcollection-value)
-  * [`_isEqual(valueA, valueB)`](#_isequalvaluea-valueb)
+  * [`_index_of(collection, value)`](#_index_ofcollection-value)
+  * [`_is_equal(valueA, valueB)`](#_is_equalvaluea-valueb)
   * [`_join(array, joiner)`](#_joinarray-joiner)
   * [`_keys(dsMapId)`](#_keysdsmapid)
   * [`_length(collection)`](#_lengthcollection)
@@ -42,8 +42,9 @@ gdash is a functional utility library for GML, inspired by [lodash](https://loda
   * [`_split(string, splitter)`](#_splitstring-splitter)
   * [`_spread(script, argArray)`](#_spreadscript-argarray)
   * [`_times(script)`](#_timesscript)
-  * [`_toArray(list)`](#_toarraylist)
-  * [`_typeOf(value)`](#_typeofvalue)
+  * [`_to_array(list)`](#_to_arraylist)
+  * [`_to_list(array)`](#_to_listarray)
+  * [`_type_of(value)`](#_type_ofvalue)
   * [`_uniq(array)`](#_uniqarray)
 
 <!-- tocstop -->
@@ -71,7 +72,7 @@ _and(false, true);
 // => false
 ```
 
-### `_arrayOf(value1, value2 ... value14)`
+### `_array_of(value1, value2 ... value14)`
 
 Returns an array of the given arguments.
 
@@ -80,14 +81,14 @@ Returns an array of the given arguments.
 @returns {Array} An array of the given parameters
 
 @example
-_arrayOf(1, 2, 3);
+_array_of(1, 2, 3);
 // => [1, 2, 3];
 
-_arrayOf('hello', 'world', 'i', 'am', 'an', 'array');
+_array_of('hello', 'world', 'i', 'am', 'an', 'array');
 // => ['hello', 'world', 'i', 'am', 'an', 'array'];
 ```
 
-### `_cloneArray(array)`
+### `_clone_array(array)`
 
 Clones a given input array, returning a deep copy.
 
@@ -96,8 +97,8 @@ Clones a given input array, returning a deep copy.
 @returns {Array} A copy of the input array
 
 @example
-var myArray = _arrayOf(1, 2, 3);
-var copyArray = _cloneArray(myArray);
+var myArray = _array_of(1, 2, 3);
+var copyArray = _clone_array(myArray);
 _isEqual(myArray, copyArray)
 // => true
 ```
@@ -126,7 +127,7 @@ Appends the values of one array to another.
 @returns {Array} The concatenated array
 
 @example
-_concat(_arrayOf(0, 1, 2), _arrayOf(3, 4, 5));
+_concat(_array_of(0, 1, 2), _array_of(3, 4, 5));
 // => [0, 1, 2, 3, 4, 5]
 ```
 
@@ -182,7 +183,7 @@ Returns a a collection where values of the input collection are truthy when run 
 @returns {Array|DS_List} The filtered collection
 
 @example
-_filter(_arrayOf(0, 1, 2, 3), lessThanTwo)
+_filter(_array_of(0, 1, 2, 3), lessThanTwo)
 // => [0, 1]
 ```
 
@@ -196,7 +197,7 @@ Iterates over an array, returning the first element that the given script return
 @returns {*} The first element that returns truthy from the script
 
 @example
-_find(_arrayOf(0, 1, 2, 3), __equalsThree);
+_find(_array_of(0, 1, 2, 3), __equalsThree);
 // => 3
 ```
 ### `_free(resourceId [, dsType])`
@@ -229,7 +230,7 @@ _get(someMap, 'nested.three.deep');
 // => 1
 ```
 
-### `_indexOf(collection, value)`
+### `_index_of(collection, value)`
 
 Returns the index of the `value` in the `collection`, where `collection` is a ds_list id or array.
 
@@ -242,21 +243,21 @@ Returns `-1` if the value does not exist in the collection.
 @returns {Real} The index of the value, or -1
 
 @example
-var arr = _arrayOf(1, 2, 3, 4);
-_indexOf(arr, 3);
+var arr = _array_of(1, 2, 3, 4);
+_index_of(arr, 3);
 // => 2
 
 var list = ds_list_create();
 ds_list_add(list, 'hello', 'world', 3, true);
-_indexOf(list, 'world');
+_index_of(list, 'world');
 // => 1
 
-var arr = _arrayOf(1, 2, 3, 4);
-_indexOf(arr, 5);
+var arr = _array_of(1, 2, 3, 4);
+_index_of(arr, 5);
 // => -1
 ```
 
-### `_isEqual(valueA, valueB)`
+### `_is_equal(valueA, valueB)`
 
 Checks if two values are equal, being safe about type and checking first-level
 children of ds_lists and ds_maps. Returns false on type inequality rather than
@@ -271,10 +272,10 @@ throwing an error.
 
 @example
 
-_isEqual([1, 2, 3], [1, 2, 3]);
+_is_equal([1, 2, 3], [1, 2, 3]);
 // => true
 
-_isEqual("hello", 1);
+_is_equal("hello", 1);
 // => false
 
 var map = ds_map_create();
@@ -283,7 +284,7 @@ ds_map_add(map, 'world', 10);
 var map2 = ds_map_create();
 ds_map_add(map2, 'hello', 6);
 ds_map_add(map2, 'world', 10);
-_isEqual(map, map2, ds_type_map);
+_is_equal(map, map2, ds_type_map);
 // => true
 ```
 
@@ -297,11 +298,11 @@ Returns a string of the given `array` values combined by the `joiner`
 @returns {String} The joined array
 
 @example
-var arr = _arrayOf('hello', 'world');
+var arr = _array_of('hello', 'world');
 _join(arr, ' ');
 // => 'hello world'
 
-var arr = _arrayOf('Peter', 'Paul', 'Mary');
+var arr = _array_of('Peter', 'Paul', 'Mary');
 _join(arr, ', ');
 // => 'Peter, Paul, Mary';
 ```
@@ -442,7 +443,7 @@ Adds a value to the end of an array
 @returns {Array} The array with the value added
 
 @example
-_push(_arrayOf(1, 2), 3);
+_push(_array_of(1, 2), 3);
 // => [1, 2, 3]
 ```
 
@@ -456,11 +457,11 @@ Reduces a collection by iterating over it with a function. Provided script shoul
 @returns {*} The reduced value from the given script
 
 @example
-var arr = _arrayOf(1, 2, 3, 4, 5);
+var arr = _array_of(1, 2, 3, 4, 5);
 _reduce(arr, sum);
 // => 15
 
-var arr = _arrayOf('hello', 'world');
+var arr = _array_of('hello', 'world');
 _reduce(arr, concat);
 // => 'helloworld';
 ```
@@ -474,9 +475,9 @@ Reverses a given input array.
 @returns {Array} The reversed array
 
 @example
-var myArray = _arrayOf(1, 2, 3);
+var myArray = _array_of(1, 2, 3);
 var reverseArray = _reverse(myArray);
-_isEqual(_arrayOf(3,2,1), reverseArray)
+_isEqual(_array_of(3,2,1), reverseArray)
 // => true
 ```
 
@@ -535,9 +536,9 @@ Creates a slice of array from start up to, but not including, end.
 @returns {Array} The sliced array
 
 @example
-var myArray = _arrayOf(1, 2, 3, 4);
+var myArray = _array_of(1, 2, 3, 4);
 var slicedArray = _slice(myArray, 1, 3);
-_isEqual(_arrayOf(2,3), slicedArray)
+_isEqual(_array_of(2,3), slicedArray)
 // => true
 ```
 
@@ -569,7 +570,7 @@ Runs a script with the provided array as arguments.
 
 @example
 // Assume we have a script add_to_list which is similar to ds_list_add
-_spread(add_to_list, _arrayOf(listId, 1, 2, 3, 4));
+_spread(add_to_list, _array_of(listId, 1, 2, 3, 4));
 // => List now contains 1, 2, 3, 4
 ```
 
@@ -587,7 +588,7 @@ _times(3, returnTheValue5);
 // => [5, 5, 5];
 ```
 
-### `_toArray(list)`
+### `_to_array(list)`
 
 Returns the given ds_list as an array
 
@@ -597,7 +598,19 @@ Returns the given ds_list as an array
 Note: If the given list is of size 0, this will return undefined
 ```
 
-### `_typeOf(value)`
+### `_to_list(array)`
+
+Converts the given array to a new ds_list
+
+```
+var input = ["hello", "world", 10];
+var list = _to_list(input);
+list[| 0]; // "hello"
+list[| 1]; // "world"
+list[| 2]; // 10
+```
+
+### `_type_of(value)`
 
 Returns the variable type of the given argument
 
@@ -607,21 +620,21 @@ Returns the variable type of the given argument
 
 @example
 
-_typeOf(1);
+_type_of(1);
 // => "real"
 
-_typeOf("hello");
+_type_of("hello");
 // => "string"
 
 var arr;
 arr[0] = 1; arr[1] = 2;
-_typeOf(arr);
+_type_of(arr);
 // => "array"
 
-_typeOf(undefined);
+_type_of(undefined);
 // => "undefined";
 
-_typeOf(sprite_get_texture(spr_player, 1));
+_type_of(sprite_get_texture(spr_player, 1));
 // => "pointer";
 ```
 
@@ -634,7 +647,7 @@ Returns an array with all duplicate values removed
 @returns {Array} An array with the duplicate values removed
 
 @example
-_uniq(_arrayOf(1, 1, 2, 3));
+_uniq(_array_of(1, 1, 2, 3));
 // => [1, 2, 3]
 ```
 

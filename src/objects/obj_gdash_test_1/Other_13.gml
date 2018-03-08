@@ -14,11 +14,11 @@ ds_list_sort(list, true);
 
 var arr = [1, 2, 3, 4, 5];
 
-var mapRes = _map(map, __double, ds_type_map);
-var listRes = _map(list, __double, ds_type_list);
-var arrRes = _map(arr, __double);
+var mapRes = _map(map, double, ds_type_map);
+var listRes = _map(list, double, ds_type_list);
+var arrRes = _map(arr, double);
 
-var addTwo = _partial(__add, 2);
+var addTwo = _partial(add, 2);
 var arrRes2 = _map(arr, addTwo);
 
 assert_equal(arrRes2[0], 3);

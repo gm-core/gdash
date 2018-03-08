@@ -3,7 +3,7 @@ test_start("_filter", "returns an array with elements removed when they are fals
 
 var arr = [0, 1, 2, 3, 4, 5, 6];
 
-var res = _filter(arr, __isEven);
+var res = _filter(arr, isEven);
 
 assert_is_true(_contains(res, 0));
 assert_is_true(_contains(res, 2));
@@ -16,7 +16,7 @@ assert_is_false(_contains(res, 5));
 
 var list = ds_list_create();
 ds_list_add(list, 0, 1, 2, 3, 4, 5, 6);
-var resList = _filter(list, __isEven);
+var resList = _filter(list, isEven);
 
 _log(list[| 1]);
 _log(resList[| 1]);

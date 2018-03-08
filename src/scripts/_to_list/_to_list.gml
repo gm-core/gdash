@@ -11,7 +11,7 @@ list[| 2]; // 10
 */
 
 var arr = argument0;
-var arrSize = array_size_1d(arr);
+var arrSize = array_length_1d(arr);
 var list = ds_list_create();
 
 for (var i = 0; i < arrSize; i++) {

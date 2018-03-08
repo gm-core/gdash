@@ -138,7 +138,7 @@
             "Key": "2e2daba8-4764-4076-8526-b2528785accc",
             "Value": {
                 "id": "dd65cb39-3c63-4ec2-b8e1-2ec42f6932fa",
-                "resourcePath": "scripts\\__sum\\__sum.yy",
+                "resourcePath": "scripts\\sum\\sum.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -274,7 +274,7 @@
             "Key": "6674cf91-7ea3-4e59-9ebf-1f0caf512692",
             "Value": {
                 "id": "c5ae8e9e-36c7-43c4-b137-0f1535cd2495",
-                "resourcePath": "scripts\\__isEven\\__isEven.yy",
+                "resourcePath": "scripts\\isEven\\isEven.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -306,7 +306,7 @@
             "Key": "71fc0e7e-ac29-4c46-920e-a07621c9158d",
             "Value": {
                 "id": "ddf047e3-a5e8-4c54-8786-2e8411191a9b",
-                "resourcePath": "scripts\\__add\\__add.yy",
+                "resourcePath": "scripts\\add\\add.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -314,7 +314,7 @@
             "Key": "73ab2ea6-b1dd-40ce-9fb0-1356bcff5f3e",
             "Value": {
                 "id": "57763314-898c-43ef-adf9-254e124b5a8d",
-                "resourcePath": "scripts\\__greaterThanThree\\__greaterThanThree.yy",
+                "resourcePath": "scripts\\greaterThanThree\\greaterThanThree.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -426,7 +426,7 @@
             "Key": "a44c3458-a344-402c-8fd1-6eff64583bc8",
             "Value": {
                 "id": "c7ee1655-c55c-48e2-80b6-f2278c462c7b",
-                "resourcePath": "scripts\\__double\\__double.yy",
+                "resourcePath": "scripts\\double\\double.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -522,7 +522,7 @@
             "Key": "b4af5c47-5e7e-4154-b1bd-ccf86a7504ae",
             "Value": {
                 "id": "bd0128ff-db11-4816-9f12-1db133b94c97",
-                "resourcePath": "scripts\\__returnFour\\__returnFour.yy",
+                "resourcePath": "scripts\\returnFour\\returnFour.yy",
                 "resourceType": "GMScript"
             }
         },

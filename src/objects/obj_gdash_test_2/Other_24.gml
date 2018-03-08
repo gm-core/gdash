@@ -1,8 +1,8 @@
 /// @description _reverse
 test_start("_reverse", "Reverses an array");
 
-var arr1 = _arrayOf(1);
-var arr2 = _arrayOf(1, 2, 3);
+var arr1 = [1];
+var arr2 = [1, 2, 3];
 
 var test1 = _reverse(arr1);
 var test2 = _reverse(arr2);

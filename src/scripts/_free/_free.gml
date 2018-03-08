@@ -18,7 +18,7 @@ if (argument_count == 1) {
     type = argument[1];
 }
 
-if (_isEqual(type, "partial")) {
+if (_is_equal(type, "partial")) {
     type = ds_type_map;
 }
 

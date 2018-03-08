@@ -3,10 +3,9 @@
 /// @returns {Array} The reversed array
 /*
 @example
-var myArray = _arrayOf(1, 2, 3);
+var myArray = [1, 2, 3];
 var reverseArray = _reverse(myArray);
-_isEqual(_arrayOf(3,2,1), reverseArray)
-// => true
+// => [3, 2, 1]
 */
 
 var result;

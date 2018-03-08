@@ -12,12 +12,7 @@ var list = ds_list_create();
 ds_list_add(list, 1, 2, 3, 4, 5);
 ds_list_sort(list, true);
 
-var arr;
-arr[0] = 1;
-arr[1] = 2;
-arr[2] = 3;
-arr[3] = 4;
-arr[4] = 5;
+var arr = [1, 2, 3, 4, 5];
 
 var mapRes = _map(map, __double, ds_type_map);
 var listRes = _map(list, __double, ds_type_list);

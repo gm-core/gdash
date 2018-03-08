@@ -34,7 +34,7 @@
             "Key": "024cd91c-bb54-4636-a223-6ba0a8f98e80",
             "Value": {
                 "id": "e15462b7-c381-44e6-8e87-e7199f511333",
-                "resourcePath": "scripts\\_cloneArray\\_cloneArray.yy",
+                "resourcePath": "scripts\\_clone_array\\_clone_array.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -98,7 +98,7 @@
             "Key": "1ba92935-c21d-4159-91a1-0a778afcbcf6",
             "Value": {
                 "id": "2c4005fd-e6dc-46fc-bd52-e523842dcf4d",
-                "resourcePath": "scripts\\_typeOf\\_typeOf.yy",
+                "resourcePath": "scripts\\_type_of\\_type_of.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -330,7 +330,7 @@
             "Key": "78a96032-6d47-40a1-94e8-dcb78178a134",
             "Value": {
                 "id": "52ff4490-1727-4bdb-8c98-9d003038855a",
-                "resourcePath": "scripts\\_isEqual\\_isEqual.yy",
+                "resourcePath": "scripts\\_is_equal\\_is_equal.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -442,7 +442,7 @@
             "Key": "a6902058-42c5-4eb6-8658-c430cfa31c1a",
             "Value": {
                 "id": "0150e35a-054c-4604-b480-d9db4ec72297",
-                "resourcePath": "scripts\\_arrayOf\\_arrayOf.yy",
+                "resourcePath": "scripts\\_array_of\\_array_of.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -586,7 +586,7 @@
             "Key": "cfac0abc-4609-4eae-a2d7-af54980b51fd",
             "Value": {
                 "id": "75ba1d87-ae76-4abc-bc1c-64b17f94a36c",
-                "resourcePath": "scripts\\_indexOf\\_indexOf.yy",
+                "resourcePath": "scripts\\_index_of\\_index_of.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -602,7 +602,7 @@
             "Key": "da7da0f1-1a2d-47c9-955b-587d639ca46a",
             "Value": {
                 "id": "3dee5fbe-693c-4d65-ad0c-67bc6f20788e",
-                "resourcePath": "scripts\\_toArray\\_toArray.yy",
+                "resourcePath": "scripts\\_to_array\\_to_array.yy",
                 "resourceType": "GMScript"
             }
         },

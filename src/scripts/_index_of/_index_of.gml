@@ -15,7 +15,7 @@ if (is_real(collection)) {
 var n = _length(collection);
 
 for (var i = 0; i < n; i++) {
-    if (_isEqual(collection[@ i], search)) {
+    if (_is_equal(collection[@ i], search)) {
         return i;
     }
 }

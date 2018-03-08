@@ -4,7 +4,7 @@
 /// @returns {Array} The array with the value added
 /*
 @example
-_push(_arrayOf(1, 2), 3);
+_push([1, 2], 3);
 // => [1, 2, 3]
 */
 

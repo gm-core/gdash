@@ -5,7 +5,7 @@
 /// @return {*} The return value of the script
 /*
 @example
-_spread(ds_list_add, _arrayOf(listId, 1, 2, 3, 4));
+_spread(add_to_list, [listId, 1, 2, 3, 4]);
 // => List now contains 1, 2, 3, 4
 */
 

@@ -4,21 +4,21 @@
 /*
 @example
 
-_typeOf(1);
+_type_of(1);
 // => "real"
 
-_typeOf("hello");
+_type_of("hello");
 // => "string"
 
 var arr;
 arr[0] = 1; arr[1] = 2;
-_typeOf(arr);
+_type_of(arr);
 // => "array"
 
-_typeOf(undefined);
+_type_of(undefined);
 // => "undefined";
 
-_typeOf(sprite_get_texture(spr_player, 1));
+_type_of(sprite_get_texture(spr_player, 1));
 // => "pointer";
 */
 

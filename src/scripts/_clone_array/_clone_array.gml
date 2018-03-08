@@ -3,9 +3,9 @@
 /// @returns {Array} A copy of the input array
 /*
 @example
-var myArray = _arrayOf(1, 2, 3);
-var copyArray = _cloneArray(myArray);
-_isEqual(myArray, copyArray)
+var myArray = [1, 2, 3];
+var copyArray = _clone_array(myArray);
+_is_equal(myArray, copyArray)
 // => true
 */
 

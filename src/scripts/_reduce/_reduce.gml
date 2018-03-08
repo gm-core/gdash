@@ -4,11 +4,11 @@
 /// @returns {*} The reduced value from the given script
 /*
 @example
-var arr = _arrayOf(1, 2, 3, 4, 5);
+var arr = [1, 2, 3, 4, 5];
 _reduce(arr, sum);
 // => 15
 
-var arr = _arrayOf('hello', 'world');
+var arr = ['hello', 'world'];
 _reduce(arr, concat);
 // => 'helloworld';
 */
@@ -17,7 +17,7 @@ var collection = argument[0];
 var func = argument[1];
 var result = undefined;
 var n = _length(collection);
-var type = _typeOf(collection);
+var type = _type_of(collection);
 
 if (type == "real") {
     for (var i = 0; i < n; i++) {

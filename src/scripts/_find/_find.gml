@@ -4,7 +4,7 @@
 /// @returns {*} The first element that returns truthy from the script
 /*
 @example
-_find(_arrayOf(0, 1, 2, 3), __equalsThree);
+_find([0, 1, 2, 3], __equalsThree);
 // => 3
 */
 

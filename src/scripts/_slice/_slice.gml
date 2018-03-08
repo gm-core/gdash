@@ -5,16 +5,16 @@
 /// @returns {Array} The sliced array
 /*
 @example
-var myArray = _arrayOf(1, 2, 3, 4);
+var myArray = [1, 2, 3, 4];
 var slicedArray = _slice(myArray, 1, 3);
-_isEqual(_arrayOf(2,3), slicedArray)
+_is_equal([2, 3], slicedArray)
 // => true
 */
 
 var result;
 var array = argument[0];
 var starti = argument[1];
-var endi=0;
+var endi = 0;
 
 if (argument_count == 3) {
 	endi = argument[2];

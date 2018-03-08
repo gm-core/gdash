@@ -20,7 +20,7 @@ for (var i = argument_count-1; i >= 1; i--) {
 }
 
 // Check if func is a partial (map with 'partial' set to 'partial');
-if (ds_exists(func, ds_type_map) && _isEqual(ds_map_find_value(func, "partial"), "partial")) {
+if (ds_exists(func, ds_type_map) && _is_equal(ds_map_find_value(func, "partial"), "partial")) {
     var partialId = func;
     func = ds_map_find_value(partialId, "function");
     args = _concat(ds_map_find_value(partialId, "args"), args);

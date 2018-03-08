@@ -2,7 +2,7 @@
 
 test_start("_slice", "Slices an array");
 
-var arr = _arrayOf(1, 2, 3);
+var arr = [1, 2, 3];
 
 var test1 = _slice(arr, 0);
 var test2 = _slice(arr, 1, 2);

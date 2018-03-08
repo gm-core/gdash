@@ -6,7 +6,7 @@
 ///       the original collection will not be destroyed, so if you pass in a list, you will still need to destroy it.
 /*
 @example
-_filter(_arrayOf(0, 1, 2, 3), lessThanTwo)
+_filter([0, 1, 2, 3], lessThanTwo)
 // => [0, 1]
 
 */
@@ -15,7 +15,7 @@ var result;
 var collection = argument0;
 var j = 0;
 var n = _length(collection);
-var type = _typeOf(collection);
+var type = _type_of(collection);
 
 if (type == "real") {
     result = ds_list_create();

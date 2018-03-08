@@ -4,13 +4,13 @@
 /// @returns {Array} The concatenated array
 /*
 @example
-_concat(_arrayOf(0, 1, 2), _arrayOf(3, 4, 5));
+_concat([0, 1, 2], [3, 4, 5]);
 // => [0, 1, 2, 3, 4, 5]
 
 */
 
 var n = _length(argument0);
-var arr = _cloneArray(argument0);
+var arr = _clone_array(argument0);
 
 for (var i = _length(argument1) - 1; i >= 0; i--) {
     arr[@ n+i] = argument1[@ i]; 

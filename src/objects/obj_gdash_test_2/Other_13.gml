@@ -1,9 +1,9 @@
-/// @desc _arrayOf
-test_start("_arrayOf", "returns an array of the arguments");
+/// @desc _array_of
+test_start("_array_of", "returns an array of the arguments");
 
-var arr = _arrayOf(2, 4, 6, 1, 2, 3);
+var arr = _array_of(2, 4, 6, 1, 2, 3);
 
-assert_equal(_typeOf(arr), "array");
+assert_equal(_type_of(arr), "array");
 
 assert_equal(arr[0], 2);
 assert_equal(arr[1], 4);

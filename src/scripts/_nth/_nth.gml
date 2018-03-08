@@ -4,7 +4,7 @@
 
 var collection = argument0;
 var n = argument1;
-var type = _typeOf(collection);
+var type = _type_of(collection);
 
 
 if (type == "real") {

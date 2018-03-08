@@ -27,19 +27,19 @@ if (argument_count == 3) {
     type = argument[2];
 }
 
-if (_isEqual(type, "array")) {
+if (_is_equal(type, "array")) {
     for (var i = _length(collection)-1; i >= 0; i--) {
         result[i] = _run(func, collection[@ i], i);
     }
     
     return result;
-} else if (_isEqual(type, ds_type_map)) {
+} else if (_is_equal(type, ds_type_map)) {
     var keys = _keys(collection);
     for (var i = _length(keys)-1; i >= 0; i--) {
         result[i] = _run(func, ds_map_find_value(collection, keys[i]), keys[i]);
     }
     return result;
-} else if (_isEqual(type, ds_type_list)) {
+} else if (_is_equal(type, ds_type_list)) {
     for (var i = _length(collection)-1; i >= 0; i--) {
         result[i] = _run(func, ds_list_find_value(collection, i), i);
     }

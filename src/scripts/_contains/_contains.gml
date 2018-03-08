@@ -39,7 +39,7 @@ if (is_string(collection)) {
     // If it is an array, check if target exists in the array.
     var n = _length(collection);
     for (var i = fromIndex; i < n; i++) {
-        if (_typeOf(collection[@ i]) == _typeOf(target) && collection[@ i] == target) {
+        if (_type_of(collection[@ i]) == _type_of(target) && collection[@ i] == target) {
             return true;
         }
     }
@@ -50,7 +50,7 @@ if (is_string(collection)) {
         var n = _length(keys);
         for (var i = fromIndex; i < n; i++) {
             var thisValue = collection[? keys[i]];
-            if (_typeOf(thisValue) == _typeOf(target) && thisValue == target) {
+            if (_type_of(thisValue) == _type_of(target) && thisValue == target) {
                 return true;
             }
         }
@@ -64,7 +64,7 @@ if (is_string(collection)) {
     return false;
 } else {
     // Catch case for unknown collection
-    show_error("Cannot look for value in type: " + _typeOf(collection) + "\nCollection must be a string, array, map or list.", false);
+    show_error("Cannot look for value in type: " + _type_of(collection) + "\nCollection must be a string, array, map or list.", false);
 }
 
 return false;

@@ -6,10 +6,7 @@ assert_is_true(_contains("hello", "ello"));
 assert_is_false(_contains("hello", "goodbye"));
 
 // Array contains
-var arr;
-arr[0] = 1;
-arr[1] = "hello";
-arr[2] = "goodbye";
+var arr = [1, "hello", "goodbye"];
 
 assert_is_true(_contains(arr, 1));
 assert_is_true(_contains(arr, "hello"));

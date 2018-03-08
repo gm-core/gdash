@@ -3,7 +3,7 @@
 /// @returns {Array} An array with the duplicate values removed
 /*
 @example
-_uniq(_arrayOf(1, 1, 2, 3));
+_uniq([1, 1, 2, 3]);
 // => [1, 2, 3]
 */
 

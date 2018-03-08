@@ -1,8 +1,8 @@
 /// @desc _concat
 test_start("_concat", "Appends one array to another");
 
-var arr1 = _arrayOf(0, 1, 2);
-var arr2 = _arrayOf(30, 40, 50);
+var arr1 = [0, 1, 2];
+var arr2 = [30, 40, 50];
 
 var res = _concat(arr1, arr2);
 

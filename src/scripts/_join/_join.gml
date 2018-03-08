@@ -4,11 +4,11 @@
 /// @returns {String} The joined array
 /*
 @example
-var arr = _arrayOf('hello', 'world');
+var arr = ['hello', 'world'];
 _join(arr, ' ');
 // => 'hello world'
 
-var arr = _arrayOf('Peter', 'Paul', 'Mary');
+var arr = ['Peter', 'Paul', 'Mary'];
 _join(arr, ', ');
 // => 'Peter, Paul, Mary';
 */

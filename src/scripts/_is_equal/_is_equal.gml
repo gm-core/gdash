@@ -34,11 +34,11 @@ if (argument_count == 3) {
         return false;
     } else {
         if (_type_of(compareA) == "array") {
-            if (_length(compareA) != _length(compareB)) {
+            if (array_length_1d(compareA) != array_length_1d(compareB)) {
                 return false;
             }
             
-            for (var i = _length(compareA)-1; i >= 0; i--) {
+            for (var i = array_length_1d(compareA) - 1; i >= 0; i--) {
                 if (!_is_equal(compareA[@ i], compareB[@ i])) {
                     return false;
                 }
@@ -57,7 +57,7 @@ if (type == ds_type_map) {
         return false;
     }
     
-    for (var i = _length(aKeys)-1; i >= 0; i--) {
+    for (var i = array_length_1d(aKeys) - 1; i >= 0; i--) {
         if (!_is_equal(ds_map_find_value(compareA, aKeys[i]), ds_map_find_value(compareB, aKeys[i]))) {
             return false;
         }

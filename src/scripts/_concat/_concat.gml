@@ -9,10 +9,10 @@ _concat([0, 1, 2], [3, 4, 5]);
 
 */
 
-var n = _length(argument0);
+var n = array_length_1d(argument0);
 var arr = _clone_array(argument0);
 
-for (var i = _length(argument1) - 1; i >= 0; i--) {
+for (var i = array_length_1d(argument1) - 1; i >= 0; i--) {
     arr[@ n+i] = argument1[@ i]; 
 }
 

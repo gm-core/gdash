@@ -8,11 +8,11 @@ _uniq([1, 1, 2, 3]);
 */
 
 var arr = argument0;
-var n = _length(arr);
+var n = array_length_1d(arr);
 var j = 0;
 var result = undefined;
 
-if (_length(arr) < 2)
+if (array_length_1d(arr) < 2)
     return arr;
 
 for (var i = 0; i < n; i++) {

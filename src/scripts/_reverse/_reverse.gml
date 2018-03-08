@@ -9,7 +9,7 @@ var reverseArray = _reverse(myArray);
 */
 
 var result;
-var n = _length(argument0);
+var n = array_length_1d(argument0);
 
 for (var i = 0; i < n; i++) {
 	result[i] = argument0[@ n-1-i];

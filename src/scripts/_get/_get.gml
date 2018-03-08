@@ -14,7 +14,7 @@ _.get(someMap, 'nested.three.deep');
 var location = argument1;
 var locationArray = _split(location, ".");
 var map = argument0;
-var n = _length(locationArray);
+var n = array_length_1d(locationArray);
 var thisLoc;
 
 for (var i = 0; i < n; i++) {

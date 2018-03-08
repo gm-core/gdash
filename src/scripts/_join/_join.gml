@@ -17,7 +17,7 @@ var outString = "";
 var inArray = argument0;
 var joiner = argument1;
 
-var arrLength = _length(inArray);
+var arrLength = array_length_1d(inArray);
 var maxIndex = arrLength - 1;
 var stringJoiner = string(joiner);
 

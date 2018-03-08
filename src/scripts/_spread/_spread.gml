@@ -16,7 +16,7 @@ if (is_undefined(argument[1])) {
 } 
 
 var args = argument[1];
-switch (_length(args)) {
+switch (array_length_1d(args)) {
   case 1:
     return script_execute(func, args[@ 0]);
   case 2:

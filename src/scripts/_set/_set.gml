@@ -7,14 +7,14 @@
 @example
 // someMap looks like:
 //  { nested: {three: {deep: 1}}}
-_.set(someMap, 'nested.three.deep', 2);
+_set(someMap, 'nested.three.deep', 2);
 // => someMap now looks like:
 // => {nested: {three: {deep: 2}}}
 
 @example
 // some map looks like:
 // { someKey: "someValue" }
-_.set(someMap, "newKey", ds_list_create(), ds_list);
+_set(someMap, "newKey", ds_list_create(), ds_type_list);
 // => someMap now looks like:
 // => { someKey: "someValue"], newKey: [] }
 
@@ -30,7 +30,7 @@ if (argument_count > 3) {
 }
 
 var locationArray = _split(location, ".");
-var n = _length(locationArray);
+var n = array_length_1d(locationArray);
 var finalLocation = locationArray[n - 1];
 var thisLoc;
 var prev;

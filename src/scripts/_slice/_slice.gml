@@ -19,7 +19,7 @@ var endi = 0;
 if (argument_count == 3) {
 	endi = argument[2];
 } else {
-	endi = _length(array);
+	endi = array_length_1d(array);
 }
 
 for (var i = endi - 1; i >= starti; i--) {

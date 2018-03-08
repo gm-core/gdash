@@ -9,6 +9,6 @@ _push([1, 2], 3);
 */
 
 gml_pragma("forceinline");
-argument0[@ _length(argument0)] = argument1;
+argument0[@ array_length_1d(argument0)] = argument1;
 return argument0;
 

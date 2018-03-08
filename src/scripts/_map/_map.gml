@@ -28,19 +28,19 @@ if (argument_count == 3) {
 }
 
 if (_is_equal(type, "array")) {
-    for (var i = _length(collection)-1; i >= 0; i--) {
+    for (var i = array_length_1d(collection)-1; i >= 0; i--) {
         result[i] = _run(func, collection[@ i], i);
     }
     
     return result;
 } else if (_is_equal(type, ds_type_map)) {
     var keys = _keys(collection);
-    for (var i = _length(keys)-1; i >= 0; i--) {
+    for (var i = array_length_1d(keys) - 1; i >= 0; i--) {
         result[i] = _run(func, ds_map_find_value(collection, keys[i]), keys[i]);
     }
     return result;
 } else if (_is_equal(type, ds_type_list)) {
-    for (var i = _length(collection)-1; i >= 0; i--) {
+    for (var i = ds_list_size(collection) - 1; i >= 0; i--) {
         result[i] = _run(func, ds_list_find_value(collection, i), i);
     }
     return result;

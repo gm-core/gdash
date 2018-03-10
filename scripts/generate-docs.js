@@ -44,7 +44,7 @@ function getParams(script) {
 
 function getNotes(script) {
   const res = script.match(/@note (.*)$/m);
-  return res ? `> ${res[1]}\n\n` : '';
+  return res ? `> *Note*: ${res[1]}\n\n` : '';
 }
 
 function getReturn(script) {

@@ -406,7 +406,7 @@ _or(false, false);
 
 Creates a partial function identifier for use in place of raw scripts in gdash functions, or with the use of `_run`.
 
-> Partials are to be treated as a data structure, and must be cleaned up with _free() when they are no longer of use.
+> *Note*: Partials are to be treated as a data structure, and must be cleaned up with _free() when they are no longer of use.
 
 ```gml
 @param {Script} script The script to create a partial of
@@ -562,8 +562,6 @@ _split('Dogs and cats and mice', ' and ');
 
 Runs a script with the provided array as arguments
 
-> This script is disgusting, but useful.
-
 ```gml
 @param {Script} script The script to run
 @param {Array} arrayOfArguments An array to provide as individual arguments
@@ -595,7 +593,7 @@ _times(3, returnTheValue5);
 
 Converts the given ds_list to an array
 
-> If the given list is of size 0, this will return undefined.
+> *Note*: If the given list is of size 0, this will return undefined.
 
 ```gml
 @param list

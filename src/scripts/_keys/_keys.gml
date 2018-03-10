@@ -16,7 +16,7 @@ _keys(map);
 var map = argument0;
 var nextKey = ds_map_find_first(map);
 var nextInd = 0;
-var keys;
+var keys = [];
 
 while (!is_undefined(nextKey)) {
     keys[nextInd++] = nextKey;

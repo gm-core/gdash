@@ -1,5 +1,6 @@
 /// @func _type_of(value)
-/// @desc Returns the variable type of the given argument
+/// @desc Returns the variable type of the given argument as a string.
+/// @note Works exactly as the native typeof(), though refers to `number` as `real` to be more consistent with GM:S terminology
 /// @param {*} value A variable to check the type of
 /// @returns {String} The type of the variable as a human readable string
 /*
@@ -20,17 +21,8 @@ _type_of(undefined);
 // => "undefined";
 
 _type_of(sprite_get_texture(spr_player, 1));
-// => "pointer";
+// => "ptr";
 */
 
-if (is_string(argument0)) {
-    return "string";
-} else if (is_array(argument0)) {
-    return "array";
-} else if (is_ptr(argument0)) {
-    return "pointer";
-} else if (is_undefined(argument0)) {
-    return "undefined";
-} else if (is_real(argument0)) {
-    return "real";
-}
+var type = typeof(argument0)
+return type == "number" ? "real" : type;

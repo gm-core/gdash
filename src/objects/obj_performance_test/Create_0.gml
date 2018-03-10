@@ -12,10 +12,10 @@ for (var i = 0; i < count; i++) {
     
 #region test
 
-    
+    //_uniq(arr);
 
 #endregion
-//    _contains(arr, 2, 2);
+
 }
 
 var endTime = get_timer();

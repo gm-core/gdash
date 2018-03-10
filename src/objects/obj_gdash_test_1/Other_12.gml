@@ -16,6 +16,7 @@ assert_is_true(_contains(keys, "two"));
 assert_is_true(_contains(keys, "three"));
 assert_is_true(_contains(keys, "four"));
 assert_is_true(_contains(keys, "five"));
+assert_is_false(_contains(keys, "rando"));
 
 ds_map_destroy(map);
 test_end();

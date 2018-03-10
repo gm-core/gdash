@@ -6,4 +6,3 @@ assert_equal(_type_of("hello"), "string");
 assert_equal(_type_of(undefined), "undefined");
 
 test_end();
-

@@ -12,15 +12,21 @@ var arr = argument0;
 var n = array_length_1d(arr);
 var j = 0;
 var result = undefined;
+var seenMap = ds_map_create();
 
-if (array_length_1d(arr) < 2)
+if (array_length_1d(arr) <= 1) {
     return arr;
+}
 
 for (var i = 0; i < n; i++) {
-    if (!_contains(result, arr[@ i])) {
-        result[j++] = arr[@ i];
+    var val = arr[@ i];
+    if (is_undefined(seenMap[? val])) {
+        seenMap[? val] = true;
+        result[j++] = val;
     }
 }
+
+ds_map_destroy(seenMap);
 
 return result;
 

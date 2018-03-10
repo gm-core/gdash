@@ -1,7 +1,8 @@
 /// @func _reduce(collection, reducer)
-/// @desc Reduces a collection by iterating over it with a function. Provided script should take 2 arguments: total, value. On the first call, total is undefined.
+/// @desc Reduces a collection by iterating over it with a function. Provided script should take 2 arguments: total, value.
 /// @param {Array|ds_list} collection The collection to reduce
 /// @param {Script} recuderScript The script to reduce with
+/// @param {*} value [Optional] The default value to begin reducing with. If not provided, the default is `undefined`
 /// @returns {*} The reduced value from the given script
 /*
 @example
@@ -16,7 +17,7 @@ _reduce(arr, concat);
 
 var collection = argument[0];
 var func = argument[1];
-var result = undefined;
+var result = argument_count > 2 ? argument[2] : undefined;
 var type = _type_of(collection);
 
 if (type == "real") {

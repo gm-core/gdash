@@ -1,5 +1,5 @@
 /// @func _contains(collection, target [, fromIndex, dsType])
-/// @desc Returns true if the given array contains the given value
+/// @desc Returns true if the given array contains the given value, otherwise returns false
 /// @param {String|Array|DS_Map|DS_List} collection The collection to search
 /// @param {*} value The value to look for
 /// @param {Real} optionalFromIndex [0] The index to begin looking from

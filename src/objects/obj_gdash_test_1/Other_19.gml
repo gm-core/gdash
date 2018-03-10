@@ -18,9 +18,6 @@ var list = ds_list_create();
 ds_list_add(list, 0, 1, 2, 3, 4, 5, 6);
 var resList = _filter(list, isEven);
 
-_log(list[| 1]);
-_log(resList[| 1]);
-
 assert_is_true(_contains(resList, 0, 0, ds_type_list));
 assert_is_true(_contains(resList, 2, 0, ds_type_list));
 assert_is_true(_contains(resList, 4, 0, ds_type_list));

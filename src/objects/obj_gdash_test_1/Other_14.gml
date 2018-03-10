@@ -14,5 +14,7 @@ list[| 4] = 5;
 
 assert_equal(_reduce(list, sum), 15);
 
+assert_equal(_reduce(arr, sum, 10), 25);
+
 test_end();
 

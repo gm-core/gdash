@@ -21,42 +21,72 @@ var collection = argument[0];
 var target = argument[1];
 var fromIndex = argument_count > 2 ? argument[2] : 0;
 var dsType = argument_count > 3 ? argument[3] : ds_type_list;
+var collectionType = typeof(collection);
 
-if (is_string(collection)) {
-
-    // If it is a string, check to see if the target is in the string.
-    return string_count(string(target), collection) > 0;
-} else if (is_array(collection)) {
-
-    // If it is an array, check if target exists in the array.
-    var n = array_length_1d(collection);
-    for (var i = fromIndex; i < n; i++) {
-        if (_type_of(collection[@ i]) == _type_of(target) && collection[@ i] == target) {
-            return true;
+// Prepare collection if fromIndex is specified for array or list
+if (fromIndex != 0) {
+    if (collectionType == "array") {
+        if (fromIndex > array_length_1d(collection)) {
+            return false;
         }
+        collection = _slice(collection, fromIndex);
+    } else if (collectionType == "number" && dsType == ds_type_list) {
+        if (fromIndex > ds_list_size(collection)) {
+            return false;
+        }
+        var inCollection = collection;
+        collection = ds_list_create();
+        ds_list_copy(collection, inCollection);
+        for (var i = 0; i < fromIndex; i++) {
+            ds_list_delete(collection, 0);
+        }
+    } else if (collectionType == "string") {
+        if (fromIndex > string_length(collection)) {
+            return false;
+        }
+        collection = string_delete(collection, 1, fromIndex);
     }
-    return false;
-} else if (is_real(collection)) {
+}
+
+if (collectionType == "string") {
+    return string_count(string(target), collection) > 0;
+} else if (collectionType == "array") {    
+    var asList = _to_list(collection);
+    var found = ds_list_find_index(asList, target);
+    ds_list_destroy(asList);
+    return found != -1;
+} else if (collectionType == "number") {
     if (dsType == ds_type_map) {
         var keys = _keys(collection);
         var n = array_length_1d(keys);
+
+        if (fromIndex > n) {
+            return false;
+        }
+
         for (var i = fromIndex; i < n; i++) {
             var thisValue = collection[? keys[i]];
-            if (_type_of(thisValue) == _type_of(target) && thisValue == target) {
+            if (typeof(thisValue) == typeof(target) && thisValue == target) {
                 return true;
             }
         }
         return false;
     } else if (dsType == ds_type_list) {
-        return ds_list_find_index(collection, target) != -1;
+        var found = ds_list_find_index(collection, target) != -1;
+        if (fromIndex != 0) {
+            ds_list_destroy(collection);
+        }
+        return found;
     } else {
         show_error("Cannot look for value in ds type: " + string(dsType) + "\nIf using _contains with a data structure, it must be a list or map.", false);
+        return false;
     }
 } else if (is_undefined(collection)) {
     return false;
 } else {
     // Catch case for unknown collection
-    show_error("Cannot look for value in type: " + _type_of(collection) + "\nCollection must be a string, array, map or list.", false);
+    show_error("Cannot look for value in type: " + typeof(collection) + "\nCollection must be a string, array, map or list.", false);
+    return false;
 }
 
 return false;

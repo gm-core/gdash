@@ -303,6 +303,14 @@
             }
         },
         {
+            "Key": "6fa04631-f8b2-4a2d-a503-192018527068",
+            "Value": {
+                "id": "eb9bc38f-0606-40ff-9bd9-9b6abf2b0330",
+                "resourcePath": "objects\\obj_performance_test\\obj_performance_test.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "71fc0e7e-ac29-4c46-920e-a07621c9158d",
             "Value": {
                 "id": "ddf047e3-a5e8-4c54-8786-2e8411191a9b",
@@ -540,6 +548,14 @@
                 "id": "e4f9e436-4700-44f1-95b3-18bb29397b00",
                 "resourcePath": "scripts\\_partial\\_partial.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b6c6bba7-1e78-4b34-a956-95ae24232057",
+            "Value": {
+                "id": "8e7059e7-3fc0-4a34-8b64-0dab171c4e85",
+                "resourcePath": "rooms\\rm_perf_test\\rm_perf_test.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

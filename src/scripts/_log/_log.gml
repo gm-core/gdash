@@ -1,6 +1,6 @@
 /// @func _log(values...)
 /// @desc Convenience method for show_debug_message(). Automatically convetrs arguments to strings.
-/// @param {Mixed} Message The message or value to log
+/// @param {Mixed} Messages... The message or value to log
 
 var toshow = "";
 for (var i = 0; i < argument_count; i++) {

@@ -1,3 +1,4 @@
+/// @func _to_list(array)
 /// @desc Converts the given array to a new ds_list
 /// @param array
 /// Note: This creates a ds_list resource which should be destroyed with ds_list_destroy when it is no longer needed.

@@ -1,3 +1,4 @@
+/// @func _filter(collection, script)
 /// @desc Returns a collection where values of the input collection are truthy when run through the provided function.
 /// @param {Array|ds_list} collection The collection to filter
 /// @param {Script} filterScript The script to filter with

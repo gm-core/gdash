@@ -1,3 +1,4 @@
+/// @func _times(script)
 /// @desc Returns an array of the result of a function run the given number of times
 /// @param {Real} executeCount The number of times to execute the function
 /// @param {Script} script The script to execute

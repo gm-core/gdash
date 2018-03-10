@@ -1,3 +1,4 @@
+/// @func _or(valueA, valueB)
 /// @desc Returns the value of the provided arguments after a boolean OR
 /// @param {*} valueA Some first input
 /// @param {*} valueB A value to || the first input with

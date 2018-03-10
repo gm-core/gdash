@@ -1,3 +1,4 @@
+/// @func _reduce(collection, reducer)
 /// @desc Reduces a collection by iterating over it with a function. Provided script should take 2 arguments: total, value. On the first call, total is undefined.
 /// @param {Array|ds_list} collection The collection to reduce
 /// @param {Script} recuderScript The script to reduce with

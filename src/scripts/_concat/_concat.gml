@@ -1,3 +1,4 @@
+/// @func _concat(arrayA, arrayB)
 /// @desc Appends the values of one array to another.
 /// @param {Array} baseArray The array to append to
 /// @param {Array} arrayToAppend The array to append

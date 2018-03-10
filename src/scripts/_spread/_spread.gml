@@ -1,5 +1,6 @@
+/// @func _spread(script, argsArray)
 /// @desc Runs a script with the provided array as arguments
-/// Note: This script is disgusting, but useful.
+/// @note This script is disgusting, but useful.
 /// @param {Script} script The script to run
 /// @param {Array} arrayOfArguments An array to provide as individual arguments
 /// @return {*} The return value of the script

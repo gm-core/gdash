@@ -1,3 +1,4 @@
+/// @func _collect(object)
 /// @desc Returns an array of all objects of the provided type
 /// @param {ObjectType} objectType The object type to collect
 /// @returns {Array} An array of all object IDs of the provided type in the room

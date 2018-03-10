@@ -1,3 +1,4 @@
+/// @func _run(scriptOrPartial, arguments...)
 /// @desc Executes a script or partial with the provided arguments
 /// @param {Script|Real} scriptOrPartial The script to run or the ID of the partial to run
 /// @param {*} arguments... Arguments to pass the script

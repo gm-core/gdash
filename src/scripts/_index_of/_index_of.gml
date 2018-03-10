@@ -1,3 +1,4 @@
+/// @func _index_of(collection, value)
 /// @desc Returns the index of the given item in the given array, or -1
 /// @param {Array|DS_List} collection The collection to search
 /// @param {*} value The value to look for

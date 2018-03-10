@@ -1,3 +1,4 @@
+/// @func _push(array, value)
 /// @desc Adds a value to the end of an array
 /// @param {Array} array The array to add the value to
 /// @param {*} value The value to add

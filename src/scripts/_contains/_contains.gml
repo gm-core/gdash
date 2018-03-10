@@ -1,3 +1,4 @@
+/// @func _Contains(collection, target [, fromIndex, dsType])
 /// @desc Returns true if the given array contains the given value
 /// @param {String|Array|DS_Map|DS_List} collection The collection to search
 /// @param {*} value The value to look for
@@ -18,17 +19,8 @@ _contains("hello", "ello");
 
 var collection = argument[0];
 var target = argument[1];
-var fromIndex = 0;
-
-var dsType = ds_type_list;
-
-if (argument_count > 2) {
-    fromIndex = argument[2];
-}
-
-if (argument_count > 3) {
-    dsType = argument[3];
-}
+var fromIndex = argument_count > 2 ? argument[2] : 0;
+var dsType = argument_count > 3 ? argument[3] : ds_type_list;
 
 if (is_string(collection)) {
 

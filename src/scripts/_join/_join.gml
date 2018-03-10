@@ -1,3 +1,4 @@
+/// @func _join(array, joinChar)
 /// @desc Returns a string of the given array combined with the given joiner
 /// @param {Array} array The array to join
 /// @param {String} joinChar The character to join by

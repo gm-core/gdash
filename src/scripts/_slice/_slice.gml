@@ -1,3 +1,4 @@
+/// @func _slice(array, start [, end])
 /// @desc Creates a slice of array from start up to, but not including, end.
 /// @param {Array} array The array to slice
 /// @param {Integer} start Index to start the slice

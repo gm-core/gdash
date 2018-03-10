@@ -1,3 +1,4 @@
+/// @func _reverse(array)
 /// @desc Reverses a given input array
 /// @param {Array} array The array to reverse
 /// @returns {Array} The reversed array

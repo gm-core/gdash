@@ -1,11 +1,11 @@
+/// @func _is_equal(valueA, valueB [, dsType])
 /// @desc Checks if two values are equal, being safe about type and checking first-level children of ds_lists and ds_maps. Returns false on type inequality rather than throwing an error.
 /// @param {*} firstValue First value to compare
 /// @param {*} secondValue Second value to compare
-/// @param {ds_type} [Optional] If specified, assumes this type instead of inferring the type. Only specify this if using _is_equal for a ds
+/// @param {ds_type} dsType [Optional] If specified, assumes this type instead of inferring the type. Only specify this if using _is_equal for a ds
 /// @returns {Boolean} true if the values are equal, false otherwise
 /*
 @example
-
 _is_equal([1, 2, 3], [1, 2, 3]);
 // => true
 
@@ -20,7 +20,6 @@ ds_map_add(map2, 'hello', 6);
 ds_map_add(map2, 'world', 10);
 _is_equal(map, map2, ds_type_map);
 // => true
-
 */
 
 var compareA = argument[0];

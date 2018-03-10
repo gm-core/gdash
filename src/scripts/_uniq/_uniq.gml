@@ -1,3 +1,4 @@
+/// @func _uniq(array)
 /// @desc Returns an array with all duplicate values removed
 /// @param {Array} array An array with duplicate values
 /// @returns {Array} An array with the duplicate values removed

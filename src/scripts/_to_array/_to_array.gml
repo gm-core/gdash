@@ -1,6 +1,7 @@
+/// @func _to_array(list)
 /// @desc Converts the given ds_list to an array
 /// @param list
-/// Note: If the given list is of size 0, this will return undefined.
+/// @note If the given list is of size 0, this will return undefined.
 
 var list = argument0;
 var listSize = ds_list_size(list);

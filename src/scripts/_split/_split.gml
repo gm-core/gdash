@@ -1,3 +1,4 @@
+/// @func _split(string, splitChar)
 /// @desc Returns an array of strings represnting the given string separated by a given substring
 /// @param {String} string The string to split
 /// @param {String} splitChar The character to split by

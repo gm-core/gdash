@@ -1,3 +1,4 @@
+/// @func _nth(collection, index)
 /// @desc Returns the nth index of the given array or ds_list. If n is negative, the nth element from the end is returned.
 /// @param collection
 /// @param n

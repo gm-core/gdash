@@ -1,3 +1,4 @@
+/// @func _type_of(value)
 /// @desc Returns the variable type of the given argument
 /// @param {*} value A variable to check the type of
 /// @returns {String} The type of the variable as a human readable string

@@ -1,4 +1,5 @@
-/// @descSets a nested value following a dot notation. Creates along the way if its not set.
+/// @func _set(map, locationString, value)
+/// @desc Sets a nested value following a dot notation. Creates along the way if its not set.
 /// @param {DS_Map} map The map to set data in
 /// @param {String} locationString The location of the data to set
 /// @param {Mixed} value The data to set
@@ -11,7 +12,6 @@ _set(someMap, 'nested.three.deep', 2);
 // => someMap now looks like:
 // => {nested: {three: {deep: 2}}}
 
-@example
 // some map looks like:
 // { someKey: "someValue" }
 _set(someMap, "newKey", ds_list_create(), ds_type_list);

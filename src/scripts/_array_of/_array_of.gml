@@ -1,3 +1,4 @@
+/// @func _array_of(values...)
 /// @desc Returns an array of the given arguments.
 /// @param {*) values... Values to put into an array
 /// @returns {Array} An array of the given parameters

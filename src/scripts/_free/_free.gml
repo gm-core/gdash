@@ -1,3 +1,4 @@
+/// @func _free(id [, ds_type])
 /// @desc Frees a partial function from memory
 /// @param {Real} resource The partial ID to free
 /// @param {DS_TYPE} optionalType The type of resource to free

@@ -1,3 +1,4 @@
+/// @func _destroy(object)
 /// @desc Destroys the passed in instance
 /// @param {Instance} instance The instance to destroy
 /*

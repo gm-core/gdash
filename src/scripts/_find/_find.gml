@@ -1,3 +1,4 @@
+/// @func _find(array, findScript)
 /// @desc Iterates over an array, returning the first element that the given script returns true for.
 /// @param {Array} array The array to iterate over
 /// @param {Script} findScript The script to run on the given element

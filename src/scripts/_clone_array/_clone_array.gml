@@ -1,3 +1,4 @@
+/// @func _clone_array(array)
 /// @desc Clones a given input array, returning a deep copy.
 /// @param {Array} array The array to clone
 /// @returns {Array} A copy of the input array

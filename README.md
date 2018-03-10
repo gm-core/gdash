@@ -19,6 +19,7 @@ gdash is a functional utility library for GML, inspired by [lodash](https://loda
   * [`_concat(arrayA, arrayB)`](#_concatarraya-arrayb)
   * [`_contains(collection, target [, fromIndex, dsType])`](#_containscollection-target--fromindex-dstype)
   * [`_destroy(object)`](#_destroyobject)
+  * [`_error(message [, fatal])`](#_errormessage--fatal)
   * [`_filter(collection, script)`](#_filtercollection-script)
   * [`_find(array, findScript)`](#_findarray-findscript)
   * [`_free(id [, ds_type])`](#_freeid--ds_type)
@@ -28,7 +29,9 @@ gdash is a functional utility library for GML, inspired by [lodash](https://loda
   * [`_join(array, joinChar)`](#_joinarray-joinchar)
   * [`_keys(map)`](#_keysmap)
   * [`_length(collectionOrString)`](#_lengthcollectionorstring)
+  * [`_list_of(values...)`](#_list_ofvalues)
   * [`_log(values...)`](#_logvalues)
+  * [`_map_of(values...)`](#_map_ofvalues)
   * [`_map(collection, script [, ds_type])`](#_mapcollection-script--ds_type)
   * [`_nth(collection, index)`](#_nthcollection-index)
   * [`_or(valueA, valueB)`](#_orvaluea-valueb)
@@ -141,7 +144,7 @@ _concat([0, 1, 2], [3, 4, 5]);
 
 ### `_contains(collection, target [, fromIndex, dsType])`
 
-Returns true if the given array contains the given value
+Returns true if the given array contains the given value, otherwise returns false
 
 ```gml
 @param {String|Array|DS_Map|DS_List} collection The collection to search
@@ -174,6 +177,22 @@ _destroy(obj_enemy);
 
 // Destroy all obj_enemy with no health (hasNoHealth is a script)
 _map(_filter(_collect(obj_enemy)), hasNoHealth), _destroy);
+```
+
+### `_error(message [, fatal])`
+
+When running with the debugger, displays an error window. Otherwise, logs an error using `_log`.
+
+> *Note*: Only mark an error as `fatal` if you are okay with it ending your game
+
+```gml
+@param {String} message The message to error with
+@param {Boolean} fatal [Optional] If true, will force a show_error() call with `abort` set to true
+
+@example
+_error("This is an error that will let the game continue");
+_error("This is an error that will let the game continue", false);
+_error("This is an error that will kill the game", true);
 ```
 
 ### `_filter(collection, script)`
@@ -336,12 +355,52 @@ _length(some_list_id_of_size_5);
 // => 5
 ```
 
+### `_list_of(values...)`
+
+Returns a DS_List containing the provided values. This DS_List should be destroyed as you would any other DS.
+
+```gml
+@param {*} values... As many starting values for the list as desired
+
+@returns {DS_List} A new DS_List containing the provided values
+
+@example
+
+var list = _list_of(1, 2, 3, 4);
+_log(list[| 2]) // logs 3
+```
+
 ### `_log(values...)`
 
 Convenience method for show_debug_message(). Automatically convetrs arguments to strings.
 
 ```gml
-@param {Mixed} Message The message or value to log
+@param {Mixed} Messages... The message or value to log
+
+```
+
+### `_map_of(values...)`
+
+Returns a DS_Map containing the provided values. Arguments are split into key/value pairs in the order they are provided.
+
+> *Note*: This script must take an even number of arguments. Keys can only be integers or strings.
+
+```gml
+@param {*} values... As many starting values for the map as desired
+
+@returns {DS_Map} A new DS_Map containing the provided key/value pairs
+
+@example
+
+var map = _map_of(
+    "health", 100,
+    "mana", 20,
+    "level", 1
+);
+
+map[? "health"] // = 100
+map[? "mana"] // = 20
+map[? "level"] // = 1
 
 ```
 
@@ -445,11 +504,12 @@ _push([1, 2], 3);
 
 ### `_reduce(collection, reducer)`
 
-Reduces a collection by iterating over it with a function. Provided script should take 2 arguments: total, value. On the first call, total is undefined.
+Reduces a collection by iterating over it with a function. Provided script should take 2 arguments: total, value.
 
 ```gml
 @param {Array|ds_list} collection The collection to reduce
 @param {Script} recuderScript The script to reduce with
+@param {*} value [Optional] The default value to begin reducing with. If not provided, the default is `undefined`
 
 @returns {*} The reduced value from the given script
 
@@ -617,7 +677,9 @@ list[| 2]; // 10
 
 ### `_type_of(value)`
 
-Returns the variable type of the given argument
+Returns the variable type of the given argument as a string.
+
+> *Note*: Works exactly as the native typeof(), though refers to `number` as `real` to be more consistent with GM:S terminology
 
 ```gml
 @param {*} value A variable to check the type of
@@ -641,7 +703,7 @@ _type_of(undefined);
 // => "undefined";
 
 _type_of(sprite_get_texture(spr_player, 1));
-// => "pointer";
+// => "ptr";
 ```
 
 ### `_uniq(array)`

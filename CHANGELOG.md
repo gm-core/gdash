@@ -9,5 +9,10 @@
   * `_uniq`
   * `_contains`
 * Bug fixes and behavior alignment for `_contains`
-* New script: `_to_list(array)`
+* `_keys` now returns an empty array for empty maps
+* New scripts:
+  * `_to_list(array)`
+  * `_list_of(values...)`
+  * `_map_of(values...)`
+  * `_error(message [, fatal])`
 * Documentation is now generated directly from code comments in the source

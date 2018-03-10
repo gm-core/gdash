@@ -1,5 +1,5 @@
 /// @func _partial(script, partialArgs...)
-/// @desc Creates a partial function identifier for use in place of raw scripts in gdash functions, or with the use of _run.
+/// @desc Creates a partial function identifier for use in place of raw scripts in gdash functions, or with the use of `_run`.
 /// @note Partials are to be treated as a data structure, and must be cleaned up with _free() when they are no longer of use.
 /// @param {Script} script The script to create a partial of
 /// @param {*} partialArguments... Arguments to bind to the partial

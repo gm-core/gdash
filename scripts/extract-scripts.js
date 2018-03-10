@@ -16,7 +16,7 @@ async function main() {
     return copyFile(file, outFile);
   });
 
-  await copyAll;
+  await Promise.all(copyAll);
 }
 
 main();

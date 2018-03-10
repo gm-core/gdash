@@ -1,9 +1,10 @@
 {
-  "name": "gdash-utilities",
-  "version": "0.0.1",
+  "name": "gdash",
+  "version": "4.0.0",
   "description": "This package.json is to install development utilities for gdash. You can ignore this if you are using gdash in your game.",
   "scripts": {
     "readme-toc": "markdown-toc -i README.md",
+    "generate-docs": "node scripts/generate-docs.js && npm run readme-toc",
     "build": "npm run clean && node scripts/extract-scripts.js",
     "clean": "rimraf build"
   },

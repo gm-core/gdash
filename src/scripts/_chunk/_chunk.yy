@@ -1,8 +1,8 @@
 {
-    "id": "a6b523a8-9863-4b43-b7d2-d0490d07f636",
+    "id": "30814abc-08cb-429f-91b8-352de81acdc3",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "_reverse",
+    "name": "_chunk",
     "IsCompatibility": false,
     "IsDnD": false
 }

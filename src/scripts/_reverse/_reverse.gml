@@ -1,19 +1,29 @@
 /// @func _reverse(array)
-/// @desc Reverses a given input array
-/// @param {Array} array The array to reverse
+/// @desc Reverses the order of elements in a given array.
+/// @param {Array} array The array to modify
 /// @returns {Array} The reversed array
+/// @note This method mutates array.
 /*
 @example
-var myArray = [1, 2, 3];
-var reverseArray = _reverse(myArray);
-// => [3, 2, 1]
+var arr = _array_of(0, 1, 2);
+_reverse(arr);
+// => [2, 1, 0];
 */
 
-var result;
-var n = array_length_1d(argument0);
+var i;
+var _arr;
+var _half;
+var _len;
+var _tmp;
 
-for (var i = 0; i < n; i++) {
-	result[i] = argument0[@ n-1-i];
+_arr = argument0;
+_len = array_length_1d(_arr);
+_half = floor(_len / 2);
+
+for (i = 0; i < _half; i++) {
+	_tmp = _arr[@ i];
+	_arr[@ i] = _arr[@ _len - 1 - i];
+	_arr[@ _len - 1 - i] = _tmp;
 }
 
-return result;
+return _arr;

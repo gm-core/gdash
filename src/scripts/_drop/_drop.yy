@@ -1,8 +1,8 @@
 {
-    "id": "a6b523a8-9863-4b43-b7d2-d0490d07f636",
+    "id": "ad183422-6cc2-41f7-b74f-76e5e32b1fe7",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "_reverse",
+    "name": "_drop",
     "IsCompatibility": false,
     "IsDnD": false
 }

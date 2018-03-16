@@ -1,6 +1,5 @@
 # GM Core Code Standards
 
-
 ## Whitespace
 
 ### Newlines
@@ -104,7 +103,8 @@ defeat_enemy()
 
 Prefix resources (except scripts) with an identifier of the type.
 
-|!Resource Type|!Prefix|!Example|
+|Resource Type|Prefix|Example|
+|-|-|-|
 |Sprite|`spr`|`spr_player`|
 |Tile Set|`tle`|`tle_world`|
 |Sound (SFX)|`snd`|`snd_bullet`|
@@ -118,7 +118,7 @@ Prefix resources (except scripts) with an identifier of the type.
 
 ## Script Practices
 
-### Arguments
+### Naming Arguments
 
 Name all arguments unless the script is a one-liner.
 
@@ -141,6 +141,8 @@ if (argument1 - argument0.resist > 0) {
 }
 ```
 
+### Defaulting Arguments
+
 Default arguments whenever it makes sense using ternaries.
 
 ```gml
@@ -162,6 +164,8 @@ if (argument_count > 2) {
 }
 ```
 
+### Script JSDoc Annotations
+
 Define `@func`, `@desc`, `@param` and `@returns` annotations on scripts
 
 ```gml
@@ -176,6 +180,8 @@ Define `@func`, `@desc`, `@param` and `@returns` annotations on scripts
 
 ## Performance Tuning
 
+### Force Inline
+
 Use `gml_pragma("forceinline")` for one-liners
 
 ```gml
@@ -183,6 +189,8 @@ Use `gml_pragma("forceinline")` for one-liners
 gml_pragma("forceinline");
 return argument0 * 2;
 ```
+
+### Array Looping
 
 When creating an array in a loop, start at the end.
 

@@ -1,0 +1,1 @@
+return floor(argument0);

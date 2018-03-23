@@ -6,9 +6,9 @@ var arr1 = [1, 2, 3.3];
 var arr2 = [3, 1.2, 1.9];
 var arr3 = [0, 2.6];
 
-var test1 = _union_by(arr1, arr2, _floor);
-var test2 = _union_by(arr1, arr3, _floor);
-var test3 = _union_by(arr2, arr1, _floor);
+var test1 = _union_by(arr1, arr2, native_floor);
+var test2 = _union_by(arr1, arr3, native_floor);
+var test3 = _union_by(arr2, arr1, native_floor);
 
 assert_equal(_length(test1), 3);
 assert_equal(_length(test2), 4);

@@ -19,19 +19,19 @@ _fill(arr, 0);
 
 var i;
 var arr;
-var _end;
+var last;
 
 if (argument_count == 2) {
     i    = 0;
-    _end = array_length_1d(argument[0]);
+    last = array_length_1d(argument[0]);
 } else if (argument_count == 4) {
     i    = argument[2];
-    _end = argument[3];
+    last = argument[3];
 } else return false;
 
 arr = argument[0];
 
-for (; i < _end; i++) {
+for (; i < last; i++) {
     arr[@ i] = argument[1];
 }
 

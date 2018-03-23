@@ -6,10 +6,10 @@ var arr1 = [1.4, 2, 3.5, 4];
 var arr2 = [1, 4.9, 3];
 var arr3 = [0.75, 2.1];
 
-var test1 = _intersection_by(arr1, arr2, _floor);
-var test2 = _intersection_by(arr1, arr3, _floor);
-var test3 = _intersection_by(arr2, arr1, _floor);
-var test4 = _intersection_by(arr1, arr2, arr3, _floor);
+var test1 = _intersection_by(arr1, arr2, native_floor);
+var test2 = _intersection_by(arr1, arr3, native_floor);
+var test3 = _intersection_by(arr2, arr1, native_floor);
+var test4 = _intersection_by(arr1, arr2, arr3, native_floor);
 
 assert_equal(_length(test1), 3);
 assert_equal(_length(test2), 1);

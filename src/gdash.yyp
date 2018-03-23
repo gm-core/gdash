@@ -210,7 +210,7 @@
             "Key": "3c3a3065-afd7-43ae-a56c-3737e596aaec",
             "Value": {
                 "id": "9c0a020c-6957-45f4-abce-e280e1d764f1",
-                "resourcePath": "scripts\\_floor\\_floor.yy",
+                "resourcePath": "scripts\\native_floor\\native_floor.yy",
                 "resourceType": "GMScript"
             }
         },

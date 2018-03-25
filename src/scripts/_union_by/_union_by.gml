@@ -1,5 +1,5 @@
 /// @func _union_by(arrays..., iteratee)
-/// @desc Like _union(), except that it accepts iteratee which is invoked for each element of each array to generate the criterion by which uniqueness is computed.
+/// @desc Like `_union()`, except that it accepts iteratee which is invoked for each element of each array to generate the criterion by which uniqueness is computed.
 /// @param {Array} arrays... The arrays to be unioned
 /// @param {Script} iteratee The script invoked on each element to generate uniqueness criteria
 /// @returns {Array} The union of the given arrays

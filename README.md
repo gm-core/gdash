@@ -1,6 +1,6 @@
 # gdash - GML Utility Library
 
-Version 4.0.0
+Version 5.0.0
 
 ## Introduction
 
@@ -14,17 +14,26 @@ gdash is a functional utility library for GML, inspired by [lodash](https://loda
 - [API](#api)
   * [`_and(valueA, valueB)`](#_andvaluea-valueb)
   * [`_array_of(values...)`](#_array_ofvalues)
+  * [`_backward(array)`](#_backwardarray)
+  * [`_chunk(array, size)`](#_chunkarray-size)
   * [`_clone_array(array)`](#_clone_arrayarray)
   * [`_collect(object)`](#_collectobject)
   * [`_concat(arrayA, arrayB)`](#_concatarraya-arrayb)
   * [`_contains(collection, target [, fromIndex, dsType])`](#_containscollection-target--fromindex-dstype)
   * [`_destroy(object)`](#_destroyobject)
+  * [`_difference_by(array, arrays..., iteratee)`](#_difference_byarray-arrays-iteratee)
+  * [`_difference(array, arrays...)`](#_differencearray-arrays)
+  * [`_drop_right(array, n)`](#_drop_rightarray-n)
+  * [`_drop(array, n)`](#_droparray-n)
   * [`_error(message [, fatal])`](#_errormessage--fatal)
+  * [`_fill(array, value [, start, end])`](#_fillarray-value--start-end)
   * [`_filter(collection, script)`](#_filtercollection-script)
   * [`_find(array, findScript)`](#_findarray-findscript)
   * [`_free(id [, ds_type])`](#_freeid--ds_type)
   * [`_get(map, locationString)`](#_getmap-locationstring)
   * [`_index_of(collection, value)`](#_index_ofcollection-value)
+  * [`_intersection_by(arrays..., iteratee)`](#_intersection_byarrays-iteratee)
+  * [`_intersection(arrays...)`](#_intersectionarrays)
   * [`_is_equal(valueA, valueB [, dsType])`](#_is_equalvaluea-valueb--dstype)
   * [`_join(array, joinChar)`](#_joinarray-joinchar)
   * [`_keys(map)`](#_keysmap)
@@ -48,7 +57,12 @@ gdash is a functional utility library for GML, inspired by [lodash](https://loda
   * [`_to_array(list)`](#_to_arraylist)
   * [`_to_list(array)`](#_to_listarray)
   * [`_type_of(value)`](#_type_ofvalue)
+  * [`_union_by(arrays..., iteratee)`](#_union_byarrays-iteratee)
+  * [`_union(arrays...)`](#_unionarrays)
   * [`_uniq(array)`](#_uniqarray)
+  * [`_unzip(array)`](#_unziparray)
+  * [`_without(array, values...)`](#_withoutarray-values)
+  * [`_zip(arrays...)`](#_ziparrays)
 
 <!-- tocstop -->
 
@@ -93,6 +107,43 @@ _arrayOf(1, 2, 3);
 
 _arrayOf('hello', 'world', 'i', 'am', 'an', 'array');
 // => ['hello', 'world', 'i', 'am', 'an', 'array'];
+```
+
+### `_backward(array)`
+
+Creates a new array containing the elements of array in reverse order.
+
+> *Note*: To modify an array in-place, use `_reverse`
+
+```gml
+@param {Array} array The array to reverse
+
+@returns {Array} The reversed array
+
+@example
+var myArray = [1, 2, 3];
+var reverseArray = _backward(myArray);
+// => [3, 2, 1]
+```
+
+### `_chunk(array, size)`
+
+Creates a two-dimensional array of elements split into groups of given length.
+
+```gml
+@param {Array} array The array to split
+@param {Integer} size The size of each chunk
+
+@returns {Array} The two-dimensional array of chunks
+
+@example
+var arr = [0, 1, 2, 3];
+_chunk(arr, 2);
+// => [[0, 1], [2, 3]];
+
+var arr = [0, 1, 2, 3];
+_chunk(arr, 3);
+// => [[0, 1, 2], [3]];
 ```
 
 ### `_clone_array(array)`
@@ -179,6 +230,78 @@ _destroy(obj_enemy);
 _map(_filter(_collect(obj_enemy)), hasNoHealth), _destroy);
 ```
 
+### `_difference_by(array, arrays..., iteratee)`
+
+Like `_difference()`, except that it accepts iteratee which is invoked for each element of each array to generate the criterion by which they are compared.
+
+```gml
+@param {Array} array The array to inspect
+@param {Array} arrays... The arrays whose values are to be excluded
+@param {Script} iteratee The script invoked on each element to generate comparison criteria
+
+@returns {Array} The difference between the first and the remaining arrays
+
+@example
+// _floor(x)
+return floor(x);
+
+var arr0 = [0.5, 1, 2];
+var arr1 = [0];
+var arr2 = [0.1, 2.9];
+_difference_by(arr0, arr1, arr2, _floor);
+// => [1];
+```
+
+### `_difference(array, arrays...)`
+
+Creates an array of values from the first array not found in the other arrays.
+
+```gml
+@param {Array} array The array to inspect
+@param {Array} arrays... The arrays whose values are to be excluded
+
+@returns {Array} The difference between the first and the remaining arrays
+
+@example
+var arr0 = [0, 1, 2];
+var arr1 = [0];
+var arr2 = [0, 2];
+_difference(arr0, arr1, arr2);
+// => [1];
+```
+
+### `_drop_right(array, n)`
+
+Creates a slice of array with n elements dropped from the end.
+
+```gml
+@param {Array} array The array to inspect
+@param {Integer} n The number of elements to drop
+
+@returns {Array} The slice of array
+
+@example
+var arr = [0, 1, 2, 3];
+_drop_right(arr, 2);
+// => [0, 1];
+```
+
+### `_drop(array, n)`
+
+Creates a slice of array with n elements dropped from the beginning.
+
+```gml
+@param {Array} array The array to inspect
+@param {Integer} n The number of elements to drop
+
+@returns {Array} The slice of array
+
+@example
+var arr = [0, 1, 2, 3];
+_drop(arr, 2);
+// => [2, 3];
+```
+
 ### `_error(message [, fatal])`
 
 When running with the debugger, displays an error window. Otherwise, logs an error using `_log`.
@@ -193,6 +316,30 @@ When running with the debugger, displays an error window. Otherwise, logs an err
 _error("This is an error that will let the game continue");
 _error("This is an error that will let the game continue", false);
 _error("This is an error that will kill the game", true);
+```
+
+### `_fill(array, value [, start, end])`
+
+Fills elements of array with value from start up to, but not including, end.
+
+> *Note*: This method mutates array.
+
+```gml
+@param {Array} array The array to fill
+@param {*} value The value with which to fill elements of array
+@param {Integer} optionalStart The start index
+@param {Integer} optionalEnd The end index
+
+@returns {Array} The filled array
+
+@example
+var arr = [0, 1, 2, 3];
+_fill(arr, 4, 1, 3);
+// => [0, 4, 4, 3];
+
+var arr = [0, 1, 2, 3];
+_fill(arr, 0);
+// => [0, 0, 0, 0];
 ```
 
 ### `_filter(collection, script)`
@@ -269,6 +416,47 @@ Returns the index of the given item in the given array, or -1
 
 @returns {Real} The index of the value, or -1
 
+```
+
+### `_intersection_by(arrays..., iteratee)`
+
+Like `_intersection()`, except that it accepts iteratee which is invoked for each element of each array to generate the criterion by which uniqueness is computed.
+
+```gml
+@param {Array} arrays... The arrays to be intersected
+@param {Script} iteratee The script invoked on each element to generate uniqueness criteria
+
+@returns {Array} The intersection of the given arrays
+
+@example
+// _floor(x)
+return floor(x);
+
+var arr0 = [0, 1.9];
+var arr1 = [0.6, 3];
+_intersection_by(arr0, arr1, _floor);
+// => [0];
+```
+
+### `_intersection(arrays...)`
+
+Creates an array of unique values common to all given arrays in the order in which they originally appeared.
+
+```gml
+@param {Array} arrays... The arrays to be intersected
+
+@returns {Array} The intersection of the given arrays
+
+@example
+var arr0 = [0, 1];
+var arr1 = [0];
+_intersection(arr0, arr1);
+// => [0];
+
+var arr0 = ['Sword', 'Potion'];
+var arr1 = ['Shield', 'Potion', 'Sword'];
+_intersection(arr0, arr1);
+// => ['Sword', 'Potion'];
 ```
 
 ### `_is_equal(valueA, valueB [, dsType])`
@@ -525,17 +713,19 @@ _reduce(arr, concat);
 
 ### `_reverse(array)`
 
-Reverses a given input array
+Reverses the order of elements in array.
+
+> *Note*: This method mutates the input array. To create a new array instead, use `_backward`
 
 ```gml
-@param {Array} array The array to reverse
+@param {Array} array The array to modify
 
 @returns {Array} The reversed array
 
 @example
-var myArray = [1, 2, 3];
-var reverseArray = _reverse(myArray);
-// => [3, 2, 1]
+var arr = [0, 1, 2];
+_reverse(arr);
+// => [2, 1, 0];
 ```
 
 ### `_run(scriptOrPartial, arguments...)`
@@ -706,6 +896,47 @@ _type_of(sprite_get_texture(spr_player, 1));
 // => "ptr";
 ```
 
+### `_union_by(arrays..., iteratee)`
+
+Like `_union()`, except that it accepts iteratee which is invoked for each element of each array to generate the criterion by which uniqueness is computed.
+
+```gml
+@param {Array} arrays... The arrays to be unioned
+@param {Script} iteratee The script invoked on each element to generate uniqueness criteria
+
+@returns {Array} The union of the given arrays
+
+@example
+// _floor(x)
+return floor(x);
+
+var arr0 = [0.5, 1.2];
+var arr1 = [0, 1.9];
+_union_by(arr0, arr1, _floor);
+// => [0.5, 1.2];
+```
+
+### `_union(arrays...)`
+
+Creates an array of unique values, in the order in which they originally appeared, from all given arrays.
+
+```gml
+@param {Array} arrays... The arrays to be unioned
+
+@returns {Array} The union of the given arrays
+
+@example
+var arr0 = _array_of(0, 1);
+var arr1 = _array_of(0);
+_union(arr0, arr1);
+// => [0, 1];
+
+var arr0 = _array_of('Sword', 'Potion');
+var arr1 = _array_of('Shield', 'Sword');
+_union(arr0, arr1);
+// => ['Sword', 'Potion', 'Shield'];
+```
+
 ### `_uniq(array)`
 
 Returns an array with all duplicate values removed
@@ -718,4 +949,60 @@ Returns an array with all duplicate values removed
 @example
 _uniq([1, 1, 2, 3]);
 // => [1, 2, 3]
+```
+
+### `_unzip(array)`
+
+From a zipped two-dimensional array, creates a collection of grouped elements by regrouping the elements to their pre-zipped configuration 
+
+```gml
+@param {Array} array The zipped two-dimensional array
+
+@returns {Array} The two-dimensional array of regrouped elements
+
+@example
+var arr0 = [0, 1, 2];
+var arr1 = [3, 4, 5];
+var arr2 =_zip(arr0, arr1);
+_unzip(arr2);
+// => [[0, 1, 2], [3, 4, 5]];
+
+```
+
+### `_without(array, values...)`
+
+Creates an array excluding all given values from amongst the elements of the given array
+
+```gml
+@param {Array} array The array to inspect
+@param {*} values... The values to exclude
+
+@returns {Array} The array of filtered elements
+
+@example
+var arr = [0, 1, 0, 2];
+_without(arr, 0, 1);
+// => [2];
+```
+
+### `_zip(arrays...)`
+
+Creates a two-dimensional array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on.
+
+```gml
+@param {Array} arrays... The remaining arrays
+
+@returns {Array} The array of elements grouped in arrays
+
+@example
+var arr0 = [0, 1];
+var arr1 = ['Sword', 'Shield'];
+var arr2 = [true, false];
+_zip(arr0, arr1, arr2);
+// => [[0, 'Sword', true], [1, 'Shield', false]];
+
+var arr0 = [0, 1, 2];
+var arr1 = [3, 4, 5];
+_zip(arr0, arr1);
+// => [[0, 3], [1, 4], [2, 5]];
 ```

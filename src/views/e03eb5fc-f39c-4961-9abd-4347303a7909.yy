@@ -6,7 +6,8 @@
     "children": [
         "75161d65-d380-49da-b5bd-8506f3d3c411",
         "7893bfef-671e-4406-83f9-e70a21e68cea",
-        "306bd252-5957-48f2-b8af-8353d163a88d"
+        "306bd252-5957-48f2-b8af-8353d163a88d",
+        "a34d8e76-f284-4808-bb25-3d09a5586449"
     ],
     "filterType": "GMObject",
     "folderName": "test_automation",

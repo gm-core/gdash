@@ -2,6 +2,7 @@
 /// @desc Creates a new array containing the elements of array in reverse order.
 /// @param {Array} array The array to reverse
 /// @returns {Array} The reversed array
+/// @note To modify an array in-place, use `_reverse`
 /*
 @example
 var myArray = [1, 2, 3];

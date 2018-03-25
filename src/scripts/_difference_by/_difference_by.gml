@@ -1,5 +1,5 @@
 /// @func _difference_by(array, arrays..., iteratee)
-/// @desc Like _difference(), except that it accepts iteratee which is invoked for each element of each array to generate the criterion by which they are compared.
+/// @desc Like `_difference()`, except that it accepts iteratee which is invoked for each element of each array to generate the criterion by which they are compared.
 /// @param {Array} array The array to inspect
 /// @param {Array} arrays... The arrays whose values are to be excluded
 /// @param {Script} iteratee The script invoked on each element to generate comparison criteria

@@ -401,7 +401,7 @@ Gets a nested value following a dot notation
 @example
 // someMap looks like:
 // { nested: {three: {deep: 1}}}
-_.get(someMap, 'nested.three.deep');
+_get(someMap, 'nested.three.deep');
 // => 1
 
 ```

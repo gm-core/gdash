@@ -768,7 +768,7 @@ _set(someMap, 'nested.three.deep', 2);
 // { someKey: "someValue" }
 _set(someMap, "newKey", ds_list_create(), ds_type_list);
 // => someMap now looks like:
-// => { someKey: "someValue"], newKey: [] }
+// => { someKey: "someValue", newKey: [] }
 
 ```
 

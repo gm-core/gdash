@@ -6,6 +6,10 @@ Version 5.0.0
 
 gdash is a functional utility library for GML, inspired by [lodash](https://lodash.com/). It aims to add useful, broad-purposed functions to help aid in game development. If you are doing any kind of data manipulation in your game, gdash can help out.
 
+### GameMaker Studio 2.3 Beta
+
+The existing gdash functions are compatible with GameMaker Studio 2.3, but with the significant changes to GML in this version, gdash functions will be revised to better suit the language. Core functionality will be revised to center around GM:S2.3 after the 2.3 beta ends and 2.3 becomes the mainline version. Until then, 2.3-beta compatible packages for gdash will be published for version 5.0.0 and above.
+
 ## Table of Contents
 
 <!-- toc -->

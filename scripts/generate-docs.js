@@ -27,7 +27,7 @@ Download [the latest release](https://github.com/gm-core/gdash/releases) and imp
 
 `
 
-const sourceDir = path.join(__dirname, '../src-gm23/gdash/scripts');
+const sourceDir = path.join(__dirname, '../src/gdash/scripts');
 const scriptGlob = path.join(sourceDir, '**/_*.gml');
 
 function getTitle(script) {

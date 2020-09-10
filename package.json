@@ -1,6 +1,6 @@
 {
   "name": "gdash",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "This package.json is to install development utilities for gdash. You can ignore this if you are using gdash in your game.",
   "scripts": {
     "readme-toc": "markdown-toc -i README.md",

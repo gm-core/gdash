@@ -1,9 +1,9 @@
-/// @func _times(script)
+/// @func _times(executeCount, method)
 /// @desc Returns an array of the result of a function run the given number of times
 /// @param {Real} executeCount The number of times to execute the function
-/// @param {Script} script The script to execute
+/// @param {Method} method The method to execute
 /// @returns {Array} An array of the script results
-function _times(argument0, argument1) {
+function _times(count, func) {
 	/*
 	@example
 	_times(3, returnTheValue5);
@@ -11,8 +11,6 @@ function _times(argument0, argument1) {
 
 	*/
 
-	var count = argument0;
-	var func = argument1;
 	var arr;
 
 	arr[count-1] = 0;
@@ -22,8 +20,4 @@ function _times(argument0, argument1) {
 	}
 
 	return arr;
-
-
-
-
 }

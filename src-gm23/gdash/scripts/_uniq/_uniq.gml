@@ -2,14 +2,13 @@
 /// @desc Returns an array with all duplicate values removed
 /// @param {Array} array An array with duplicate values
 /// @returns {Array} An array with the duplicate values removed
-function _uniq(argument0) {
+function _uniq(arr) {
 	/*
 	@example
 	_uniq([1, 1, 2, 3]);
 	// => [1, 2, 3]
 	*/
 
-	var arr = argument0;
 	var n = array_length(arr);
 	var j = 0;
 	var result = undefined;

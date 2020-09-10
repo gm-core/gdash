@@ -3,7 +3,7 @@
 /// @note Works exactly as the native typeof(), though refers to `number` as `real` to be more consistent with GM:S terminology
 /// @param {*} value A variable to check the type of
 /// @returns {String} The type of the variable as a human readable string
-function _type_of(argument0) {
+function _type_of(value) {
 	/*
 	@example
 
@@ -25,7 +25,7 @@ function _type_of(argument0) {
 	// => "ptr";
 	*/
 
-	var type = typeof(argument0)
+	var type = typeof(value)
 	return type == "number" ? "real" : type;
 
 

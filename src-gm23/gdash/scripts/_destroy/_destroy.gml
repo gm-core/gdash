@@ -1,7 +1,7 @@
 /// @func _destroy(object)
 /// @desc Destroys the passed in instance
 /// @param {Instance} instance The instance to destroy
-function _destroy(argument0) {
+function _destroy(object) {
 	/*
 	@example
 	_destroy(obj_enemy);
@@ -10,11 +10,7 @@ function _destroy(argument0) {
 	_map(_filter(_collect(obj_enemy)), hasNoHealth), _destroy);
 	*/
 
-	with (argument0) {
+	with (object) {
 	    instance_destroy();
 	}
-
-
-
-
 }

@@ -3,7 +3,7 @@
 /// @param {String} string The string to split
 /// @param {String} splitChar The character to split by
 /// @returns {Array} The split string
-function _split(argument0, argument1) {
+function _split(inputString, splitter) {
 	/*
 	@example
 	_split('Hello, world', ',');
@@ -13,8 +13,6 @@ function _split(argument0, argument1) {
 	// => ['Dogs', 'cats', 'mice']
 	*/
 
-	var inputString = argument0;
-	var splitter = argument1;
 	var splitterLength = string_length(splitter);
 	var result;
 	var splitterLocation;

@@ -43,6 +43,4 @@ function _map_of() {
 	}
 
 	return map;
-
-
 }

@@ -3,7 +3,7 @@
 /// @param {Array} array The array to inspect
 /// @param {Integer} n The number of elements to drop
 /// @returns {Array} The slice of array
-function _drop(argument0, argument1) {
+function _drop(arr, num) {
 	/*
 	@example
 	var arr = [0, 1, 2, 3];
@@ -13,13 +13,8 @@ function _drop(argument0, argument1) {
 
 	var i;
 	var n;
-	var arr;
 	var len;
-	var num;
 	var result;
-
-	arr = argument0;
-	num = argument1;
 
 	if (num == 0) return arr;
 
@@ -32,7 +27,4 @@ function _drop(argument0, argument1) {
 	}
 
 	return result;
-
-
-
 }

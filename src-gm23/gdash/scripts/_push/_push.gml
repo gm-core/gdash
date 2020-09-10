@@ -3,7 +3,7 @@
 /// @param {Array} array The array to add the value to
 /// @param {*} value The value to add
 /// @returns {Array} The array with the value added
-function _push(argument0, argument1) {
+function _push(arr, value) {
 	/*
 	@example
 	_push([1, 2], 3);
@@ -11,10 +11,6 @@ function _push(argument0, argument1) {
 	*/
 
 	gml_pragma("forceinline");
-	argument0[@ array_length(argument0)] = argument1;
-	return argument0;
-
-
-
-
+	arr[@ array_length(arr)] = value;
+	return arr;
 }

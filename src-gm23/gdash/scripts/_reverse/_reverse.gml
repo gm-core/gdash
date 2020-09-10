@@ -3,7 +3,7 @@
 /// @param {Array} array The array to modify
 /// @returns {Array} The reversed array
 /// @note This method mutates the input array. To create a new array instead, use `_backward`
-function _reverse(argument0) {
+function _reverse(arr) {
 	/*
 	@example
 	var arr = [0, 1, 2];
@@ -12,12 +12,10 @@ function _reverse(argument0) {
 	*/
 
 	var i;
-	var arr;
 	var half;
 	var len;
 	var tmp;
 
-	arr = argument0;
 	len = array_length(arr);
 	half = len div 2;
 
@@ -28,7 +26,4 @@ function _reverse(argument0) {
 	}
 
 	return arr;
-
-
-
 }

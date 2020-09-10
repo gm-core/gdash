@@ -2,7 +2,7 @@
 /// @desc Converts the given array to a new ds_list
 /// @param array
 /// Note: This creates a ds_list resource which should be destroyed with ds_list_destroy when it is no longer needed.
-function _to_list(argument0) {
+function _to_list(arr) {
 	/*
 	@example
 	var input = ["hello", "world", 10];
@@ -12,7 +12,6 @@ function _to_list(argument0) {
 	list[| 2]; // 10
 	*/
 
-	var arr = argument0;
 	var arrSize = array_length(arr);
 	var list = ds_list_create();
 
@@ -21,6 +20,4 @@ function _to_list(argument0) {
 	}
 
 	return list;
-
-
 }

@@ -32,9 +32,4 @@ function _free() {
 	        ds_list_destroy(dsId);
 	        break;
 	}
-
-
-
-
-
 }

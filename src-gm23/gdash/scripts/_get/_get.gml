@@ -3,7 +3,7 @@
 /// @param {DS_Map} map The map to get data from
 /// @param {String} locationString The location of the data to get
 /// @returns {Mixed} The data found at the given location
-function _get(argument0, argument1) {
+function _get(map, location) {
 	/*
 	@example
 	// someMap looks like:
@@ -13,9 +13,7 @@ function _get(argument0, argument1) {
 
 	*/
 
-	var location = argument1;
 	var locationArray = _split(location, ".");
-	var map = argument0;
 	var n = array_length(locationArray);
 	var thisLoc;
 
@@ -29,8 +27,4 @@ function _get(argument0, argument1) {
 	}
 
 	return map;
-
-
-
-
 }

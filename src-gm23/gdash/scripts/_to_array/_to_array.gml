@@ -2,9 +2,7 @@
 /// @desc Converts the given ds_list to an array
 /// @param list
 /// @note If the given list is of size 0, this will return undefined.
-function _to_array(argument0) {
-
-	var list = argument0;
+function _to_array(list) {
 	var listSize = ds_list_size(list);
 	var array;
 	array[0] = undefined;
@@ -18,6 +16,4 @@ function _to_array(argument0) {
 	}
 
 	return array;
-
-
 }

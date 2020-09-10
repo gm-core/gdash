@@ -2,7 +2,7 @@
 /// @desc Returns an array of all objects of the provided type
 /// @param {ObjectType} objectType The object type to collect
 /// @returns {Array} An array of all object IDs of the provided type in the room
-function _collect(argument0) {
+function _collect(object) {
 	/*
 	@example
 
@@ -12,13 +12,9 @@ function _collect(argument0) {
 
 	var result;
 
-	for (var i = instance_number(argument0); i >= 0; i--) {
-	    result[i] = instance_find(argument0, i);
+	for (var i = instance_number(object); i >= 0; i--) {
+	    result[i] = instance_find(object, i);
 	}
 
 	return result;
-
-
-
-
 }

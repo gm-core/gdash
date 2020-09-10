@@ -3,7 +3,7 @@
 /// @param {Array} array The array to join
 /// @param {String} joinChar The character to join by
 /// @returns {String} The joined array
-function _join(argument0, argument1) {
+function _join(arr, joinChar) {
 	/*
 	@example
 	var arr = ['hello', 'world'];
@@ -16,8 +16,8 @@ function _join(argument0, argument1) {
 	*/
 
 	var outString = "";
-	var inArray = argument0;
-	var joiner = argument1;
+	var inArray = arr;
+	var joiner = joinChar;
 
 	var arrLength = array_length(inArray);
 	var maxIndex = arrLength - 1;
@@ -32,9 +32,4 @@ function _join(argument0, argument1) {
 	}
 
 	return outString;
-
-
-
-
-
 }

@@ -2,7 +2,7 @@
 /// @desc Returns an array contains all keys in a ds_map. Order is not guaranteed due to how ds_maps are stored.
 /// @param {DS_Map} map The map to get the keys from
 /// @returns {Array} An array of all keys in the map
-function _keys(argument0) {
+function _keys(map) {
 	/*
 	@example
 	var map = ds_map_create();
@@ -14,7 +14,6 @@ function _keys(argument0) {
 
 	*/
 
-	var map = argument0;
 	var nextKey = ds_map_find_first(map);
 	var nextInd = 0;
 	var keys = [];
@@ -25,8 +24,4 @@ function _keys(argument0) {
 	}
 
 	return keys;
-
-
-
-
 }

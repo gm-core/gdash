@@ -47,9 +47,4 @@ function _map() {
 	    }
 	    return result;
 	}
-
-
-
-
-
 }

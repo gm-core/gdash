@@ -3,7 +3,7 @@
 /// @param {Array} baseArray The array to append to
 /// @param {Array} arrayToAppend The array to append
 /// @returns {Array} The concatenated array
-function _concat(argument0, argument1) {
+function _concat(arrayA, arrayB) {
 	/*
 	@example
 	_concat([0, 1, 2], [3, 4, 5]);
@@ -11,14 +11,12 @@ function _concat(argument0, argument1) {
 
 	*/
 
-	var n = array_length(argument0);
-	var arr = _clone_array(argument0);
+	var n = array_length(arrayA);
+	var arr = _clone_array(arrayA);
 
-	for (var i = array_length(argument1) - 1; i >= 0; i--) {
-	    arr[@ n+i] = argument1[@ i]; 
+	for (var i = array_length(arrayB) - 1; i >= 0; i--) {
+	    arr[@ n+i] = arrayB[@ i]; 
 	}
 
 	return arr;
-
-
 }

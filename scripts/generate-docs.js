@@ -27,7 +27,7 @@ Download [the latest release](https://github.com/gm-core/gdash/releases) and imp
 
 `
 
-const sourceDir = path.join(__dirname, '../src/scripts');
+const sourceDir = path.join(__dirname, '../src-gm23/gdash/scripts');
 const scriptGlob = path.join(sourceDir, '**/_*.gml');
 
 function getTitle(script) {
@@ -61,6 +61,10 @@ function removeCarriageReturns(content) {
   return content.replace(/\r/g, '');
 }
 
+function removeTabs(content) {
+  return content.replace(/\t/g, '');
+}
+
 async function main() {
   const scriptFiles = await glob(scriptGlob);
   const docs = scriptFiles.map(async file => {
@@ -80,7 +84,7 @@ async function main() {
     str += ret;
     str += examples
     str += '```\n';
-    return removeCarriageReturns(str);
+    return removeTabs(removeCarriageReturns(str));
   });
 
   const results = (await Promise.all(docs)).join('\n');

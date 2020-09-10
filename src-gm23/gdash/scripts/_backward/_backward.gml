@@ -3,7 +3,7 @@
 /// @param {Array} array The array to reverse
 /// @returns {Array} The reversed array
 /// @note To modify an array in-place, use `_reverse`
-function _backward(argument0) {
+function _backward(arr) {
 	/*
 	@example
 	var myArray = [1, 2, 3];
@@ -11,11 +11,9 @@ function _backward(argument0) {
 	// => [3, 2, 1]
 	*/
 
-	var arr;
 	var len;
 	var result;
 
-	arr = argument0;
 	len = array_length(arr);
 
 	for (var i = len - 1; i >= 0; i--) {
@@ -23,7 +21,4 @@ function _backward(argument0) {
 	}
 
 	return result;
-
-
-
 }

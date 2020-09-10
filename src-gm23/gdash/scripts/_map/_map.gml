@@ -1,7 +1,7 @@
-/// @func _map(collection, script [, ds_type])
-/// @desc Iterates over a given collection, running the provided function for each value in the collection. Returns an array of all function results at each index.
+/// @func _map(collection, method [, ds_type])
+/// @desc Iterates over a given collection, running the provided method for each value in the collection. Returns an array of all method results at each index.
 /// @param {Array|DS_Map|DS_List} collection The collection to map
-/// @param {Script} script The script to map over the collection
+/// @param {Method} method The method to map over the collection
 /// @param {ds_type|String} optionalType ["array"] The type of collection. Only provide when using a DS
 /// @returns {Array} An array of all mapped results
 function _map() {

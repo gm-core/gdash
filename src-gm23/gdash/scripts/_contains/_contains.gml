@@ -91,7 +91,4 @@ function _contains() {
 	}
 
 	return false;
-
-
-
 }

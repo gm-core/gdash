@@ -3,7 +3,7 @@
 /// @param {*} valueA Some first input
 /// @param {*} valueB A value to && the first input with
 /// @returns {Boolean} The value of the provided arguments after an &&
-function _and(argument0, argument1) {
+function _and(valueA, valueB) {
 	/*
 	@example
 	_and(true, true);
@@ -14,9 +14,5 @@ function _and(argument0, argument1) {
 
 	*/
 	gml_pragma("forceinline");
-	return argument0 && argument1;
-
-
-
-
+	return valueA && valueB;
 }

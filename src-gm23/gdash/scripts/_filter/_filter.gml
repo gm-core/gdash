@@ -1,20 +1,18 @@
-/// @func _filter(collection, script)
+/// @func _filter(collection, filterMethod)
 /// @desc Returns a collection where values of the input collection are truthy when run through the provided function.
 /// @param {Array|ds_list} collection The collection to filter
-/// @param {Script} filterScript The script to filter with
+/// @param {Method} filterMethod The method to filter with
 /// @returns {Array|ds_list} The filtered collection
 /// Note: Returns the same type as the given collection. Creates a new list if the collection is a list.
 ///       the original collection will not be destroyed, so if you pass in a list, you will still need to destroy it.
-function _filter(argument0, argument1) {
+function _filter(collection, filterMethod) {
 	/*
 	@example
 	_filter([0, 1, 2, 3], lessThanTwo)
 	// => [0, 1]
-
 	*/
 
 	var result;
-	var collection = argument0;
 	var j = 0;
 	var type = _type_of(collection);
 
@@ -22,7 +20,7 @@ function _filter(argument0, argument1) {
 	    var length = ds_list_size(collection);
 	    result = ds_list_create();
 	    for (var i = 0; i < length; i++) {
-	        if (_run(argument1, collection[| i])) {
+	        if (filterMethod(collection[| i])) {
 	            result[| j] = collection[| i];
 	            j++;
 	        }    
@@ -30,7 +28,7 @@ function _filter(argument0, argument1) {
 	} else if (type == "array") {
 	    var length = array_length(collection);
 	    for (var i = 0; i < length; i++) {
-	        if (_run(argument1, collection[@ i])) {
+	        if (filterMethod(collection[@ i])) {
 	            result[j] = collection[@ i];
 	            j++;
 	        }    
@@ -40,8 +38,4 @@ function _filter(argument0, argument1) {
 	}
 
 	return result;
-
-
-
-
 }

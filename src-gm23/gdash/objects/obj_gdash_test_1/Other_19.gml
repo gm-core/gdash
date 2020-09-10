@@ -3,6 +3,10 @@ test_start("_filter", "returns an array with elements removed when they are fals
 
 var arr = [0, 1, 2, 3, 4, 5, 6];
 
+var isEven = function(n) {
+	return n % 2 == 0;
+}
+
 var res = _filter(arr, isEven);
 
 assert_is_true(_contains(res, 0));

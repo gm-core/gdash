@@ -1,8 +1,8 @@
-/// @func _run(scriptOrPartial, arguments...)
-/// @desc Executes a script or partial with the provided arguments
-/// @param {Script|Real} scriptOrPartial The script to run or the ID of the partial to run
-/// @param {*} arguments... Arguments to pass the script
-/// @returns {*} The return value of the script
+/// @func _run(methodOrPartial, arguments...)
+/// @desc Executes a method or partial with the provided arguments
+/// @param {Method|Real} methodOrPartial The method to run or the ID of the partial to run
+/// @param {*} arguments... Arguments to pass the method or partial
+/// @returns {*} The return value of the execution
 function _run() {
 	/*
 	@example
@@ -22,17 +22,11 @@ function _run() {
 	}
 
 	// Check if func is a partial (map with 'partial' set to 'partial');
-	if (ds_exists(func, ds_type_map) && _is_equal(ds_map_find_value(func, "partial"), "partial")) {
+	if (_type_of(func) == "real" && ds_exists(func, ds_type_map) && _is_equal(ds_map_find_value(func, "partial"), "partial")) {
 	    var partialId = func;
 	    func = ds_map_find_value(partialId, "function");
 	    args = _concat(ds_map_find_value(partialId, "args"), args);
 	}
 
 	return _spread(func, args);
-
-
-
-
-
-
 }

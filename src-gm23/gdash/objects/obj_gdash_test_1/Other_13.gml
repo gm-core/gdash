@@ -14,9 +14,13 @@ ds_list_sort(list, true);
 
 var arr = [1, 2, 3, 4, 5];
 
-var mapRes = _map(map, double, ds_type_map);
-var listRes = _map(list, double, ds_type_list);
-var arrRes = _map(arr, double);
+var doubleValue = function(n) {
+	return n * 2;
+}
+
+var mapRes = _map(map, doubleValue, ds_type_map);
+var listRes = _map(list, doubleValue, ds_type_list);
+var arrRes = _map(arr, doubleValue);
 
 var addTwo = _partial(add, 2);
 var arrRes2 = _map(arr, addTwo);

@@ -19,7 +19,4 @@ function _array_of() {
 	}
 
 	return result;
-
-
-
 }

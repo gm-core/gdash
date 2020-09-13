@@ -24,25 +24,25 @@ function _union() {
 	var n;
 	var arr;
 	var len;
-	var set;
-	var result;
+	var tempSet;
+	var result = [];
 
 	n = 0;
-	set = ds_map_create();
+	tempSet = ds_map_create();
 	result = array_create(0);
 
 	for (i = 0; i < argument_count; i++) {
 	    arr = argument[i];
 	    len = array_length(arr);
 	    for (j = 0; j < len; j++) {
-	        if (set[? arr[j]] != 1) {
-	            set[? arr[j]] = 1;
+	        if (tempSet[? arr[j]] != 1) {
+	            tempSet[? arr[j]] = 1;
 	            result[n++] = arr[j];
 	        }
 	    }
 	}
 
-	ds_map_destroy(set);
+	ds_map_destroy(tempSet);
 	return result;
 
 

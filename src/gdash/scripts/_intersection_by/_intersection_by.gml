@@ -25,19 +25,19 @@ function _intersection_by() {
 	var crit;
 	var iter;
 	var len;
-	var set;
-	var result;
+	var tempSet;
+	var result = [];
 
 	iter = argument[argument_count - 1];
-	set = ds_map_create();
+	tempSet = ds_map_create();
 
 	for (i = 1; i < argument_count; i++) {
 	    arr = argument[i];
 	    len = array_length(arr);
 	    for (j = 0; j < len; j++) {
 			crit = script_execute(iter, arr[j]);
-	        if (i == 1 || set[? crit] == i - 1) {
-	            set[? crit] = i;
+	        if (i == 1 || tempSet[? crit] == i - 1) {
+	            tempSet[? crit] = i;
 	        }
 	    }
 	}
@@ -49,13 +49,13 @@ function _intersection_by() {
 
 	for (i = 0; i < len; i++) {
 		crit = script_execute(iter, arr[i]);
-	    if (set[? crit] == argument_count - 2) {
-	        set[? crit]++;
+	    if (tempSet[? crit] == argument_count - 2) {
+	        tempSet[? crit]++;
 	        result[n++] = arr[i];
 	    }
 	}
 
-	ds_map_destroy(set);
+	ds_map_destroy(tempSet);
 	return result;
 
 

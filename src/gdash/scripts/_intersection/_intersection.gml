@@ -24,17 +24,17 @@ function _intersection() {
 	var n;
 	var arr;
 	var len;
-	var set;
-	var result;
+	var tempSet;
+	var result = [];
 
-	set = ds_map_create();
+	tempSet = ds_map_create();
 
 	for (i = 1; i < argument_count; i++) {
 	    arr = argument[i];
 	    len = array_length(arr);
 	    for (j = 0; j < len; j++) {
-	        if (i == 1 || set[? arr[j]] == i - 1) {
-	            set[? arr[j]] = i;
+	        if (i == 1 || tempSet[? arr[j]] == i - 1) {
+	            tempSet[? arr[j]] = i;
 	        }
 	    }
 	}
@@ -45,13 +45,13 @@ function _intersection() {
 	result = array_create(0);
 
 	for (i = 0; i < len; i++) {
-	    if (set[? arr[i]] == argument_count - 1) {
-	        set[? arr[i]]++;
+	    if (tempSet[? arr[i]] == argument_count - 1) {
+	        tempSet[? arr[i]]++;
 	        result[n++] = arr[i];
 	    }
 	}
 
-	ds_map_destroy(set);
+	ds_map_destroy(tempSet);
 	return result;
 
 

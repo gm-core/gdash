@@ -13,7 +13,7 @@ function _slice() {
 	// => true
 	*/
 
-	var result;
+	var result = [];
 	var array = argument[0];
 	var starti = argument[1];
 	var endi = 0;

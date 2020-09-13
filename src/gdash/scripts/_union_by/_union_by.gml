@@ -25,12 +25,12 @@ function _union_by() {
 	var crit;
 	var iter;
 	var len;
-	var set;
-	var result;
+	var tempSet;
+	var result = [];
 
 	n = 0;
 	iter = argument[argument_count - 1];
-	set  = ds_map_create();
+	tempSet  = ds_map_create();
 	result = array_create(0);
 
 	for (i = 0; i < argument_count; i++) {
@@ -38,14 +38,14 @@ function _union_by() {
 	    len = array_length(arr);
 	    for (j = 0; j < len; j++) {
 			crit = script_execute(iter, arr[j]);
-	        if (set[? crit] != 1) {
-	            set[? crit] = 1;
+	        if (tempSet[? crit] != 1) {
+	            tempSet[? crit] = 1;
 	            result[n++] = arr[j];
 	        }
 	    }
 	}
 
-	ds_map_destroy(set);
+	ds_map_destroy(tempSet);
 	return result;
 
 

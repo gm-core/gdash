@@ -12,7 +12,7 @@ function _filter(collection, filterMethod) {
 	// => [0, 1]
 	*/
 
-	var result;
+	var result = [];
 	var j = 0;
 	var type = _type_of(collection);
 

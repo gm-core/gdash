@@ -14,7 +14,7 @@ function _split(inputString, splitter) {
 	*/
 
 	var splitterLength = string_length(splitter);
-	var result;
+	var result = [];
 	var splitterLocation;
 	var part;
 	var count = 0;

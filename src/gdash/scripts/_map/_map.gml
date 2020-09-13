@@ -7,12 +7,10 @@
 function _map() {
 	/*
 	@example
-
 	var arr;
 	arr[0] = 1; arr[1] = 2;
 	_map(arr, doubleValue);
 	// => [2, 4];
-
 	var map = ds_map_create();
 	ds_map_add(map, 'hello', 6);
 	ds_map_add(map, 'world', 10);
@@ -23,7 +21,7 @@ function _map() {
 	var collection = argument[0];
 	var func = argument[1];
 	var type = "array";
-	var result;
+	var result = [];
 
 	if (argument_count == 3) {
 	    type = argument[2];

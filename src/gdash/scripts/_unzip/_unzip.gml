@@ -19,7 +19,7 @@ function _unzip(arr) {
 	var j;
 	var len;
 	var num;
-	var result;
+	var result = [];
 
 	len = array_length(arr);
 	num = array_length(arr[0]);

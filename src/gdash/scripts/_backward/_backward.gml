@@ -12,7 +12,7 @@ function _backward(arr) {
 	*/
 
 	var len;
-	var result;
+	var result = [];
 
 	len = array_length(arr);
 

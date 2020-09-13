@@ -14,7 +14,7 @@ function _drop(arr, num) {
 	var i;
 	var n;
 	var len;
-	var result;
+	var result = [];
 
 	if (num == 0) return arr;
 

@@ -23,7 +23,7 @@ function _zip() {
 	var j;
 	var arr;
 	var len;
-	var result;
+	var result = [];
 
 	len = array_length(argument[0]);
 	for (i = 1; i < argument_count; i++)

@@ -19,7 +19,7 @@ function _chunk(arr, size) {
 
 	var i;
 	var len;
-	var result;
+	var result = [];
 
 	if (size == 0) return array_create(0);
 

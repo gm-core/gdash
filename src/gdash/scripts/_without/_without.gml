@@ -20,7 +20,7 @@ function _without() {
 	var arr;
 	var match;
 	var len;
-	var result;
+	var result = [];
 
 	n = 0;
 	arr = argument[0];

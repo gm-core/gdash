@@ -21,17 +21,17 @@ function _difference() {
 	var n;
 	var arr;
 	var len;
-	var set;
-	var result;
+	var tempSet;
+	var result = [];
 
-	set = ds_map_create();
+	tempSet = ds_map_create();
 
 	for (i = 1; i < argument_count; i++) {
 	    arr = argument[i];
 	    len = array_length(arr);
 	    for (j = 0; j < len; j++) {
-	        if (set[? arr[j]] != 1) {
-	            set[? arr[j]] = 1;
+	        if (tempSet[? arr[j]] != 1) {
+	            tempSet[? arr[j]] = 1;
 	        }
 	    }
 	}
@@ -42,12 +42,12 @@ function _difference() {
 	result = array_create(0);
 
 	for (i = 0; i < len; i++) {
-		if (set[? arr[i]] != 1) {
+		if (tempSet[? arr[i]] != 1) {
 			result[n++] = arr[i];	
 		}
 	}
 
-	ds_map_destroy(set);
+	ds_map_destroy(tempSet);
 	return result;
 
 

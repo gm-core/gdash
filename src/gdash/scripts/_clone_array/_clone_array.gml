@@ -10,11 +10,8 @@ function _clone_array(arr) {
 	_is_equal(myArray, copyArray)
 	// => true
 	*/
-
-	// Abuse GML array copy into script mechanics.
-	/// Note, maybe switch to GMS2 new method: array_copy?
-	var result = arr;
-
-	result[0] = result[0]; // this forces a copy    
+	
+	var result = [];
+	array_copy(result, 0, arr, 0, array_length(arr));
 	return result;
 }

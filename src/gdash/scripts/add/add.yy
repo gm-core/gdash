@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "unit test",
-    "path": "folders/Scripts/util/unit test.yy",
+    "path": "folders/util/unit test.yy",
   },
   "resourceVersion": "1.0",
   "name": "add",

@@ -79,14 +79,13 @@ function _contains() {
 	        }
 	        return found;
 	    } else {
-	        show_error("Cannot look for value in ds type: " + string(dsType) + "\nIf using _contains with a data structure, it must be a list or map.", false);
-	        return false;
+	        throw "Cannot look for value in ds type: " + string(dsType) + "\nIf using _contains with a data structure, it must be a list or map.";
 	    }
 	} else if (is_undefined(collection)) {
 	    return false;
 	} else {
 	    // Catch case for unknown collection
-	    show_error("Cannot look for value in type: " + typeof(collection) + "\nCollection must be a string, array, map or list.", false);
+	    throw "Cannot look for value in type: " + typeof(collection) + "\nCollection must be a string, array, map or list.";
 	    return false;
 	}
 

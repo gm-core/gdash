@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "gamatas",
-    "path": "folders/Scripts/lib/gamatas.yy",
+    "name": "gmtest",
+    "path": "folders/Lib/gmtest.yy",
   },
   "resourceVersion": "1.0",
   "name": "assert",

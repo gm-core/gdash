@@ -22,6 +22,10 @@ function _reduce() {
 	var type = _type_of(collection);
 
 	if (type == "real") {
+		if (!ds_exists(collection, ds_type_list)) {
+			throw "Cannot reduce provided data structure: must be a ds_list or array";
+		}
+
 	    var length = ds_list_size(collection);
 	    for (var i = 0; i < length; i++) {
 	        result = _run(func, result, collection[| i]);
@@ -32,7 +36,7 @@ function _reduce() {
 	        result = _run(func, result, collection[@ i]);
 	    }
 	} else {
-	    show_error("Cannot reduce type: " + type + "\nCollection must be an array or ds_list", false);
+	    throw "Cannot reduce type: " + type + "\nCollection must be an array or ds_list";
 	}
 
 	return result;

@@ -11,7 +11,7 @@ function _uniq(arr) {
 
 	var n = array_length(arr);
 	var j = 0;
-	var result = undefined;
+	var result = [];
 	var seenMap = ds_map_create();
 
 	if (array_length(arr) <= 1) {
@@ -29,9 +29,4 @@ function _uniq(arr) {
 	ds_map_destroy(seenMap);
 
 	return result;
-
-
-
-
-
 }

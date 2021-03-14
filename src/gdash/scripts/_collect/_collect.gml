@@ -12,7 +12,7 @@ function _collect(object) {
 
 	var result = [];
 
-	for (var i = instance_number(object); i >= 0; i--) {
+	for (var i = instance_number(object) - 1; i >= 0; i--) {
 	    result[i] = instance_find(object, i);
 	}
 

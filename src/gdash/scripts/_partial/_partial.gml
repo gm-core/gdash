@@ -34,8 +34,4 @@ function _partial() {
 	ds_map_add(partial, "partial", "partial");
 
 	return partial;
-
-
-
-
 }

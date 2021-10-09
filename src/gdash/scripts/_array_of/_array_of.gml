@@ -12,7 +12,7 @@ function _array_of() {
 	// => ['hello', 'world', 'i', 'am', 'an', 'array'];
 	*/
 
-	var result = [];
+	var result = array_create(argument_count-1, 0);
 
 	for (i = argument_count-1; i >= 0; i--) {
 	    result[i] = argument[i];
